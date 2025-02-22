@@ -4,7 +4,10 @@
   "description": "Voltagene SRL Website, minimalist. Made by Charles David (InuzDev)",
   "main": "index.js",
   "scripts": {
-    "test": "next dev"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "author": "Charles David (InuzDev)",
   "license": "MIT",
@@ -12,5 +15,10 @@
     "next": "^15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.13.5",
+    "@types/react": "^19.0.10",
+    "typescript": "5.7.3"
   }
 }

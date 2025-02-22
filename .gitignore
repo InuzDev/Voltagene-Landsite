@@ -1,2 +1,8 @@
 node_modules/
 .qodo/
+
+#Next folder
+.next/
+
+#Environment variables
+.env.local
