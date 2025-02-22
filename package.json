@@ -1,0 +1,16 @@
+{
+  "name": "voltagene-landsite",
+  "version": "0.0.1",
+  "description": "Voltagene SRL Website, minimalist. Made by Charles David (InuzDev)",
+  "main": "index.js",
+  "scripts": {
+    "test": "next dev"
+  },
+  "author": "Charles David (InuzDev)",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^15.1.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
