@@ -10,6 +10,12 @@
       ],
       "@/Hooks/*": [
         "hooks/*"
+      ],
+      "@/Pages/*": [
+        "pages/*"
+      ],
+      "@/Error/*": [
+        "error/*"
       ]
     },
     "target": "ES2017",

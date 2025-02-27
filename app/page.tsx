@@ -1,3 +1,4 @@
+// Home page of Voltagene SRL, contact and slider is shown here. Also Location with Google Maps
 import React from "react"
 
 export default function Page() {
