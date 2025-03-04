@@ -1,2 +1,4 @@
 /* Global Style for the website */
-@import "tailwindcss"
+@import "tailwindcss";
+
+/* Image layout for a better responsive design */
