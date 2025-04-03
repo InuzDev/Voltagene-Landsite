@@ -11,7 +11,7 @@ export function SiteFooter() {
                <div>
                   <h3 className="text-xl font-bold mb-4 text-yellow-500">Voltagene SRL</h3>
                   <p className="text-gray-300 mb-4">
-                     Providing sustainable energy solutions since 2022. We're committed to a greener future through innovative solar technology.
+                     Providing sustainable energy solutions since 2022. We&apos;re committed to a greener future through innovative solar technology.
                   </p>
                   <div className="flex space-x-4">
                      <Link href="#" className="text-gray-400 hover:text-white transition-colors">
