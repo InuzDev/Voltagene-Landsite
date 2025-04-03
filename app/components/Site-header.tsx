@@ -46,7 +46,7 @@ export function SiteHeader() {
          <div className="container flex h-16 items-center justify-between px-4">
             <Link href="/" className="flex items-center space-x-2">
                <Sun className={`h-6 w-6 ${isScrolled ? "text-yellow-500" : "text-yellow-400"}`} />
-               <span className="font-bold">SolarPro</span>
+               <span className="font-bold">Voltagene SRL</span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -84,7 +84,7 @@ export function SiteHeader() {
                         <div className="flex items-center justify-between pb-4 border-b">
                            <Link href="/" className="flex items-center space-x-2">
                               <Sun className="h-6 w-6 text-yellow-500" />
-                              <span className="font-bold">SolarPro</span>
+                              <span className="font-bold">Voltagene SRL</span>
                            </Link>
                         </div>
                         <nav className="flex flex-col gap-4 mt-8">

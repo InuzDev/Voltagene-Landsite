@@ -125,7 +125,7 @@ export default function Home() {
                      <Button
                         size="lg"
                         variant="outline"
-                        className="border-white text-white hover:bg-white/20"
+                        className="border-white text-black hover:bg-white/20 hover:text-white"
                         onClick={() => {
                            document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })
                         }}

@@ -100,7 +100,7 @@ export function SiteFooter() {
             <div className="border-t border-gray-800 mt-10 pt-6">
                <div className="flex flex-col sm:flex-row justify-between items-center">
                   <p className="text-gray-400 text-sm text-center sm:text-left">
-                     © {new Date().getFullYear()} SolarPro Energy. All rights reserved.
+                     © {new Date().getFullYear()} Voltagene SRL. All rights reserved.
                   </p>
                   <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6 mt-4 sm:mt-0">
                      <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
