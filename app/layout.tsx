@@ -7,8 +7,9 @@ import "./styles/global.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-   title: "Solar Energy Solutions",
-   description: "Professional solar panel installation, cleaning, and remodeling services",
+   title: "Voltagene SRL - Solar Energy Solutions",
+   description:
+      "Professional solar panel installation, cleaning, and remodeling services for residential and commercial properties.",
 }
 
 export default function RootLayout({
@@ -17,14 +18,13 @@ export default function RootLayout({
    children: React.ReactNode
 }>) {
    return (
-      <html lang="en">
-         <body>
-            <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
+      <html lang="en" className="scroll-smooth">
+         <body className={inter.className}>
+            <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
                {children}
             </ThemeProvider>
          </body>
       </html>
    )
 }
-
 

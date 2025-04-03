@@ -11,6 +11,7 @@
   "author": "Charles David (InuzDev)",
   "license": "MIT",
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-slot": "^1.1.2",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
