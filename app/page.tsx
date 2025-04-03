@@ -209,7 +209,7 @@ export default function Home() {
                <div className="max-w-6xl mx-auto">
                   <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">Recent Projects</h2>
                   <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
-                     Take a look at some of our recent solar installations and the impact they&aposve made for our clients.
+                     Take a look at some of our recent solar installations and the impact they&apos;ve made for our clients.
                   </p>
 
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
