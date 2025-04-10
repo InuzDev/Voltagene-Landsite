@@ -24,7 +24,7 @@ export function SiteHeader() {
       { href: "#projects", label: "Projects" },
       { href: "#about", label: "About" },
       { href: "#testimonials", label: "Testimonials" },
-      { href: "#contact", label: "Contact" },
+      { href: "/Contact", label: "Contact" },
    ]
 
    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
