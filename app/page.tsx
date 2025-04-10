@@ -1,13 +1,16 @@
 "use client"
 
-import { ArrowDown, ArrowRight, ArrowUpRight, ExternalLink, Sun } from "lucide-react"
+import { ArrowDown, ArrowRight, ArrowUpRight, ExternalLink } from "lucide-react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import { useEffect, useRef, useState } from "react"
 import { SiteFooter } from "./components/Site-footer"
 import { SiteHeader } from "./components/Site-header"
 import { Button } from "./components/ui/button"
 
 export default function Home() {
+   const router = useRouter();
+
    const [scrollY, setScrollY] = useState(0)
    const heroRef = useRef<HTMLDivElement>(null)
 
@@ -113,13 +116,15 @@ export default function Home() {
 
                {/* Hero Content */}
                <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 text-white">
-                  <Sun className="h-16 w-16 mb-6 text-yellow-400 animate-pulse" />
+                  {/* <Sun className="h-16 w-16 mb-6 text-yellow-400 animate-pulse" /> */}
                   <h1 className="text-4xl md:text-6xl font-bold mb-4">Powering Your Future With Solar Energy</h1>
                   <p className="text-xl md:text-2xl max-w-3xl mb-8">
                      Professional installation, cleaning, and remodeling services for sustainable energy solutions.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                     <Button size="lg" className="bg-green-800 hover:bg-green-900 text-white">
+                     <Button size="lg" className="bg-green-800 hover:bg-green-900 text-white" onClick={() => {
+                        router.push("/Contact")
+                     }}>
                         Get a Free Quote
                      </Button>
                      <Button
@@ -166,7 +171,7 @@ export default function Home() {
                            {/* Image Container */}
                            <div className="relative h-56 overflow-hidden">
                               <Image
-                                 src={service.image || "/placeholder.svg"}
+                                 src={service.image}
                                  alt={service.title}
                                  fill
                                  className="object-cover transition-transform duration-500 group-hover:scale-105"
