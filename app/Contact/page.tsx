@@ -4,7 +4,7 @@ import { Textarea } from "app/components/textarea"
 import { Button } from "app/components/ui/button"
 import { Card } from "app/components/ui/card"
 import { Clock, Mail, MapPin, Phone } from "lucide-react"
-import Image from "next/image"
+// import Image from "next/image"
 
 export default function ContactPage() {
    return (
