@@ -60,7 +60,7 @@ export default function ContactPage() {
                                  <label htmlFor="subject" className="text-sm font-medium">
                                     Asunto
                                  </label>
-                                 <Input id="subject" name="subject" placeholder="¿De qué se trata esto?" required />
+                                 <Input id="subject" name="subject" placeholder="Asunto" required />
                               </div>
 
                               <div className="space-y-2">

@@ -2,6 +2,7 @@
 
 import { Menu, Sun } from "lucide-react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import type React from "react"
 import { useEffect, useState } from "react"
 import { Button } from "./ui/button"
@@ -9,6 +10,7 @@ import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
 
 export function SiteHeader() {
    const [isScrolled, setIsScrolled] = useState(false)
+   const router = useRouter();
 
    useEffect(() => {
       const handleScroll = () => {
@@ -29,11 +31,15 @@ export function SiteHeader() {
 
    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
       e.preventDefault()
-      const element = document.querySelector(href)
-      if (element) {
-         element.scrollIntoView({ behavior: "smooth" })
-         // Update URL without page reload
-         window.history.pushState(null, "", href)
+      if (href.startsWith("#")) {
+         const element = document.querySelector(href)
+         if (element) {
+            element.scrollIntoView({ behavior: "smooth" })
+            // optional: update URL hash without reload
+            window.history.pushState(null, "", href)
+         }
+      } else {
+         router.push(href)
       }
    }
 
