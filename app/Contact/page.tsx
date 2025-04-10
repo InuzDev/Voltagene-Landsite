@@ -1,4 +1,5 @@
 import { Input } from "app/components/input"
+import { SiteFooter } from "app/components/Site-footer"
 import { SiteHeader } from "app/components/Site-header"
 import { Textarea } from "app/components/textarea"
 import { Button } from "app/components/ui/button"
@@ -162,6 +163,7 @@ export default function ContactPage() {
                </div>
             </section>
          </main>
+         <SiteFooter />
       </>
    )
 }
