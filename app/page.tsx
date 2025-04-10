@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowDown, ArrowRight, ArrowUpRight, ExternalLink, Sun } from "lucide-react"
+import { ArrowDown, ArrowRight, ArrowUpRight, ExternalLink } from "lucide-react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { useEffect, useRef, useState } from "react"

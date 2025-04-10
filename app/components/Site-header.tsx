@@ -27,8 +27,6 @@ export function SiteHeader() {
    const isHome = pathname === '/'
    const shouldBeTransparent = isHome && !isScrolled
 
-   const root = '/'
-
    // Navigation links data
    const navLinks = [
       { href: '/', label: 'Home' },
