@@ -20,7 +20,7 @@ export default function RootLayout({
    return (
       <html lang="en" className="scroll-smooth">
          <body className={inter.className}>
-            <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
+            <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
                {children}
             </ThemeProvider>
          </body>
