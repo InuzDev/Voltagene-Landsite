@@ -33,7 +33,7 @@ export function SiteHeader() {
       { href: "/#services", label: "Services" },
       { href: "/#projects", label: "Projects" },
       { href: "/#about", label: "About" },
-      { href: "/#testimonials", label: "Testimonials" },
+      // { href: "/#testimonials", label: "Testimonials" },
       { href: "/Contact", label: "Contact" },
    ]
 

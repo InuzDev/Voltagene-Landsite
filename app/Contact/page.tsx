@@ -7,6 +7,7 @@ import { Card } from "app/components/ui/card"
 import { Clock, Mail, MapPin, Phone } from "lucide-react"
 // import Image from "next/image"
 
+// Making this functional.
 export default function ContactPage() {
    return (
       <>
