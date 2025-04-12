@@ -27,16 +27,6 @@ export function SiteHeader() {
    const isHome = pathname === '/'
    const shouldBeTransparent = isHome && !isScrolled
 
-   // Navigation links data
-   const navLinks = [
-      { href: '/', label: 'Home' },
-      { href: "/#services", label: "Services" },
-      { href: "/#projects", label: "Projects" },
-      { href: "/#about", label: "About" },
-      // { href: "/#testimonials", label: "Testimonials" },
-      { href: "/Contact", label: "Contact" },
-   ]
-
    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
       e.preventDefault()
       if (href.startsWith("#")) {
@@ -50,6 +40,17 @@ export function SiteHeader() {
          router.push(href)
       }
    }
+
+   // Navigation links data
+   const navLinks = [
+      { href: '/', label: 'Inicio' },
+      { href: "/#services", label: "Servicios" },
+      { href: "/#projects", label: "Proyectos" },
+      { href: "/#about", label: "Sobre Nosotros" },
+      // { href: "/#testimonials", label: "Testimonials" },
+      { href: "/Contact", label: "Contáctanos" },
+   ]
+
 
    return (
       <header
@@ -84,7 +85,7 @@ export function SiteHeader() {
                      : "bg-green-800 hover:bg-green-900 text-white"
                      }`}
                >
-                  Get a Quote
+                  Obtener Cotización
                </Button>
 
                {/* Mobile Navigation */}
@@ -115,7 +116,7 @@ export function SiteHeader() {
                               </a>
                            ))}
                            <Button className="mt-4 bg-green-800 hover:bg-green-900 text-white">
-                              Get a Quote
+                              Obtener Cotización
                            </Button>
                         </nav>
                      </div>
