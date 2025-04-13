@@ -7,9 +7,9 @@ import "./Global.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-   title: "Voltagene SRL - Solar Energy Solutions",
+   title: "Voltagene SRL - Soluciones para energía solar",
    description:
-      "Professional solar panel installation, cleaning, and remodeling services for residential and commercial properties.",
+      "Servicios profesionales de instalación, limpieza y remodelación de paneles solares para propiedades residenciales y comerciales.",
 }
 
 export default function RootLayout({
