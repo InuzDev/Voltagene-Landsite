@@ -2,10 +2,10 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
    const data = await req.json()
-   const { name, email, message } = data;
+   const { firstName, lastName, email, subject, message } = data;
 
-   if (!name || !email || !message) {
-      return NextResponse.json({ errpr: "All fields are required. " }), { status: 400 }
+   if (!firstName || !lastName || !email || !subject || !message) {
+      return NextResponse.json({ error: "Hay parametros que faltan / There are missing parameters. " }), { status: 400 }
    }
 
    return NextResponse.json({ success: true })
