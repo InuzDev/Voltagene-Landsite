@@ -8,6 +8,6 @@ export function ThemeProvider({
    ...props
 }: React.ComponentProps<typeof NextThemesProvider>) {
    return (
-      <NextThemesProvider {...props}><html>{children}</html></NextThemesProvider>
+      <NextThemesProvider {...props}>{children}</NextThemesProvider>
    )
 }

@@ -43,57 +43,77 @@ export default function Home() {
    const services = [
       {
          id: 1,
-         title: "Solar Installation",
+         title: "Instalación Solar",
          description:
-            "Professional installation of high-efficiency solar panels for residential and commercial properties.",
+            "Instalación profesional de paneles solares de alta eficiencia para propiedades residenciales y comerciales.",
          image: "/GasStation.png?height=400&width=600",
-         features: ["Custom system design", "Premium panels", "Expert installation", "Warranty coverage"],
+         features: [
+            "Diseño personalizado del sistema",
+            "Paneles de primera calidad",
+            "Instalación por expertos",
+            "Cobertura de garantía",
+         ],
       },
       {
          id: 2,
-         title: "Panel Cleaning",
+         title: "Limpieza de Paneles",
          description:
-            "Regular maintenance and cleaning services to ensure your solar panels operate at maximum efficiency.",
+            "Servicios regulares de mantenimiento y limpieza para asegurar que tus paneles solares funcionen al máximo rendimiento.",
          image: "/GasStation.png?height=400&width=600",
-         features: ["Increased efficiency", "Extends panel life", "Scheduled maintenance", "Performance monitoring"],
+         features: [
+            "Mayor eficiencia",
+            "Prolonga la vida útil de los paneles",
+            "Mantenimiento programado",
+            "Monitoreo del rendimiento",
+         ],
       },
       {
          id: 3,
-         title: "System Remodeling",
-         description: "Upgrade and remodel existing solar systems to improve performance and energy production.",
+         title: "Remodelación del Sistema",
+         description:
+            "Actualización y remodelación de sistemas solares existentes para mejorar el rendimiento y la producción de energía.",
          image: "/GasStation.png?height=400&width=600",
-         features: ["System assessment", "Technology upgrades", "Capacity expansion", "Performance optimization"],
+         features: [
+            "Evaluación del sistema",
+            "Actualización tecnológica",
+            "Ampliación de capacidad",
+            "Optimización del rendimiento",
+         ],
       },
-   ]
+   ];
+
 
    // Recent projects data
    const recentProjects = [
       {
          id: 1,
-         title: "Residential Solar Installation",
+         title: "Instalación Solar Residencial",
          location: "Sunnyvale, CA",
          description:
-            "Complete rooftop solar panel installation for a 2,500 sq ft home, providing 100% of the family's energy needs.",
-         metrics: "12.5 kW system | 30 panels | $15,000 annual savings",
+            "Instalación completa de paneles solares en el techo de una casa de 2,500 pies², cubriendo el 100% de las necesidades energéticas de la familia.",
+         metrics: "Sistema de 12.5 kW | 30 paneles | $15,000 de ahorro anual",
          image: "/FamHome.png?height=600&width=800",
       },
       {
          id: 2,
-         title: "Commercial Office Building",
+         title: "Edificio de Oficinas Comercial",
          location: "Austin, TX",
-         description: "Large-scale commercial installation for a 4-story office building, reducing energy costs by 65%.",
-         metrics: "75 kW system | 180 panels | Carbon reduction: 120 tons/year",
+         description:
+            "Instalación comercial a gran escala para un edificio de oficinas de 4 pisos, reduciendo los costos energéticos en un 65%.",
+         metrics: "Sistema de 75 kW | 180 paneles | Reducción de carbono: 120 toneladas/año",
          image: "/FamHome.png?height=600&width=800",
       },
       {
          id: 3,
-         title: "Community Solar Farm",
+         title: "Granja Solar Comunitaria",
          location: "Boulder, CO",
-         description: "Community solar project providing clean energy to 150+ homes in the local neighborhood.",
-         metrics: "250 kW system | 600 panels | Powers 150 homes",
+         description:
+            "Proyecto solar comunitario que proporciona energía limpia a más de 150 hogares en el vecindario local.",
+         metrics: "Sistema de 250 kW | 600 paneles | Suministra a 150 hogares",
          image: "/FamHome.png?height=600&width=800",
       },
-   ]
+   ];
+
 
    return (
       <>
@@ -117,15 +137,15 @@ export default function Home() {
                {/* Hero Content */}
                <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 text-white">
                   {/* <Sun className="h-16 w-16 mb-6 text-yellow-400 animate-pulse" /> */}
-                  <h1 className="text-4xl md:text-6xl font-bold mb-4">Powering Your Future With Solar Energy</h1>
+                  <h1 className="text-4xl md:text-6xl font-bold mb-4">Impulsando Tu Futuro con Energía Solar</h1>
                   <p className="text-xl md:text-2xl max-w-3xl mb-8">
-                     Professional installation, cleaning, and remodeling services for sustainable energy solutions.
+                     Instalación profesional, limpieza y remodelación para soluciones energéticas sostenibles.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                      <Button size="lg" className="bg-green-800 hover:bg-green-900 text-white" onClick={() => {
                         router.push("/Contact")
                      }}>
-                        Get a Free Quote
+                        Solicita una Cotización Gratis
                      </Button>
                      <Button
                         size="lg"
@@ -135,7 +155,7 @@ export default function Home() {
                            document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })
                         }}
                      >
-                        Our Services
+                        Nuestros Servicios
                      </Button>
                   </div>
 
@@ -156,9 +176,9 @@ export default function Home() {
             <section id="services" className="w-full py-24 px-4 bg-white">
                <div className="max-w-6xl mx-auto">
                   <div className="text-center mb-16">
-                     <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Solar Services</h2>
+                     <h2 className="text-3xl md:text-4xl font-bold mb-4">Nuestros Servicios</h2>
                      <p className="text-gray-600 max-w-2xl mx-auto">
-                        We provide comprehensive solar solutions to meet your energy needs, from installation to maintenance.
+                        Ofrecemos soluciones solares integrales para satisfacer tus necesidades energéticas, desde la instalación hasta el mantenimiento.
                      </p>
                   </div>
 
@@ -212,9 +232,9 @@ export default function Home() {
             {/* Recent Projects Section */}
             <section id="projects" className="w-full py-20 px-4 bg-gray-50">
                <div className="max-w-6xl mx-auto">
-                  <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">Recent Projects</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">Proyectos Recientes</h2>
                   <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
-                     Take a look at some of our recent solar installations and the impact they&apos;ve made for our clients.
+                     Conoce algunas de nuestras instalaciones solares más recientes y el impacto que han tenido en nuestros clientes.
                   </p>
 
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -249,7 +269,7 @@ export default function Home() {
                                  variant="outline"
                                  className="w-full flex items-center justify-center gap-2 text-green-800 border-green-800 hover:bg-green-50"
                               >
-                                 View Case Study <ExternalLink size={16} />
+                                 Ver Estudio de Caso <ExternalLink size={16} />
                               </Button>
                            </div>
                         </div>
@@ -258,7 +278,7 @@ export default function Home() {
 
                   <div className="text-center mt-12">
                      <Button className="bg-green-800 hover:bg-green-900 text-white flex items-center gap-2">
-                        View All Projects <ArrowRight size={16} />
+                        Ver Todos los Proyectos <ArrowRight size={16} />
                      </Button>
                   </div>
                </div>
