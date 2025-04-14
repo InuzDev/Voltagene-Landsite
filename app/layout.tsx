@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import type React from "react"
@@ -21,6 +22,7 @@ export default function RootLayout({
       <html lang="en" className="scroll-smooth">
          <body className={inter.className}>
             <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+               <Analytics />
                {children}
             </ThemeProvider>
          </body>
