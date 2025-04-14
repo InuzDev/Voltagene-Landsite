@@ -82,7 +82,7 @@ export default function ContactPage() {
                      {/* Contact Information */}
                      <div className="space-y-8">
                         <div>
-                           <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
+                           <h2 className="text-2xl font-semibold mb-6">Información de contacto</h2>
                            <p className="text-gray-600 mb-8">
                               Contáctenos directamente o visite nuestra oficina.
                               Nuestro equipo está listo para responder sus preguntas y brindarle las soluciones solares que necesita.
@@ -94,7 +94,7 @@ export default function ContactPage() {
                                     <MapPin className="h-5 w-5 text-green-600" />
                                  </div>
                                  <div className="ml-3">
-                                    <h3 className="text-base font-medium">Our Location</h3>
+                                    <h3 className="text-base font-medium">Nuestra ubicación</h3>
                                     <p className="text-gray-600">
                                        Calle Principal #123, Santiago de los Caballeros
                                        <br />

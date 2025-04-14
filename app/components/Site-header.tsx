@@ -84,8 +84,9 @@ export function SiteHeader() {
                      ? "bg-white text-green-800 hover:bg-gray-100"
                      : "bg-green-800 hover:bg-green-900 text-white"
                      }`}
+                  onClick={() => { location.replace("/Contact") }}
                >
-                  Obtener Cotización
+                  Obtener cotización
                </Button>
 
                {/* Mobile Navigation */}
@@ -115,7 +116,7 @@ export function SiteHeader() {
                                  {link.label}
                               </a>
                            ))}
-                           <Button className="mt-4 bg-green-800 hover:bg-green-900 text-white">
+                           <Button onClick={() => { location.replace("/Contact") }} className="mt-4 bg-green-800 hover:bg-green-900 text-white">
                               Obtener Cotización
                            </Button>
                         </nav>
