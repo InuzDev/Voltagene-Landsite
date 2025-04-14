@@ -219,7 +219,7 @@ export default function Home() {
                                  variant="ghost"
                                  className="w-full justify-between text-green-800 hover:text-green-900 hover:bg-green-50 border border-green-200 group-hover:border-green-300 transition-colors"
                               >
-                                 Learn More{" "}
+                                 Aprende más{" "}
                                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                               </Button>
                            </div>
