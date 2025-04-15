@@ -4,8 +4,6 @@ import { ArrowDown, ArrowRight, ArrowUpRight, ExternalLink } from "lucide-react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { useEffect, useRef, useState } from "react"
-import { SiteFooter } from "./components/Site-footer"
-import { SiteHeader } from "./components/Site-header"
 import { Button } from "./components/ui/button"
 
 export default function Home() {
@@ -117,7 +115,6 @@ export default function Home() {
 
    return (
       <>
-         <SiteHeader />
          <main className="flex flex-col items-center">
             {/* Hero Section with Fade Effect */}
             <div ref={heroRef} className="relative w-full h-screen">
@@ -285,9 +282,6 @@ export default function Home() {
             </section>
 
             {/* Additional sections will be developed later */}
-
-            {/* Footer */}
-            <SiteFooter />
          </main>
       </>
    )
