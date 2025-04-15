@@ -24,7 +24,8 @@ Feel free to customize the scripts in package.json
 
 On Going chores
 
-- Contact us and sales page
+- sales page
+- Security measures for DDoS and DoS attack.
 
 Project chores list
 
