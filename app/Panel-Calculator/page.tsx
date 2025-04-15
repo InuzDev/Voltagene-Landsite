@@ -1,6 +1,5 @@
 "use client"
 
-import { SiteHeader } from "app/components/Site-header"
 import { Button } from "app/components/ui/button"
 import { Card } from "app/components/ui/card"
 import { Input } from "app/components/ui/input"
