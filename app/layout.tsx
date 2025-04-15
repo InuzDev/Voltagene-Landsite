@@ -1,4 +1,8 @@
+// analytics tools used by vecel
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
+// Imports that are required for the website to work properly
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import type React from "react"
@@ -23,6 +27,7 @@ export default function RootLayout({
          <body className={inter.className}>
             <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
                <Analytics />
+               <SpeedInsights />
                {children}
             </ThemeProvider>
          </body>

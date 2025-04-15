@@ -1,6 +1,6 @@
 "use client"
 
-import { Menu, Sun } from "lucide-react"
+import { Menu } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
@@ -101,7 +101,7 @@ export function SiteHeader() {
                      <div className="flex flex-col h-full">
                         <div className="flex items-center justify-between pb-4 border-b">
                            <Link href="/" className="flex items-center space-x-2">
-                              <Sun className="h-6 w-6 text-yellow-500" />
+                              <Image src="/Logo-main.png" alt="logo-placeholder" height={64} width={64} />
                               <span className="font-bold">Voltagene SRL</span>
                            </Link>
                         </div>
@@ -111,12 +111,12 @@ export function SiteHeader() {
                                  key={link.href}
                                  href={link.href}
                                  onClick={(e) => scrollToSection(e, link.href)}
-                                 className="text-lg font-medium py-2 hover:text-green-700 transition-colors"
+                                 className="text-lg font-medium py-2 px-20 hover:text-green-700 transition-colors"
                               >
                                  {link.label}
                               </a>
                            ))}
-                           <Button onClick={() => { location.replace("/Contact") }} className="mt-4 bg-green-800 hover:bg-green-900 text-white">
+                           <Button onClick={() => { location.replace("/Contact") }} className="mt-3.5 mx-14 bg-green-800 hover:bg-green-900 text-white">
                               Obtener Cotización
                            </Button>
                         </nav>
