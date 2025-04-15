@@ -49,6 +49,7 @@ export function SiteHeader() {
       { href: "/#about", label: "Sobre Nosotros" },
       // { href: "/#testimonials", label: "Testimonials" },
       { href: "/Contact", label: "Contáctanos" },
+      { href: "/Panel-Calculator", label: "Calculadora Solar" }
    ]
 
 

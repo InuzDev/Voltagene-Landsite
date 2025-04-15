@@ -6,6 +6,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import type React from "react"
+import { SiteFooter } from "./components/Site-footer"
+import { SiteHeader } from "./components/Site-header"
 import { ThemeProvider } from "./components/ui/theme-provider"
 import "./Global.css"
 
@@ -26,9 +28,13 @@ export default function RootLayout({
       <html lang="en" className="scroll-smooth">
          <body className={inter.className}>
             <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+               {/* These are the tools used by Vercel for analytiscs */}
                <Analytics />
                <SpeedInsights />
+               {/* This is the content of the website, the actual things happens here. */}
+               <SiteHeader />
                {children}
+               <SiteFooter />
             </ThemeProvider>
          </body>
       </html>

@@ -1,20 +1,19 @@
-import { Input } from "app/components/input"
 import { SiteFooter } from "app/components/Site-footer"
-import { SiteHeader } from "app/components/Site-header"
 import { Textarea } from "app/components/textarea"
 import { Button } from "app/components/ui/button"
 import { Card } from "app/components/ui/card"
+import { Input } from "app/components/ui/input"
 import { Clock, Mail, MapPin, Phone } from "lucide-react"
+import React from "react"
 // import Image from "next/image"
 
 // Making this functional.
 export default function ContactPage() {
    return (
       <>
-         <SiteHeader />
-         <main className="min-h-screen bg-white">
+         <main className="min-h-screen pt-16 bg-white">
             {/* Contact Header Section */}
-            <section className="py-16 px-4 md:px-6 lg:px-8">
+            <section className="py-10 px-4 md:px-6 lg:px-8">
                <div className="max-w-7xl mx-auto">
                   <div className="text-center mb-16">
                      <h1 className="text-4xl font-bold mb-4">Contactanos</h1>
