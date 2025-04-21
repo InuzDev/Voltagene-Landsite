@@ -213,6 +213,7 @@ export default function Home() {
 
                               {/* CTA Button */}
                               <Button
+                                 onClick={() => location.replace("/Contact")} // This is temporal, as we work on the new section for each service.
                                  variant="ghost"
                                  className="w-full justify-between text-green-800 hover:text-green-900 hover:bg-green-50 border border-green-200 group-hover:border-green-300 transition-colors"
                               >

@@ -1,3 +1,4 @@
+"use client"
 import { SiteFooter } from "app/components/Site-footer"
 import { Textarea } from "app/components/textarea"
 import { Button } from "app/components/ui/button"
@@ -9,6 +10,40 @@ import React from "react"
 
 // Making this functional.
 export default function ContactPage() {
+   const [result, setResult] = React.useState("");
+
+   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+      setResult("Sending...");
+
+      const form = event.currentTarget; // more reliable than event.target
+      const formData = new FormData(form);
+
+      formData.append("access_key", "eb583560-aae6-487b-a3c3-e97756fe2a81");
+
+      try {
+         const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+         });
+
+         const data = await response.json();
+
+         if (data.success) {
+            setResult("Form submitted successfully");
+            form.reset(); // reset the form
+         } else {
+            console.error("An error occurred:", data);
+            setResult(data.message);
+         }
+      } catch (error) {
+         console.error("Network error:", error);
+         setResult("Something went wrong. Please try again.");
+      }
+   };
+
+   console.info(result) // This is just to avoid eslint errors during deployment
+
    return (
       <>
          <main className="min-h-screen pt-16 bg-white">
@@ -27,19 +62,19 @@ export default function ContactPage() {
                      <div>
                         <Card className="p-8 shadow-sm">
                            <h2 className="text-2xl font-semibold mb-6">Envíanos un mensaje</h2>
-                           <form className="space-y-6">
+                           <form className="space-y-6" onSubmit={onSubmit}>
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                  <div className="space-y-2">
                                     <label htmlFor="firstName" className="text-sm font-medium">
                                        Nombre
                                     </label>
-                                    <Input id="firstName" name="firstName" placeholder="Introduce tu nombre" required />
+                                    <Input id="firstName" name="Nombre" placeholder="Introduce tu nombre" required />
                                  </div>
                                  <div className="space-y-2">
                                     <label htmlFor="lastName" className="text-sm font-medium">
                                        Apellido
                                     </label>
-                                    <Input id="lastName" name="lastName" placeholder="Introduce tu apellido" required />
+                                    <Input id="lastName" name="Apellido" placeholder="Introduce tu apellido" required />
                                  </div>
                               </div>
 
@@ -47,14 +82,14 @@ export default function ContactPage() {
                                  <label htmlFor="email" className="text-sm font-medium">
                                     E-mail / Correo Electrónico
                                  </label>
-                                 <Input id="email" name="email" type="email" placeholder="Introduce tu dirección de correo electrónico" required />
+                                 <Input id="email" name="Correo Electrónico" type="email" placeholder="Introduce tu dirección de correo electrónico" required />
                               </div>
 
                               <div className="space-y-2">
                                  <label htmlFor="phone" className="text-sm font-medium">
                                     Número de telefono
                                  </label>
-                                 <Input id="phone" name="phone" type="tel" placeholder="Introduce tu número de telefono" />
+                                 <Input id="phone" name="Telefono" type="tel" placeholder="Introduce tu número de telefono +1(829) 1234-4567" /> {/* Just put the +x (xxx) xxx-xxxx */}
                               </div>
 
                               <div className="space-y-2">
@@ -68,7 +103,7 @@ export default function ContactPage() {
                                  <label htmlFor="message" className="text-sm font-medium">
                                     Mensaje
                                  </label>
-                                 <Textarea id="message" name="message" placeholder="Cuéntanos cómo podemos ayudarte" rows={5} required />
+                                 <Textarea id="message" name="Mensaje" placeholder="Cuéntanos cómo podemos ayudarte" rows={5} required />
                               </div>
 
                               <Button type="submit" className="w-full bg-green-600 hover:bg-green-700">
