@@ -42,7 +42,7 @@ export default function ContactPage() {
       }
    };
 
-   console.log(result) // This is just to avoid eslint errors during deployment
+   console.info(result) // This is just to avoid eslint errors during deployment
 
    return (
       <>
@@ -68,13 +68,13 @@ export default function ContactPage() {
                                     <label htmlFor="firstName" className="text-sm font-medium">
                                        Nombre
                                     </label>
-                                    <Input id="firstName" name="firstName" placeholder="Introduce tu nombre" required />
+                                    <Input id="firstName" name="Nombre" placeholder="Introduce tu nombre" required />
                                  </div>
                                  <div className="space-y-2">
                                     <label htmlFor="lastName" className="text-sm font-medium">
                                        Apellido
                                     </label>
-                                    <Input id="lastName" name="lastName" placeholder="Introduce tu apellido" required />
+                                    <Input id="lastName" name="Apellido" placeholder="Introduce tu apellido" required />
                                  </div>
                               </div>
 
@@ -82,14 +82,14 @@ export default function ContactPage() {
                                  <label htmlFor="email" className="text-sm font-medium">
                                     E-mail / Correo Electrónico
                                  </label>
-                                 <Input id="email" name="email" type="email" placeholder="Introduce tu dirección de correo electrónico" required />
+                                 <Input id="email" name="Correo Electrónico" type="email" placeholder="Introduce tu dirección de correo electrónico" required />
                               </div>
 
                               <div className="space-y-2">
                                  <label htmlFor="phone" className="text-sm font-medium">
                                     Número de telefono
                                  </label>
-                                 <Input id="phone" name="phone" type="tel" placeholder="Introduce tu número de telefono" />
+                                 <Input id="phone" name="Telefono" type="tel" placeholder="Introduce tu número de telefono +1(829) 1234-4567" /> {/* Just put the +x (xxx) xxx-xxxx */}
                               </div>
 
                               <div className="space-y-2">
@@ -103,7 +103,7 @@ export default function ContactPage() {
                                  <label htmlFor="message" className="text-sm font-medium">
                                     Mensaje
                                  </label>
-                                 <Textarea id="message" name="message" placeholder="Cuéntanos cómo podemos ayudarte" rows={5} required />
+                                 <Textarea id="message" name="Mensaje" placeholder="Cuéntanos cómo podemos ayudarte" rows={5} required />
                               </div>
 
                               <Button type="submit" className="w-full bg-green-600 hover:bg-green-700">
