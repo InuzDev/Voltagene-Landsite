@@ -153,7 +153,9 @@ export default function ContactPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-16 px-4 md:px-6 lg:px-8 bg-gray-50">
+
+            {/* The CTA section need to be programmed and developed. */}
+            {/* <section className="py-16 px-4 md:px-6 lg:px-8 bg-gray-50">
                <div className="max-w-7xl mx-auto text-center">
                   <h2 className="text-3xl font-bold mb-6">Ready to Switch to Solar?</h2>
                   <p className="text-gray-600 max-w-2xl mx-auto mb-8">
@@ -161,7 +163,7 @@ export default function ContactPage() {
                   </p>
                   <Button className="bg-green-600 hover:bg-green-700 px-8 py-6 text-lg">Obtenga una cotización gratis</Button>
                </div>
-            </section>
+            </section> */}
          </main>
          <SiteFooter />
       </>

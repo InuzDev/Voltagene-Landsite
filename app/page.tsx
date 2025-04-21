@@ -44,7 +44,7 @@ export default function Home() {
          title: "Instalación Solar",
          description:
             "Instalación profesional de paneles solares de alta eficiencia para propiedades residenciales y comerciales.",
-         image: "/GasStation.png?height=400&width=600",
+         image: "/Modern-home.jpg?height=400&width=600",
          features: [
             "Diseño personalizado del sistema",
             "Paneles de primera calidad",
@@ -57,7 +57,7 @@ export default function Home() {
          title: "Limpieza de Paneles",
          description:
             "Servicios regulares de mantenimiento y limpieza para asegurar que tus paneles solares funcionen al máximo rendimiento.",
-         image: "/GasStation.png?height=400&width=600",
+         image: "/Solar-Cleaning-2.jpg?height=400&width=600",
          features: [
             "Mayor eficiencia",
             "Prolonga la vida útil de los paneles",
@@ -70,7 +70,7 @@ export default function Home() {
          title: "Remodelación del Sistema",
          description:
             "Actualización y remodelación de sistemas solares existentes para mejorar el rendimiento y la producción de energía.",
-         image: "/GasStation.png?height=400&width=600",
+         image: "/Remodeling-system.png?height=400&width=600",
          features: [
             "Evaluación del sistema",
             "Actualización tecnológica",
