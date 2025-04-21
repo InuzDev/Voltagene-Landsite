@@ -9,6 +9,8 @@ import { Calculator, Sun, Zap } from "lucide-react"
 import { useState } from "react"
 
 // Solar panel data (power in watts)
+
+// We need to ask for the real power, name and ID. Call the grown team.
 const SOLAR_PANELS = [
    { id: "eco100", name: "EcoSolar 100W", power: 100 },
    { id: "eco200", name: "EcoSolar 200W", power: 200 },

@@ -5,6 +5,7 @@ node_modules/
 .next/
 
 #Environment variables
+.env
 .env.local
 
 .qodo
