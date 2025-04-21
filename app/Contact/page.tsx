@@ -1,14 +1,42 @@
+"use client"
 import { SiteFooter } from "app/components/Site-footer"
 import { Textarea } from "app/components/textarea"
 import { Button } from "app/components/ui/button"
 import { Card } from "app/components/ui/card"
 import { Input } from "app/components/ui/input"
 import { Clock, Mail, MapPin, Phone } from "lucide-react"
-import React from "react"
+import React, { useState } from "react"
 // import Image from "next/image"
 
 // Making this functional.
 export default function ContactPage() {
+   const [result, setResult] = React.useState("");
+
+   const onSubmit = async (event: any) => {
+      event.preventDefault()
+      setResult("Sending...")
+      const formData = new FormData(event.target)
+
+      formData.append("access_key", "eb583560-aae6-487b-a3c3-e97756fe2a81")
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+         method: "POST",
+         body: formData
+      })
+
+      const data = await response.json();
+
+      if (data.success) {
+         setResult("Form submitted successfully")
+         event.target.reset();
+      } else {
+         console.error("An error has occur, error: ", data)
+         setResult(data.message);
+      }
+   }
+
+   console.log(result);
+
    return (
       <>
          <main className="min-h-screen pt-16 bg-white">
@@ -27,7 +55,7 @@ export default function ContactPage() {
                      <div>
                         <Card className="p-8 shadow-sm">
                            <h2 className="text-2xl font-semibold mb-6">Envíanos un mensaje</h2>
-                           <form className="space-y-6">
+                           <form className="space-y-6" onSubmit={onSubmit}>
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                  <div className="space-y-2">
                                     <label htmlFor="firstName" className="text-sm font-medium">
