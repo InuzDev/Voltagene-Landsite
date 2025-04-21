@@ -70,7 +70,7 @@ export default function Home() {
          title: "Remodelación del Sistema",
          description:
             "Actualización y remodelación de sistemas solares existentes para mejorar el rendimiento y la producción de energía.",
-         image: "/GasStation.png?height=400&width=600",
+         image: "/Remodeling-system.png?height=400&width=600",
          features: [
             "Evaluación del sistema",
             "Actualización tecnológica",
