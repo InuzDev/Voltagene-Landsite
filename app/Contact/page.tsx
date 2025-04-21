@@ -5,37 +5,44 @@ import { Button } from "app/components/ui/button"
 import { Card } from "app/components/ui/card"
 import { Input } from "app/components/ui/input"
 import { Clock, Mail, MapPin, Phone } from "lucide-react"
-import React, { useState } from "react"
+import React from "react"
 // import Image from "next/image"
 
 // Making this functional.
 export default function ContactPage() {
    const [result, setResult] = React.useState("");
 
-   const onSubmit = async (event: any) => {
-      event.preventDefault()
-      setResult("Sending...")
-      const formData = new FormData(event.target)
+   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+      setResult("Sending...");
 
-      formData.append("access_key", "eb583560-aae6-487b-a3c3-e97756fe2a81")
+      const form = event.currentTarget; // more reliable than event.target
+      const formData = new FormData(form);
 
-      const response = await fetch("https://api.web3forms.com/submit", {
-         method: "POST",
-         body: formData
-      })
+      formData.append("access_key", "eb583560-aae6-487b-a3c3-e97756fe2a81");
 
-      const data = await response.json();
+      try {
+         const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+         });
 
-      if (data.success) {
-         setResult("Form submitted successfully")
-         event.target.reset();
-      } else {
-         console.error("An error has occur, error: ", data)
-         setResult(data.message);
+         const data = await response.json();
+
+         if (data.success) {
+            setResult("Form submitted successfully");
+            form.reset(); // reset the form
+         } else {
+            console.error("An error occurred:", data);
+            setResult(data.message);
+         }
+      } catch (error) {
+         console.error("Network error:", error);
+         setResult("Something went wrong. Please try again.");
       }
-   }
+   };
 
-   console.log(result);
+   console.log(result) // This is just to avoid eslint errors during deployment
 
    return (
       <>
