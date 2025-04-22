@@ -222,12 +222,12 @@ export default function CalculadoraSolarPage() {
                         </div>
 
                         <div className="space-y-2">
-                           <h3 className="font-medium">¿Necesitas ayuda con tu instalación solar?</h3>
+                           <h3 className="font-medium">¿Estás listo para empezar a ahorrar en tu factura de la luz?</h3>
                            <p className="text-gray-600 text-sm">
                               Nuestro equipo de expertos está listo para ayudarte a diseñar e instalar tu sistema solar
                               personalizado.
                            </p>
-                           <Button onClick={() => { location.replace("/Contact") }} variant="outline" className="w-full">
+                           <Button onClick={() => { location.replace("/Contact") }} variant="outline" className="w-full text-white bg-green-600 hover:bg-green-700">
                               Contactar con un especialista
                            </Button>
                         </div>
