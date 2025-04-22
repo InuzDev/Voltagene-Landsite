@@ -115,7 +115,7 @@ export default function Home() {
 
    return (
       <>
-         <main className="flex flex-col items-center">
+         <main className="min-h-screen flex flex-col items-center">
             {/* Hero Section with Fade Effect */}
             <div ref={heroRef} className="relative w-full h-screen">
                {/* Background Image with Fade Effect */}
@@ -213,7 +213,7 @@ export default function Home() {
 
                               {/* CTA Button */}
                               <Button
-                                 onClick={() => location.replace("/Contact")} // This is temporal, as we work on the new section for each service.
+                                 onClick={() => location.replace("/Services")}
                                  variant="ghost"
                                  className="w-full justify-between text-green-800 hover:text-green-900 hover:bg-green-50 border border-green-200 group-hover:border-green-300 transition-colors"
                               >
@@ -275,7 +275,7 @@ export default function Home() {
                   </div>
 
                   <div className="text-center mt-12">
-                     <Button className="bg-green-800 hover:bg-green-900 text-white flex items-center gap-2">
+                     <Button onClick={() => location.replace("/Projects")} className="bg-green-800 hover:bg-green-900 text-white flex items-center gap-2">
                         Ver Todos los Proyectos <ArrowRight size={16} />
                      </Button>
                   </div>
