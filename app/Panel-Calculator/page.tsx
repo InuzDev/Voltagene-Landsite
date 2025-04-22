@@ -26,9 +26,39 @@ const SOLAR_PANELS = [
 
 // We also need a dropdown menu that combines with the actual design.
 const REGIONS = [
-   { id: 'santiago', regionName: 'Santiago', sunhours: 3 },
-   { id: 'SantoDomingo', regionName: 'Santo Domingo', sunhours: 7 }
-]
+   { id: 'azua', regionName: 'Azua', sunhours: 8.2 },
+   { id: 'bahoruco', regionName: 'Bahoruco', sunhours: 8.0 },
+   { id: 'barahona', regionName: 'Barahona', sunhours: 8.3 },
+   { id: 'dajabon', regionName: 'Dajabón', sunhours: 8.1 },
+   { id: 'distritoNacional', regionName: 'Distrito Nacional', sunhours: 8.1 },
+   { id: 'duarte', regionName: 'Duarte', sunhours: 8.4 },
+   { id: 'elSeibo', regionName: 'El Seibo', sunhours: 8.5 },
+   { id: 'eliasPina', regionName: 'Elías Piña', sunhours: 8.0 },
+   { id: 'espaillat', regionName: 'Espaillat', sunhours: 8.3 },
+   { id: 'hatoMayor', regionName: 'Hato Mayor', sunhours: 8.4 },
+   { id: 'independencia', regionName: 'Independencia', sunhours: 8.1 },
+   { id: 'laAltagracia', regionName: 'La Altagracia', sunhours: 8.7 },
+   { id: 'laRomana', regionName: 'La Romana', sunhours: 8.6 },
+   { id: 'laVega', regionName: 'La Vega', sunhours: 8.4 },
+   { id: 'mariaTrinidadSanchez', regionName: 'María Trinidad Sánchez', sunhours: 8.3 },
+   { id: 'monseñorNouel', regionName: 'Monseñor Nouel', sunhours: 8.2 },
+   { id: 'monteCristi', regionName: 'Monte Cristi', sunhours: 8.5 },
+   { id: 'montePlata', regionName: 'Monte Plata', sunhours: 8.2 },
+   { id: 'pedernales', regionName: 'Pedernales', sunhours: 8.6 },
+   { id: 'peravia', regionName: 'Peravia', sunhours: 8.3 },
+   { id: 'puertoPlata', regionName: 'Puerto Plata', sunhours: 7.4 },
+   { id: 'samana', regionName: 'Samaná', sunhours: 7.5 },
+   { id: 'sanchezRamirez', regionName: 'Sánchez Ramírez', sunhours: 8.2 },
+   { id: 'sanCristobal', regionName: 'San Cristóbal', sunhours: 8.1 },
+   { id: 'sanJoseDeOcoa', regionName: 'San José de Ocoa', sunhours: 8.0 },
+   { id: 'sanJuan', regionName: 'San Juan', sunhours: 8.3 },
+   { id: 'sanPedroDeMacoris', regionName: 'San Pedro de Macorís', sunhours: 8.4 },
+   { id: 'santiago', regionName: 'Santiago', sunhours: 8.4 },
+   { id: 'santiagoRodriguez', regionName: 'Santiago Rodríguez', sunhours: 8.2 },
+   { id: 'santoDomingo', regionName: 'Santo Domingo', sunhours: 8.1 },
+   { id: 'valverde', regionName: 'Valverde', sunhours: 8.3 }
+];
+
 
 // Average sun hours per day (can be adjusted based on location)
 // const AVERAGE_SUN_HOURS = 5
