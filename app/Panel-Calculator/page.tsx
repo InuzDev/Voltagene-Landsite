@@ -49,6 +49,8 @@ export default function CalculadoraSolarPage() {
       panelCount: number
       totalPowerW: number
       totalPowerKW: number
+      selectedRegion: string
+      RegionSunHours: number
       selectedModel: string
       monthlyConsumptionKWh: number
    } | null>(null)
@@ -75,6 +77,8 @@ export default function CalculadoraSolarPage() {
          panelCount,
          totalPowerW,
          totalPowerKW,
+         selectedRegion: selectedRegion.regionName,
+         RegionSunHours: selectedRegion.sunhours,
          selectedModel: selectedPanel.name,
          monthlyConsumptionKWh: monthlyConsumptionKWh,
       })
@@ -170,9 +174,11 @@ export default function CalculadoraSolarPage() {
                                  <span className="font-medium">Consumo mensual:</span> {formatNumber(result.monthlyConsumptionKWh)}{" "}
                                  kWh
                               </p>
-                              {/* <p className="text-gray-700">
-                                 <span className="font-medium">Horas de sol promedio:</span> {AVERAGE_SUN_HOURS} horas
-                              </p> */}
+                              <p className="text-gray-700">
+                                 <span className="font-medium">Region seleccionada:</span> {result.selectedRegion}
+                                 <br />
+                                 <span className="font-medium">Horas promedio de la region seleccionada:</span> {result.RegionSunHours}
+                              </p>
                               <div className="pt-3 border-t border-green-200">
                                  <p className="text-xl font-bold text-green-800">
                                     Necesitas {formatNumber(result.panelCount)} paneles solares
