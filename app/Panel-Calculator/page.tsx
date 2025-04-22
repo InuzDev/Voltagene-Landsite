@@ -1,5 +1,7 @@
 "use client"
 
+// TODO: we need to make a list of regions that shows the ammount of sun light.
+
 import { Button } from "app/components/ui/button"
 import { Card } from "app/components/ui/card"
 import { Input } from "app/components/ui/input"
@@ -66,7 +68,7 @@ export default function CalculadoraSolarPage() {
    }
 
    return (
-      // Añadimos pt-16 (padding-top) para dejar espacio para el header fijo
+      // We add pt-16 (top padding 16) to avoid the header cliping and overpositioning itself on the content of the page.
       <div className="min-h-screen bg-gray-50 pt-16">
          {/* Main content - Eliminamos el header personalizado ya que usaremos el SiteHeader global */}
          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
