@@ -22,8 +22,16 @@ const SOLAR_PANELS = [
    { id: "premium600", name: "Premium Solar 600W", power: 600 },
 ]
 
+// Location of each region in Dominican Republic
+
+// We also need a dropdown menu that combines with the actual design.
+const REGIONS = [
+   { id: 'santiago', regionName: 'Santiago', sunhours: 3 },
+   { id: 'SantoDomingo', regionName: 'Santo Domingo', sunhours: 7 }
+]
+
 // Average sun hours per day (can be adjusted based on location)
-const AVERAGE_SUN_HOURS = 5
+// const AVERAGE_SUN_HOURS = 5
 
 // Helper function to format numbers with thousand separators
 const formatNumber = (num: number): string => {
@@ -31,6 +39,10 @@ const formatNumber = (num: number): string => {
 }
 
 export default function CalculadoraSolarPage() {
+
+   const [region, setRegion] = useState<string>("")
+
+   // this is for the solar panels information
    const [monthlyConsumption, setMonthlyConsumption] = useState<string>("")
    const [panelModel, setPanelModel] = useState<string>("")
    const [result, setResult] = useState<{
@@ -46,15 +58,16 @@ export default function CalculadoraSolarPage() {
       if (!monthlyConsumption || !panelModel) return
 
       // Convert monthly kWh to daily Wh
-      const monthlyConsumptionKWh = Number.parseFloat(monthlyConsumption)
+      const monthlyConsumptionKWh = parseFloat(monthlyConsumption) // Fix this, as the monthlyConsumption should be a integer only
       const dailyConsumptionWh = (monthlyConsumptionKWh * 1000) / 30
 
       const selectedPanel = SOLAR_PANELS.find((panel) => panel.id === panelModel)
+      const selectedRegion = REGIONS.find((_region) => _region.id === region)
 
-      if (!selectedPanel) return
+      if (!selectedPanel || !selectedRegion) return
 
       // Basic calculation: Daily consumption (Wh) / (Panel power (W) * Sun hours)
-      const panelCount = Math.ceil(dailyConsumptionWh / (selectedPanel.power * AVERAGE_SUN_HOURS))
+      const panelCount = Math.ceil(dailyConsumptionWh / (selectedPanel.power * selectedRegion.sunhours))
       const totalPowerW = panelCount * selectedPanel.power
       const totalPowerKW = totalPowerW / 1000
 
@@ -101,6 +114,22 @@ export default function CalculadoraSolarPage() {
                      </div>
 
                      <div className="space-y-2">
+                        <Label htmlFor="region">Region del Republica Dominicana</Label>
+                        <Select value={region} onValueChange={setRegion}>
+                           <SelectTrigger id="region" className="w-full">
+                              <SelectValue placeholder="Seleccionar una región del país" />
+                           </SelectTrigger>
+                           <SelectContent>
+                              {REGIONS.map((region) => (
+                                 <SelectItem key={region.id} value={region.id}>
+                                    {region.regionName}
+                                 </SelectItem>
+                              ))}
+                           </SelectContent>
+                        </Select>
+                     </div>
+
+                     <div className="space-y-2">
                         <Label htmlFor="model">Modelo de panel solar</Label>
                         <Select value={panelModel} onValueChange={setPanelModel}>
                            <SelectTrigger id="model" className="w-full">
@@ -141,9 +170,9 @@ export default function CalculadoraSolarPage() {
                                  <span className="font-medium">Consumo mensual:</span> {formatNumber(result.monthlyConsumptionKWh)}{" "}
                                  kWh
                               </p>
-                              <p className="text-gray-700">
+                              {/* <p className="text-gray-700">
                                  <span className="font-medium">Horas de sol promedio:</span> {AVERAGE_SUN_HOURS} horas
-                              </p>
+                              </p> */}
                               <div className="pt-3 border-t border-green-200">
                                  <p className="text-xl font-bold text-green-800">
                                     Necesitas {formatNumber(result.panelCount)} paneles solares
@@ -176,7 +205,7 @@ export default function CalculadoraSolarPage() {
                </Card>
             </div>
 
-            <div className="max-w-5xl mx-auto mt-8 p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+            {/* <div className="max-w-5xl mx-auto mt-8 p-4 bg-white rounded-lg shadow-sm border border-gray-200">
                <h3 className="font-medium text-lg mb-2">Información adicional</h3>
                <p className="text-sm text-gray-600">
                   <strong>Nota:</strong> Este cálculo es una estimación basada en {AVERAGE_SUN_HOURS} horas de sol promedio
@@ -184,7 +213,7 @@ export default function CalculadoraSolarPage() {
                   ubicación geográfica, orientación de los paneles, sombras y otros factores. Para un cálculo más preciso,
                   contacte con nuestros especialistas.
                </p>
-            </div>
+            </div> */}
          </main>
       </div>
    )
