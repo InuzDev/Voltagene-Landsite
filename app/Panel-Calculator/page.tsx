@@ -227,7 +227,7 @@ export default function CalculadoraSolarPage() {
                               Nuestro equipo de expertos está listo para ayudarte a diseñar e instalar tu sistema solar
                               personalizado.
                            </p>
-                           <Button onClick={() => { location.replace("/Contact") }} variant="outline" className="w-full text-white bg-green-600 hover:bg-green-700">
+                           <Button onClick={() => { location.replace("/Contact") }} variant="outline" className="w-full hover:text-white hover:bg-green-700 bg-green-600 text-white">
                               Contactar con un especialista
                            </Button>
                         </div>
