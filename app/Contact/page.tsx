@@ -1,6 +1,6 @@
 "use client"
 import { SiteFooter } from "app/components/Site-footer"
-import { Textarea } from "app/components/textarea"
+import { Textarea } from "app/components/ui/textarea"
 import { Button } from "app/components/ui/button"
 import { Card } from "app/components/ui/card"
 import { Input } from "app/components/ui/input"

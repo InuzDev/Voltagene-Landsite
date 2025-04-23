@@ -24,7 +24,10 @@ const SOLAR_PANELS = [
 
 // Location of each region in Dominican Republic
 
-// We also need a dropdown menu that combines with the actual design.
+/*
+We calculated the average sun hour of each region, every sunhours is the result of the average sunhours all year.
+*/
+
 const REGIONS = [
    { id: 'azua', regionName: 'Azua', sunhours: 8.2 },
    { id: 'bahoruco', regionName: 'Bahoruco', sunhours: 8.0 },

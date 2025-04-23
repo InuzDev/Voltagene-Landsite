@@ -1,3 +1,5 @@
+// Low priority, need to be redo
+
 'use client'
 import { useEffect } from "react"
 import { SiteHeader } from "./components/Site-header"

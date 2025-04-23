@@ -1,6 +1,6 @@
 {
   "name": "voltagene-landsite",
-  "version": "0.0.3",
+  "version": "0.1.4",
   "description": "Official Voltagene SRL Website, minimalist. Made by Charles David (InuzDev)",
   "scripts": {
     "dev": "next dev",

@@ -15,6 +15,19 @@ export function SiteHeader() {
    const pathname = usePathname();
    const router = useRouter();
 
+   // Navigation links data
+   const generateNavLinks = (pathname: string) => [
+      { href: '/', label: 'Inicio' },
+      { href: pathname === "/" ? "/#services" : "/Services", label: "Servicios" },
+      { href: "/#projects", label: "Proyectos" },
+      { href: "/#about", label: "Sobre Nosotros" },
+      // { href: "/#testimonials", label: "Testimonials" },
+      { href: "/Panel-Calculator", label: "Calculadora Solar" },
+      { href: "/Contact", label: "Contáctanos" },
+   ]
+
+   const navLinks = generateNavLinks(pathname)
+
    useEffect(() => {
       const handleScroll = () => {
          setIsScrolled(window.scrollY > 10)
@@ -40,17 +53,6 @@ export function SiteHeader() {
          router.push(href)
       }
    }
-
-   // Navigation links data
-   const navLinks = [
-      { href: '/', label: 'Inicio' },
-      { href: "/#services", label: "Servicios" },
-      { href: "/#projects", label: "Proyectos" },
-      { href: "/#about", label: "Sobre Nosotros" },
-      // { href: "/#testimonials", label: "Testimonials" },
-      { href: "/Panel-Calculator", label: "Calculadora Solar" },
-      { href: "/Contact", label: "Contáctanos" },
-   ]
 
 
    return (

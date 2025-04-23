@@ -51,6 +51,7 @@ export default function Home() {
             "Instalación por expertos",
             "Cobertura de garantía",
          ],
+         url: "/Services/#Solar-System-Installation"
       },
       {
          id: 2,
@@ -64,6 +65,7 @@ export default function Home() {
             "Mantenimiento programado",
             "Monitoreo del rendimiento",
          ],
+         url: "/Services/#"
       },
       {
          id: 3,
@@ -77,6 +79,7 @@ export default function Home() {
             "Ampliación de capacidad",
             "Optimización del rendimiento",
          ],
+         url: "/Services/#"
       },
    ];
 
@@ -133,7 +136,6 @@ export default function Home() {
 
                {/* Hero Content */}
                <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 text-white">
-                  {/* <Sun className="h-16 w-16 mb-6 text-yellow-400 animate-pulse" /> */}
                   <h1 className="text-4xl md:text-6xl font-bold mb-4">Impulsando Tu Futuro con Energía Solar</h1>
                   <p className="text-xl md:text-2xl max-w-3xl mb-8">
                      Instalación profesional, limpieza y remodelación para soluciones energéticas sostenibles.
@@ -156,7 +158,6 @@ export default function Home() {
                      </Button>
                   </div>
 
-                  {/* Scroll Indicator - Make it clickable */}
                   <button
                      onClick={() => {
                         document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })
@@ -213,7 +214,7 @@ export default function Home() {
 
                               {/* CTA Button */}
                               <Button
-                                 onClick={() => location.replace("/Services")}
+                                 onClick={() => location.replace(service.url)}
                                  variant="ghost"
                                  className="w-full justify-between text-green-800 hover:text-green-900 hover:bg-green-50 border border-green-200 group-hover:border-green-300 transition-colors"
                               >
