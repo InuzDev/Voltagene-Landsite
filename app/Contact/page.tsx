@@ -1,9 +1,10 @@
 "use client"
 import { SiteFooter } from "app/components/Site-footer"
-import { Textarea } from "app/components/ui/textarea"
 import { Button } from "app/components/ui/button"
 import { Card } from "app/components/ui/card"
 import { Input } from "app/components/ui/input"
+import { Toaster } from "app/components/ui/sonner"
+import { Textarea } from "app/components/ui/textarea"
 import { Clock, Mail, MapPin, Phone } from "lucide-react"
 import React from "react"
 // import Image from "next/image"
@@ -12,6 +13,8 @@ import React from "react"
 export default function ContactPage() {
    const [result, setResult] = React.useState("");
 
+
+   // This is where the form submit starts. Sending it to the destinated target.
    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
       setResult("Sending...");
@@ -89,7 +92,7 @@ export default function ContactPage() {
                                  <label htmlFor="phone" className="text-sm font-medium">
                                     Número de telefono
                                  </label>
-                                 <Input id="phone" name="Telefono" type="tel" placeholder="Introduce tu número de telefono +1(829) 1234-4567" /> {/* Just put the +x (xxx) xxx-xxxx */}
+                                 <Input id="phone" name="Telefono" type="tel" placeholder="Introduce tu número de telefono; E.j (829) 1234-4567" /> {/* Just put the +x (xxx) xxx-xxxx */}
                               </div>
 
                               <div className="space-y-2">
@@ -175,6 +178,8 @@ export default function ContactPage() {
                            </div>
                         </div>
 
+                        {/* Let get the map from google maps. */}
+
                         {/* Map */}
                         {/* <div className="mt-8">
                            <h3 className="text-xl font-medium mb-4">Find Us</h3>
@@ -186,6 +191,8 @@ export default function ContactPage() {
                   </div>
                </div>
             </section>
+
+            <Toaster />
 
             {/* CTA Section */}
 
