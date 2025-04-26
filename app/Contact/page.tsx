@@ -145,7 +145,7 @@ export default function ContactPage() {
                                  <div className="ml-3">
                                     <h3 className="text-base font-medium">Nuestra ubicación</h3>
                                     <p className="text-gray-600">
-                                       PENETRACION, No. 22, APTO. RESIDENCIAL CARLIN V APTO A3, Cerro Hermoso, Santiago de los Caballeros
+                                       Penetración, No. 22, Apto. Residencial Carlin V Apto A3, Cerro Hermoso, Santiago de los Caballeros
                                        <br />
                                        República Dominicana
                                     </p>
