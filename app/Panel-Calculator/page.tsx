@@ -15,12 +15,12 @@ import { REGIONS } from "./REGIONS"
 
 // We need to ask for the real power, name and ID. Call the grown team.
 const SOLAR_PANELS = [
-   { id: "eco100", name: "EcoSolar 100W", power: 100 },
-   { id: "eco200", name: "EcoSolar 200W", power: 200 },
-   { id: "eco300", name: "EcoSolar 300W", power: 300 },
-   { id: "eco400", name: "EcoSolar 400W", power: 400 },
-   { id: "premium500", name: "Premium Solar 500W", power: 500 },
-   { id: "premium600", name: "Premium Solar 600W", power: 600 },
+   { id: "eco100", power: 100 },
+   { id: "eco200", power: 200 },
+   { id: "eco300", power: 300 },
+   { id: "eco400", power: 400 },
+   { id: "premium500", power: 500 },
+   { id: "premium600", power: 600 },
 ]
 
 // Helper function to format numbers with thousand separators
