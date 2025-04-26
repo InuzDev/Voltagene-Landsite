@@ -13,6 +13,7 @@ export default function ContactPage() {
    const [rawValue, setRawValue] = useState('');
    const [formattedValue, setFormattedValue] = useState('')
    const [result, setResult] = React.useState("");
+   console.log(rawValue) // avoid unused variable error
 
    // Format the number.
    const HandleFormatNumber = (e: React.ChangeEvent<HTMLInputElement>) => {
