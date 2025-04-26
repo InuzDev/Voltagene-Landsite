@@ -3,7 +3,7 @@
 'use client'
 import { useEffect } from "react"
 import { SiteHeader } from "./components/Site-header"
-
+import './Global.css'
 // Error boundaries must be Client Components - Next.Js docs
 
 export default function GlobalError(
