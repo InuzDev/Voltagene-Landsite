@@ -127,12 +127,12 @@ export default function CalculadoraSolarPage() {
                         <Label htmlFor="model">Potencia de panel solar</Label>
                         <Select value={panelModel} onValueChange={setPanelModel}>
                            <SelectTrigger id="model" className="w-full">
-                              <SelectValue placeholder="Selecciona un modelo de panel" />
+                              <SelectValue placeholder="Selecciona la potencia" />
                            </SelectTrigger>
                            <SelectContent>
                               {SOLAR_PANELS.map((panel) => (
                                  <SelectItem key={panel.id} value={panel.id}>
-                                    {panel.power}
+                                    {panel.power}W
                                  </SelectItem>
                               ))}
                            </SelectContent>
