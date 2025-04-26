@@ -41,7 +41,7 @@ export default function CalculadoraSolarPage() {
       totalPowerKW: number
       selectedRegion: string
       RegionSunHours: number
-      selectedModel: string
+      selectedPower: number
       monthlyConsumptionKWh: number
    } | null>(null)
 
@@ -69,7 +69,7 @@ export default function CalculadoraSolarPage() {
          totalPowerKW,
          selectedRegion: selectedRegion.regionName,
          RegionSunHours: selectedRegion.sunhours,
-         selectedModel: selectedPanel.name,
+         selectedPower: selectedPanel.power,
          monthlyConsumptionKWh: monthlyConsumptionKWh,
       })
    }
@@ -158,7 +158,7 @@ export default function CalculadoraSolarPage() {
                            </h3>
                            <div className="mt-4 space-y-3">
                               <p className="text-gray-700">
-                                 <span className="font-medium">Modelo seleccionado:</span> {result.selectedModel}
+                                 <span className="font-medium">Potencia seleccionado:</span> {result.selectedPower}
                               </p>
                               <p className="text-gray-700">
                                  <span className="font-medium">Consumo mensual:</span> {formatNumber(result.monthlyConsumptionKWh)}{" "}

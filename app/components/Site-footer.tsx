@@ -47,7 +47,7 @@ export function SiteFooter() {
                      </li>
                      <li className="flex items-start">
                         <MapPin className="h-5 w-5 mr-2 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span> 	PENETRACION, No. 22, APTO. RESIDENCIAL CARLIN V APTO A3, Cerro Hermoso, Santiago de los Caballeros</span>
+                        <span>Penetración, No. 22, Apto. Residencial Carlin V Apto A3, Cerro Hermoso, Santiago de los Caballeros</span>
                      </li>
                   </ul>
                </div>
