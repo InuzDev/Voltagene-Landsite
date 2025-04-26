@@ -15,12 +15,12 @@ import { REGIONS } from "./REGIONS"
 
 // We need to ask for the real power, name and ID. Call the grown team.
 const SOLAR_PANELS = [
-   { id: "eco100", name: "EcoSolar 100W", power: 100 },
-   { id: "eco200", name: "EcoSolar 200W", power: 200 },
-   { id: "eco300", name: "EcoSolar 300W", power: 300 },
-   { id: "eco400", name: "EcoSolar 400W", power: 400 },
-   { id: "premium500", name: "Premium Solar 500W", power: 500 },
-   { id: "premium600", name: "Premium Solar 600W", power: 600 },
+   { id: "eco100", power: 100 },
+   { id: "eco200", power: 200 },
+   { id: "eco300", power: 300 },
+   { id: "eco400", power: 400 },
+   { id: "premium500", power: 500 },
+   { id: "premium600", power: 600 },
 ]
 
 // Helper function to format numbers with thousand separators
@@ -41,7 +41,7 @@ export default function CalculadoraSolarPage() {
       totalPowerKW: number
       selectedRegion: string
       RegionSunHours: number
-      selectedModel: string
+      selectedPower: number
       monthlyConsumptionKWh: number
    } | null>(null)
 
@@ -69,7 +69,7 @@ export default function CalculadoraSolarPage() {
          totalPowerKW,
          selectedRegion: selectedRegion.regionName,
          RegionSunHours: selectedRegion.sunhours,
-         selectedModel: selectedPanel.name,
+         selectedPower: selectedPanel.power,
          monthlyConsumptionKWh: monthlyConsumptionKWh,
       })
    }
@@ -124,7 +124,7 @@ export default function CalculadoraSolarPage() {
                      </div>
 
                      <div className="space-y-2">
-                        <Label htmlFor="model">Modelo de panel solar</Label>
+                        <Label htmlFor="model">Potencia de panel solar</Label>
                         <Select value={panelModel} onValueChange={setPanelModel}>
                            <SelectTrigger id="model" className="w-full">
                               <SelectValue placeholder="Selecciona un modelo de panel" />
@@ -132,7 +132,7 @@ export default function CalculadoraSolarPage() {
                            <SelectContent>
                               {SOLAR_PANELS.map((panel) => (
                                  <SelectItem key={panel.id} value={panel.id}>
-                                    {panel.name} ({panel.power}W)
+                                    {panel.power}
                                  </SelectItem>
                               ))}
                            </SelectContent>
@@ -158,7 +158,7 @@ export default function CalculadoraSolarPage() {
                            </h3>
                            <div className="mt-4 space-y-3">
                               <p className="text-gray-700">
-                                 <span className="font-medium">Modelo seleccionado:</span> {result.selectedModel}
+                                 <span className="font-medium">Potencia seleccionado:</span> {result.selectedPower}
                               </p>
                               <p className="text-gray-700">
                                  <span className="font-medium">Consumo mensual:</span> {formatNumber(result.monthlyConsumptionKWh)}{" "}
