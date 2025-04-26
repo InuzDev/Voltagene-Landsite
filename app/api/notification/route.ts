@@ -5,7 +5,6 @@ import { sendNotification as pushSendNotification } from "app/notifications/Noti
 export async function POST(req: NextRequest) {
 
    let { subscription, title, message } = await req.json()
-   // Okay, actually. Just ignore the Eslint errors bruh, we working on a way to make this go away
 
    // If subscription is a string, try to parse it into an object
    if (typeof subscription === "string") {

@@ -1,7 +1,6 @@
 // analytics tools used by vecel
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Toaster } from "./components/ui/sonner"
 
 // Imports that are required for the website to work properly
 import type { Metadata } from "next"

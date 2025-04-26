@@ -1,39 +1,41 @@
-"use client"
+// Still unused, fix the errors. - No explicit use of any
 
-import React, { useEffect, useRef } from "react"
+// "use client"
 
-interface MapProps {
-   lat: number
-   lng: number
-}
+// import React, { useEffect, useRef } from "react"
 
-export default function GoogleMap({ lat, lng }: MapProps) {
-   const mapRef = useRef<HTMLDivElement>(null)
+// interface MapProps {
+//    lat: number
+//    lng: number
+// }
 
-   useEffect(() => {
-      const initializeMap = () => {
-         if (!window.google || !mapRef.current) return
+// export default function GoogleMap({ lat, lng }: MapProps) {
+//    const mapRef = useRef<HTMLDivElement>(null)
 
-         const map = new window.google.maps.Map(mapRef.current, {
-            center: { lat, lng },
-            zoom: 15
-         })
+//    useEffect(() => {
+//       const initializeMap = () => {
+//          if (!window.google || !mapRef.current) return
 
-         new window.google.maps.Marker({
-            position: { lat, lng },
-            map,
-            title: "Estamos aqui!"
-         })
-      }
+//          const map = new window.google.maps.Map(mapRef.current, {
+//             center: { lat, lng },
+//             zoom: 15
+//          })
 
-      if (window.google) {
-         initializeMap();
-      } else {
-         (window as any).initMap = initializeMap
-      }
-   }, [lat, lng])
+//          new window.google.maps.Marker({
+//             position: { lat, lng },
+//             map,
+//             title: "Estamos aqui!"
+//          })
+//       }
 
-   return (
-      <div ref={mapRef} />
-   )
-}
+//       if (window.google) {
+//          initializeMap();
+//       } else {
+//          (window as any).initMap = initializeMap
+//       }
+//    }, [lat, lng])
+
+//    return (
+//       <div ref={mapRef} />
+//    )
+// }

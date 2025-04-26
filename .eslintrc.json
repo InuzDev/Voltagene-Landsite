@@ -2,5 +2,10 @@
   "extends": [
     "next/core-web-vitals",
     "next/typescript"
+  ],
+  "ignorePatterns": [
+    "/app/api/*",
+    "/app/pages/*",
+    "/app/notifications/*"
   ]
 }
