@@ -11,25 +11,25 @@ export function SiteFooter() {
                <div>
                   <h3 className="text-xl font-bold mb-4 text-yellow-500">Voltagene SRL</h3>
                   <p className="text-gray-300 mb-4">
-                     Ofreciendo soluciones de energía sostenible desde 2022. Estamos comprometidos con un futuro más verde a través de tecnología solar innovadora.
+                     Ofreciendo soluciones de energía sostenible desde 2023. Estamos comprometidos con un futuro más verde a través de tecnología solar innovadora.
                   </p>
                   <div className="flex space-x-4">
-                     <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                     <Link href="https://www.facebook.com/profile.php?id=61552793234772" className="text-gray-400 hover:text-white transition-colors">
                         <Facebook size={20} />
                         <span className="sr-only">Facebook</span>
                      </Link>
-                     <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                     {/* <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                         <X size={20} />
                         <span className="sr-only">Twitter</span>
-                     </Link>
-                     <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                     </Link> */}
+                     <Link href="https://www.instagram.com/voltagene/" className="text-gray-400 hover:text-white transition-colors">
                         <Instagram size={20} />
                         <span className="sr-only">Instagram</span>
                      </Link>
-                     <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                     {/* <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                         <Linkedin size={20} />
                         <span className="sr-only">LinkedIn</span>
-                     </Link>
+                     </Link> */}
                   </div>
                </div>
 
@@ -39,7 +39,7 @@ export function SiteFooter() {
                   <ul className="space-y-3">
                      <li className="flex items-start">
                         <Phone className="h-5 w-5 mr-2 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>+1 (809) 555-1234</span>
+                        <span>+1 (849) 490-0306</span>
                      </li>
                      <li className="flex items-start">
                         <Mail className="h-5 w-5 mr-2 text-green-600 mt-0.5 flex-shrink-0" />
@@ -47,13 +47,13 @@ export function SiteFooter() {
                      </li>
                      <li className="flex items-start">
                         <MapPin className="h-5 w-5 mr-2 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>123 Solar Avenue, Sunshine City, SC 12345</span>
+                        <span> 	PENETRACION, No. 22, APTO. RESIDENCIAL CARLIN V APTO A3, Cerro Hermoso, Santiago de los Caballeros</span>
                      </li>
                   </ul>
                </div>
 
                {/* Our Team */}
-               <div>
+               {/* <div>
                   <h3 className="text-xl font-bold mb-4 text-yellow-500">Our Team</h3>
                   <p className="text-gray-300 mb-2">
                      Nuestro equipo de expertos certificados en energía solar cuenta con más de 25 años de experiencia combinada en soluciones renovables.
@@ -61,37 +61,37 @@ export function SiteFooter() {
                   <Link href="#" className="text-green-600 hover:text-green-500 font-medium">
                      Conoce al equipo →
                   </Link>
-               </div>
+               </div> */}
 
                {/* Quick Links */}
                <div>
                   <h3 className="text-xl font-bold mb-4 text-yellow-500">Enlaces Rápidos</h3>
                   <ul className="space-y-2">
                      <li>
-                        <Link href="#services" className="text-gray-300 hover:text-white transition-colors">
+                        <Link href="/Services" className="text-gray-300 hover:text-white transition-colors">
                            Nuestros Servicios
                         </Link>
                      </li>
                      <li>
-                        <Link href="#projects" className="text-gray-300 hover:text-white transition-colors">
+                        <Link href="/#projects" className="text-gray-300 hover:text-white transition-colors">
                            Proyectos Recientes
                         </Link>
                      </li>
                      <li>
-                        <Link href="#" className="text-gray-300 hover:text-white transition-colors">
+                        <Link href="/Panel-Calculator" className="text-gray-300 hover:text-white transition-colors">
                            Calculadora Solar
                         </Link>
                      </li>
-                     <li>
+                     {/* <li>
                         <Link href="#" className="text-gray-300 hover:text-white transition-colors">
                            Opciones de Financiamiento
                         </Link>
-                     </li>
-                     <li>
+                     </li> */}
+                     {/* <li>
                         <Link href="#" className="text-gray-300 hover:text-white transition-colors">
                            Preguntas Frecuentes
                         </Link>
-                     </li>
+                     </li> */}
                   </ul>
                </div>
             </div>

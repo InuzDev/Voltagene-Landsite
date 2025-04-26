@@ -9,3 +9,5 @@ node_modules/
 .env.local
 
 .qodo
+
+app/Panel-Calculator/REGIONS.tsx

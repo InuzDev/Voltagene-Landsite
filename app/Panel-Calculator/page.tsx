@@ -9,6 +9,7 @@ import { Label } from "app/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from 'app/components/ui/select'
 import { Calculator, Sun, Zap } from "lucide-react"
 import { useState } from "react"
+import { REGIONS } from "./REGIONS"
 
 // Solar panel data (power in watts)
 
@@ -21,50 +22,6 @@ const SOLAR_PANELS = [
    { id: "premium500", name: "Premium Solar 500W", power: 500 },
    { id: "premium600", name: "Premium Solar 600W", power: 600 },
 ]
-
-// Location of each region in Dominican Republic
-
-/*
-We calculated the average sun hour of each region, every sunhours is the result of the average sunhours all year.
-*/
-
-const REGIONS = [
-   { id: 'azua', regionName: 'Azua', sunhours: 8.2 },
-   { id: 'bahoruco', regionName: 'Bahoruco', sunhours: 8.0 },
-   { id: 'barahona', regionName: 'Barahona', sunhours: 8.3 },
-   { id: 'dajabon', regionName: 'Dajabón', sunhours: 8.1 },
-   { id: 'distritoNacional', regionName: 'Distrito Nacional', sunhours: 8.1 },
-   { id: 'duarte', regionName: 'Duarte', sunhours: 8.4 },
-   { id: 'elSeibo', regionName: 'El Seibo', sunhours: 8.5 },
-   { id: 'eliasPina', regionName: 'Elías Piña', sunhours: 8.0 },
-   { id: 'espaillat', regionName: 'Espaillat', sunhours: 8.3 },
-   { id: 'hatoMayor', regionName: 'Hato Mayor', sunhours: 8.4 },
-   { id: 'independencia', regionName: 'Independencia', sunhours: 8.1 },
-   { id: 'laAltagracia', regionName: 'La Altagracia', sunhours: 8.7 },
-   { id: 'laRomana', regionName: 'La Romana', sunhours: 8.6 },
-   { id: 'laVega', regionName: 'La Vega', sunhours: 8.4 },
-   { id: 'mariaTrinidadSanchez', regionName: 'María Trinidad Sánchez', sunhours: 8.3 },
-   { id: 'monseñorNouel', regionName: 'Monseñor Nouel', sunhours: 8.2 },
-   { id: 'monteCristi', regionName: 'Monte Cristi', sunhours: 8.5 },
-   { id: 'montePlata', regionName: 'Monte Plata', sunhours: 8.2 },
-   { id: 'pedernales', regionName: 'Pedernales', sunhours: 8.6 },
-   { id: 'peravia', regionName: 'Peravia', sunhours: 8.3 },
-   { id: 'puertoPlata', regionName: 'Puerto Plata', sunhours: 7.4 },
-   { id: 'samana', regionName: 'Samaná', sunhours: 7.5 },
-   { id: 'sanchezRamirez', regionName: 'Sánchez Ramírez', sunhours: 8.2 },
-   { id: 'sanCristobal', regionName: 'San Cristóbal', sunhours: 8.1 },
-   { id: 'sanJoseDeOcoa', regionName: 'San José de Ocoa', sunhours: 8.0 },
-   { id: 'sanJuan', regionName: 'San Juan', sunhours: 8.3 },
-   { id: 'sanPedroDeMacoris', regionName: 'San Pedro de Macorís', sunhours: 8.4 },
-   { id: 'santiago', regionName: 'Santiago', sunhours: 8.4 },
-   { id: 'santiagoRodriguez', regionName: 'Santiago Rodríguez', sunhours: 8.2 },
-   { id: 'santoDomingo', regionName: 'Santo Domingo', sunhours: 8.1 },
-   { id: 'valverde', regionName: 'Valverde', sunhours: 8.3 }
-];
-
-
-// Average sun hours per day (can be adjusted based on location)
-// const AVERAGE_SUN_HOURS = 5
 
 // Helper function to format numbers with thousand separators
 const formatNumber = (num: number): string => {
@@ -210,7 +167,6 @@ export default function CalculadoraSolarPage() {
                               <p className="text-gray-700">
                                  <span className="font-medium">Region seleccionada:</span> {result.selectedRegion}
                                  <br />
-                                 <span className="font-medium">Horas promedio de la region seleccionada:</span> {result.RegionSunHours}
                               </p>
                               <div className="pt-3 border-t border-green-200">
                                  <p className="text-xl font-bold text-green-800">
@@ -243,16 +199,6 @@ export default function CalculadoraSolarPage() {
                   )}
                </Card>
             </div>
-
-            {/* <div className="max-w-5xl mx-auto mt-8 p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-               <h3 className="font-medium text-lg mb-2">Información adicional</h3>
-               <p className="text-sm text-gray-600">
-                  <strong>Nota:</strong> Este cálculo es una estimación basada en {AVERAGE_SUN_HOURS} horas de sol promedio
-                  diarias y convierte su consumo mensual a necesidades diarias. Los resultados pueden variar según la
-                  ubicación geográfica, orientación de los paneles, sombras y otros factores. Para un cálculo más preciso,
-                  contacte con nuestros especialistas.
-               </p>
-            </div> */}
          </main>
       </div>
    )

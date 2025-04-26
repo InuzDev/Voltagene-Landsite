@@ -1,18 +1,29 @@
 "use client"
-import { SiteFooter } from "app/components/Site-footer"
 import { Button } from "app/components/ui/button"
 import { Card } from "app/components/ui/card"
 import { Input } from "app/components/ui/input"
 import { Toaster } from "app/components/ui/sonner"
 import { Textarea } from "app/components/ui/textarea"
-import { Clock, Mail, MapPin, Phone } from "lucide-react"
-import React from "react"
-// import Image from "next/image"
+import { formatPhoneNumber } from "app/lib/utils"
+import { Clock, Instagram, Mail, MapPin, Phone } from "lucide-react"
+import React, { useState } from "react"
 
 // Making this functional.
 export default function ContactPage() {
+   const [rawValue, setRawValue] = useState('');
+   const [formattedValue, setFormattedValue] = useState('')
    const [result, setResult] = React.useState("");
 
+   // Format the number.
+   const HandleFormatNumber = (e: React.ChangeEvent<HTMLInputElement>) => {
+      const input = e.target.value
+      const cleaned = input.replace(/\D/g, '')
+
+      if (cleaned.length <= 11) {
+         setRawValue(cleaned)
+         setFormattedValue(formatPhoneNumber(cleaned))
+      }
+   }
 
    // This is where the form submit starts. Sending it to the destinated target.
    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -92,7 +103,7 @@ export default function ContactPage() {
                                  <label htmlFor="phone" className="text-sm font-medium">
                                     Número de telefono
                                  </label>
-                                 <Input id="phone" name="Telefono" type="tel" placeholder="Introduce tu número de telefono; E.j (829) 1234-4567" /> {/* Just put the +x (xxx) xxx-xxxx */}
+                                 <Input id="phone" name="Telefono" value={formattedValue} onChange={HandleFormatNumber} type="tel" placeholder="Introduce tu número de telefono" /> {/* Just put the +x (xxx) xxx-xxxx */}
                               </div>
 
                               <div className="space-y-2">
@@ -133,7 +144,7 @@ export default function ContactPage() {
                                  <div className="ml-3">
                                     <h3 className="text-base font-medium">Nuestra ubicación</h3>
                                     <p className="text-gray-600">
-                                       Calle Principal #123, Santiago de los Caballeros
+                                       PENETRACION, No. 22, APTO. RESIDENCIAL CARLIN V APTO A3, Cerro Hermoso, Santiago de los Caballeros
                                        <br />
                                        República Dominicana
                                     </p>
@@ -146,7 +157,7 @@ export default function ContactPage() {
                                  </div>
                                  <div className="ml-3">
                                     <h3 className="text-base font-medium">Número de telefono</h3>
-                                    <p className="text-gray-600">+1 (809) 555-1234</p>
+                                    <p className="text-gray-600">+1 (849) 490-0306</p>
                                  </div>
                               </div>
 
@@ -157,6 +168,16 @@ export default function ContactPage() {
                                  <div className="ml-3">
                                     <h3 className="text-base font-medium">Correo Electrónico</h3>
                                     <p className="text-gray-600">info@voltagene.com</p>
+                                 </div>
+                              </div>
+
+                              <div className="flex items-start">
+                                 <div className="text-base font-medium">
+                                    <Instagram className="h-5 w-5 text-green-500" />
+                                 </div>
+                                 <div className="ml-3">
+                                    <h3 className="text-base font-medium">Instagram</h3>
+                                    <p className="text-gray-600">@Voltagene</p>
                                  </div>
                               </div>
 
@@ -207,7 +228,6 @@ export default function ContactPage() {
                </div>
             </section> */}
          </main>
-         <SiteFooter />
       </>
    )
 }
