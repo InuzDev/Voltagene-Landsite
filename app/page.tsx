@@ -213,14 +213,16 @@ export default function Home() {
                               </ul>
 
                               {/* CTA Button */}
-                              <Button
+                              {/* We going to hide the access to this page for now until the development is completed. */}
+
+                              {/* <Button
                                  onClick={() => location.replace(service.url)}
                                  variant="ghost"
                                  className="w-full justify-between text-green-800 hover:text-green-900 hover:bg-green-50 border border-green-200 group-hover:border-green-300 transition-colors"
                               >
                                  Aprende más{" "}
                                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                              </Button>
+                              </Button> */}
                            </div>
                         </div>
                      ))}
