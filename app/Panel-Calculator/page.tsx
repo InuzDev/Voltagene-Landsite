@@ -7,9 +7,9 @@ import { Card } from "app/components/ui/card"
 import { Input } from "app/components/ui/input"
 import { Label } from "app/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from 'app/components/ui/select'
+import { REGIONS } from "app/const/const"
 import { Calculator, Sun, Zap } from "lucide-react"
 import { useState } from "react"
-import { REGIONS } from "./REGIONS"
 
 // Solar panel data (power in watts)
 
