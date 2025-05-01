@@ -6,7 +6,7 @@ const mapAPI = `https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_AP
 export default function App({ Component, pageProps }: AppProps) {
    return (
       <>
-         <script src={mapAPI} />
+         <Script src={mapAPI} />
          <Component {...pageProps} />
       </>
    )
