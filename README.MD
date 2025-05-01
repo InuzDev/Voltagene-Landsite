@@ -2,6 +2,26 @@
 
 ## Documentation
 
+### Quick tip
+
+> The projects utilize the use of Vercel CLI to import certain files.
+In const folder, we can see there is a "const-example.tsx", the reason of this is because we are hiding the actual const.tsx which contain commercial secrets
+
+To run a project which hides files with .gitignore, we decided to use vercel CLI. Following the instructions, we first install the CLI
+
+```shell
+npm install -g vercel
+```
+
+Then, we setup the project to connect it with vercel
+
+```shell
+# First, you need to log in your vercel account with the CLI
+vercel --login
+# Then, connect your project with vercel
+vercel --prod
+```
+
 This website is used by Voltagene SRL, made with Next.Js 15.1.7 - TypeScript, for the style we opted for Tailwind CSS.
 
 To initialize the project you need npm and node.js Version 20.18.2+
