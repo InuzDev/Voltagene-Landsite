@@ -1,0 +1,23 @@
+# Ignore everything in .gitignore EXCEPT the secret file
+
+## (This overrides .gitignore ONLY for Vercel CLI deployments)
+
+## Allow hidden file explicitly
+
+!app/const/const.tsx
+
+## Still ignore build folders
+
+node_modules
+dist
+.next
+
+## Ignore test files
+
+*.test.ts
+*.spec.ts
+
+## Ignore other local files
+
+.env
+.vscode/
