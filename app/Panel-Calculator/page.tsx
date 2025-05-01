@@ -1,7 +1,5 @@
 "use client"
 
-// TODO: we need to make a list of regions that shows the ammount of sun light.
-
 import { Button } from "app/components/ui/button"
 import { Card } from "app/components/ui/card"
 import { Input } from "app/components/ui/input"
