@@ -2,7 +2,7 @@
 
 ## (This overrides .gitignore ONLY for Vercel CLI deployments)
 
-## Allow hidden file explicitly
+## Allow hidden file explicitly in the deployment
 
 !app/const/const.tsx
 
