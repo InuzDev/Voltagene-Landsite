@@ -85,24 +85,26 @@ export default function Home() {
 
 
    // Recent projects data
+
+   // Working on it right now.
    const recentProjects = [
       {
          id: 1,
-         title: "Instalación Solar Residencial",
-         location: "Sunnyvale, CA",
+         title: "Instalacion residencial",
+         location: "Cerros de Gurabo, Santiago", // ask the location for the users
          description:
-            "Instalación completa de paneles solares en el techo de una casa de 2,500 pies², cubriendo el 100% de las necesidades energéticas de la familia.",
-         metrics: "Sistema de 12.5 kW | 30 paneles | $15,000 de ahorro anual",
-         image: "/FamHome.png?height=600&width=800",
+            "Instalación con un perfil bajo completa, en un techo de aluzinc con inclinacion natural óptima.",
+         metrics: "Sistema de 11. kWp | 40 paneles",
+         image: "/Instalacion-proyecto-residencial.png?height=600&width=800",
       },
       {
          id: 2,
-         title: "Edificio de Oficinas Comercial",
+         title: "Instalacion comercial, inyección a la red",
          location: "Austin, TX",
          description:
-            "Instalación comercial a gran escala para un edificio de oficinas de 4 pisos, reduciendo los costos energéticos en un 65%.",
-         metrics: "Sistema de 75 kW | 180 paneles | Reducción de carbono: 120 toneladas/año",
-         image: "/FamHome.png?height=600&width=800",
+            "Instalación con una estructura de perfil bajo, comercial, en una estación de gasolina/lavadero.",
+         metrics: "Sistema de 15.05 kWp | 35 paneles",
+         image: "/GasStation.png?height=600&width=800",
       },
       {
          id: 3,
@@ -110,7 +112,7 @@ export default function Home() {
          location: "Boulder, CO",
          description:
             "Proyecto solar comunitario que proporciona energía limpia a más de 150 hogares en el vecindario local.",
-         metrics: "Sistema de 250 kW | 600 paneles | Suministra a 150 hogares",
+         metrics: "Sistema de 250 kWp | 600 paneles | Suministra a 150 hogares",
          image: "/FamHome.png?height=600&width=800",
       },
    ];
@@ -118,7 +120,7 @@ export default function Home() {
 
    return (
       <>
-         <main className="min-h-screen flex flex-col items-center">
+         <main id="start" className="min-h-screen flex flex-col items-center">
             {/* Hero Section with Fade Effect */}
             <div ref={heroRef} className="relative w-full h-screen">
                {/* Background Image with Fade Effect */}
@@ -251,13 +253,13 @@ export default function Home() {
                                  fill
                                  className="object-cover"
                               />
-                              <Image
+                              {/* <Image
                                  src="/FamHome.png?height=1080&width=1920"
                                  alt="Solar panels on a sunny day"
                                  fill
                                  priority
                                  className="object-cover"
-                              />
+                              /> */}
                            </div>
                            <div className="p-6">
                               <h3 className="text-xl font-bold mb-2">{project.title}</h3>

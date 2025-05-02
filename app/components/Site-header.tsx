@@ -17,7 +17,7 @@ export function SiteHeader() {
 
    // Navigation links data
    const generateNavLinks = (pathname: string) => [
-      { href: '/', label: 'Inicio' },
+      { href: pathname === '/' ? "/#start" : "/", label: 'Inicio' },
       // dynamic path kjghsdghj
       { href: pathname === "/" ? "/#services" : "/Services", label: "Servicios" },
       { href: "/#projects", label: "Proyectos" },
