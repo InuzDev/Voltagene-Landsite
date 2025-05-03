@@ -91,29 +91,26 @@ export default function Home() {
       {
          id: 1,
          title: "Instalacion residencial",
-         location: "Cerros de Gurabo, Santiago", // ask the location for the users
          description:
             "Instalación con un perfil bajo completa, en un techo de aluzinc con inclinacion natural óptima.",
-         metrics: "Sistema de 11. kWp | 40 paneles",
+         metrics: "Sistema de 11.00 kWp | 40 paneles",
          image: "/Instalacion-proyecto-residencial.png?height=600&width=800",
       },
       {
          id: 2,
-         title: "Instalacion comercial, inyección a la red",
-         location: "Austin, TX",
+         title: "Instalacion comercial",
          description:
-            "Instalación con una estructura de perfil bajo, comercial, en una estación de gasolina/lavadero.",
-         metrics: "Sistema de 15.05 kWp | 35 paneles",
+            "Instalación con una estructura de perfil bajo, comercial, en una estación de gasolina/lavadero. Inyeccion a la red.",
+         metrics: "Sistema de 17.05 kWp | 35 paneles",
          image: "/GasStation.png?height=600&width=800",
       },
       {
          id: 3,
-         title: "Granja Solar Comunitaria",
-         location: "Boulder, CO",
+         title: "Instalacion residencial rural",
          description:
-            "Proyecto solar comunitario que proporciona energía limpia a más de 150 hogares en el vecindario local.",
-         metrics: "Sistema de 250 kWp | 600 paneles | Suministra a 150 hogares",
-         image: "/FamHome.png?height=600&width=800",
+            "Instalación con inyección a la red en un residencial con techo de concreto.\n",
+         metrics: "Sistema de 250 kWp | 10 paneles",
+         image: "/whiteHome.png?height=600&width=800",
       },
    ];
 
@@ -253,17 +250,9 @@ export default function Home() {
                                  fill
                                  className="object-cover"
                               />
-                              {/* <Image
-                                 src="/FamHome.png?height=1080&width=1920"
-                                 alt="Solar panels on a sunny day"
-                                 fill
-                                 priority
-                                 className="object-cover"
-                              /> */}
                            </div>
                            <div className="p-6">
                               <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                              <p className="text-sm text-gray-500 mb-3">{project.location}</p>
                               <p className="text-gray-700 mb-4">{project.description}</p>
                               <div className="bg-gray-100 p-3 rounded-md mb-4">
                                  <p className="text-sm font-medium text-gray-800">{project.metrics}</p>
