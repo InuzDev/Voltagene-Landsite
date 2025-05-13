@@ -18,7 +18,8 @@ export function SiteHeader() {
    // Navigation links data
    const generateNavLinks = (pathname: string) => [
       { href: pathname === '/' ? "/#start" : "/", label: 'Inicio' },
-      { href: pathname === '/' ? "/#services" : "/Services", label: "Servicios" },
+      // { href: pathname === '/' ? "/#services" : "/Services", label: "Servicios" }, since the page itself isn't ready, we going to deny access to it.
+      { href: "/#services", label: "Servicios" },
       { href: pathname === '/' ? "/#projects" : "/projects", label: "Proyectos" },
       { href: "/#about", label: "Sobre Nosotros" },
       // { href: "/#testimonials", label: "Testimonials" }, This section is still pending a discussion with client.
