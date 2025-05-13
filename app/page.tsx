@@ -1,10 +1,43 @@
 "use client"
 
-import { ArrowDown, ArrowRight, ExternalLink } from "lucide-react"
+import { ArrowDown, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useEffect, useRef, useState } from "react"
 import { Button } from "./components/ui/button"
+
+type Project = {
+   id: number
+   title: string
+   slug: string
+   metrics: string
+   imageUrl: string
+   description?: string
+ }
+
+ function ProjectCard({ project }: {project: Project}) {
+   return (
+     <Link
+       href={`/proyectos/${project.slug}`}
+       className="block border rounded-lg overflow-hidden shadow-sm bg-white hover:shadow-md transition-shadow duration-300 group"
+     >
+       <div className="relative h-64 overflow-hidden">
+         <Image
+           src={project.imageUrl || "/placeholder.svg"}
+           alt={project.title}
+           fill
+           className="object-cover transition-transform duration-700 group-hover:scale-105"
+         />
+       </div>
+       <div className="p-6">
+         <h3 className="text-xl font-light mb-2 group-hover:text-green-600 transition-colors">{project.title}</h3>
+         <div className="bg-gray-50 p-3 rounded-md">
+         </div>
+       </div>
+     </Link>
+   )
+ }
 
 export default function Home() {
    const router = useRouter();
@@ -87,30 +120,33 @@ export default function Home() {
    // Recent projects data
 
    // Working on it right now.
-   const recentProjects = [
+   const recentProjects: Project [] = [
       {
          id: 1,
+         slug: "/Test1",
          title: "Instalacion residencial",
          description:
             "Instalación con un perfil bajo completa, en un techo de aluzinc con inclinacion natural óptima.",
          metrics: "Sistema de 11.00 kWp | 40 paneles",
-         image: "/Instalacion-proyecto-residencial.png?height=600&width=800",
+         imageUrl: "/Instalacion-proyecto-residencial.png?height=600&width=800",
       },
       {
          id: 2,
+         slug: "/Test2",
          title: "Instalacion comercial",
          description:
             "Instalación con una estructura de perfil bajo, comercial, en una estación de gasolina/lavadero. Inyeccion a la red.",
          metrics: "Sistema de 17.05 kWp | 35 paneles",
-         image: "/GasStation.png?height=600&width=800",
+         imageUrl: "/GasStation.png?height=600&width=800",
       },
       {
          id: 3,
+         slug: "/Test3",
          title: "Instalacion residencial rural",
          description:
             "Instalación con inyección a la red en un residencial con techo de concreto.\n",
          metrics: "Sistema de 250 kWp | 10 paneles",
-         image: "/whiteHome.png?height=600&width=800",
+         imageUrl: "/whiteHome.png?height=600&width=800",
       },
    ];
 
@@ -239,34 +275,26 @@ export default function Home() {
 
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                      {recentProjects.map((project) => (
-                        <div
-                           key={project.id}
-                           className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
-                        >
+                        <Link key={project.id} href={`/projects/${project.slug}`} className="block border rounded-lg overflow-hidden shadow-sm bg-white hover:shadow-md transition-shadow duration-300 group">
                            <div className="relative h-64">
                               <Image
-                                 src={project.image || "/placeholder.svg"}
+                                 src={project.imageUrl || "/placeholder.svg"}
                                  alt={project.title}
                                  fill
                                  className="object-cover"
                               />
                            </div>
                            <div className="p-6">
-                              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                              <h3 className="text-xl font-light mb-2 group-hover:text-green-600 transition-colors">{project.title}</h3>
                               <p className="text-gray-700 mb-4">{project.description}</p>
                               <div className="bg-gray-100 p-3 rounded-md mb-4">
                                  <p className="text-sm font-medium text-gray-800">{project.metrics}</p>
                               </div>
-                              <Button
-                                 variant="outline"
-                                 className="w-full flex items-center justify-center gap-2 text-green-800 border-green-800 hover:bg-green-50"
-                              >
-                                 Ver Estudio de Caso <ExternalLink size={16} />
-                              </Button>
                            </div>
-                        </div>
+                        </Link>
                      ))}
                   </div>
+                  
 
                   <div className="text-center mt-12">
                      <Button onClick={() => location.replace("/Projects")} className="bg-green-800 hover:bg-green-900 text-white flex items-center gap-2">
