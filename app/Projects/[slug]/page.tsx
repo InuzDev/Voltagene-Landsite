@@ -40,7 +40,6 @@ export default async function ProjectDetailPage({ params }: ProjectParams) {
             <ArrowLeft className="mr-2 h-4 w-4" /> Volver a proyectos
           </Link>
           <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-4 text-white">{project.title}</h1>
-          <p className="text-lg md:text-xl font-light max-w-2xl text-white/90">{project.location}</p>
         </div>
       </section>
 
@@ -86,18 +85,6 @@ export default async function ProjectDetailPage({ params }: ProjectParams) {
                 <li className="flex items-center justify-between">
                   <span className="text-zinc-400">Producción anual</span>
                   <span>{project.yearlyProduction}</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span className="text-zinc-400">Reducción CO₂</span>
-                  <span>{project.co2Reduction}</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span className="text-zinc-400">Finalización</span>
-                  <span>{project.completion}</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span className="text-zinc-400">Cliente</span>
-                  <span>{project.client}</span>
                 </li>
               </ul>
             </div>
