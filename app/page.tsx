@@ -16,29 +16,6 @@ type Project = {
    description?: string
  }
 
- function ProjectCard({ project }: {project: Project}) {
-   return (
-     <Link
-       href={`/proyectos/${project.slug}`}
-       className="block border rounded-lg overflow-hidden shadow-sm bg-white hover:shadow-md transition-shadow duration-300 group"
-     >
-       <div className="relative h-64 overflow-hidden">
-         <Image
-           src={project.imageUrl || "/placeholder.svg"}
-           alt={project.title}
-           fill
-           className="object-cover transition-transform duration-700 group-hover:scale-105"
-         />
-       </div>
-       <div className="p-6">
-         <h3 className="text-xl font-light mb-2 group-hover:text-green-600 transition-colors">{project.title}</h3>
-         <div className="bg-gray-50 p-3 rounded-md">
-         </div>
-       </div>
-     </Link>
-   )
- }
-
 export default function Home() {
    const router = useRouter();
 
@@ -285,7 +262,7 @@ export default function Home() {
                               />
                            </div>
                            <div className="p-6">
-                              <h3 className="text-xl font-light mb-2 group-hover:text-green-600 transition-colors">{project.title}</h3>
+                              <h3 className="text-xl font-semibold mb-2 group-hover:text-green-600 transition-colors">{project.title}</h3>
                               <p className="text-gray-700 mb-4">{project.description}</p>
                               <div className="bg-gray-100 p-3 rounded-md mb-4">
                                  <p className="text-sm font-medium text-gray-800">{project.metrics}</p>
