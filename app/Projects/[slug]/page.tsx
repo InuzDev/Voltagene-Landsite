@@ -2,7 +2,6 @@ import { projects } from "app/lib/projects"
 import { ArrowLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import postcss from "postcss"
 
 type ProjectParams = {
    params: {
