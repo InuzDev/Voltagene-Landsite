@@ -18,11 +18,10 @@ export function SiteHeader() {
    // Navigation links data
    const generateNavLinks = (pathname: string) => [
       { href: pathname === '/' ? "/#start" : "/", label: 'Inicio' },
-      // dynamic path kjghsdghj
-      { href: pathname === "/" ? "/#services" : "/Services", label: "Servicios" },
-      { href: "/#projects", label: "Proyectos" },
+      { href: pathname === '/' ? "/#services" : "/Services", label: "Servicios" },
+      { href: pathname === '/' ? "/#projects" : "/projects", label: "Proyectos" },
       { href: "/#about", label: "Sobre Nosotros" },
-      // { href: "/#testimonials", label: "Testimonials" },
+      // { href: "/#testimonials", label: "Testimonials" }, This section is still pending a discussion with client.
       { href: "/Panel-Calculator", label: "Calculadora Solar" },
       { href: "/Contact", label: "Contáctanos" },
    ]

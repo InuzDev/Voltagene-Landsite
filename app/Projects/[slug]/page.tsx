@@ -1,4 +1,4 @@
-import { projects } from "app/lib/projects"
+import { projects } from "app/lib/const"
 import { ArrowLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
