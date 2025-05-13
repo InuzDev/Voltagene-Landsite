@@ -85,40 +85,39 @@ export default function Home() {
 
 
    // Recent projects data
+
+   // Working on it right now.
    const recentProjects = [
       {
          id: 1,
-         title: "Instalación Solar Residencial",
-         location: "Sunnyvale, CA",
+         title: "Instalacion residencial",
          description:
-            "Instalación completa de paneles solares en el techo de una casa de 2,500 pies², cubriendo el 100% de las necesidades energéticas de la familia.",
-         metrics: "Sistema de 12.5 kW | 30 paneles | $15,000 de ahorro anual",
-         image: "/FamHome.png?height=600&width=800",
+            "Instalación con un perfil bajo completa, en un techo de aluzinc con inclinacion natural óptima.",
+         metrics: "Sistema de 11.00 kWp | 40 paneles",
+         image: "/Instalacion-proyecto-residencial.png?height=600&width=800",
       },
       {
          id: 2,
-         title: "Edificio de Oficinas Comercial",
-         location: "Austin, TX",
+         title: "Instalacion comercial",
          description:
-            "Instalación comercial a gran escala para un edificio de oficinas de 4 pisos, reduciendo los costos energéticos en un 65%.",
-         metrics: "Sistema de 75 kW | 180 paneles | Reducción de carbono: 120 toneladas/año",
-         image: "/FamHome.png?height=600&width=800",
+            "Instalación con una estructura de perfil bajo, comercial, en una estación de gasolina/lavadero. Inyeccion a la red.",
+         metrics: "Sistema de 17.05 kWp | 35 paneles",
+         image: "/GasStation.png?height=600&width=800",
       },
       {
          id: 3,
-         title: "Granja Solar Comunitaria",
-         location: "Boulder, CO",
+         title: "Instalacion residencial rural",
          description:
-            "Proyecto solar comunitario que proporciona energía limpia a más de 150 hogares en el vecindario local.",
-         metrics: "Sistema de 250 kW | 600 paneles | Suministra a 150 hogares",
-         image: "/FamHome.png?height=600&width=800",
+            "Instalación con inyección a la red en un residencial con techo de concreto.\n",
+         metrics: "Sistema de 250 kWp | 10 paneles",
+         image: "/whiteHome.png?height=600&width=800",
       },
    ];
 
 
    return (
       <>
-         <main className="min-h-screen flex flex-col items-center">
+         <main id="start" className="min-h-screen flex flex-col items-center">
             {/* Hero Section with Fade Effect */}
             <div ref={heroRef} className="relative w-full h-screen">
                {/* Background Image with Fade Effect */}
@@ -251,17 +250,9 @@ export default function Home() {
                                  fill
                                  className="object-cover"
                               />
-                              <Image
-                                 src="/FamHome.png?height=1080&width=1920"
-                                 alt="Solar panels on a sunny day"
-                                 fill
-                                 priority
-                                 className="object-cover"
-                              />
                            </div>
                            <div className="p-6">
                               <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                              <p className="text-sm text-gray-500 mb-3">{project.location}</p>
                               <p className="text-gray-700 mb-4">{project.description}</p>
                               <div className="bg-gray-100 p-3 rounded-md mb-4">
                                  <p className="text-sm font-medium text-gray-800">{project.metrics}</p>
