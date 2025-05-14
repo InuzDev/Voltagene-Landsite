@@ -1,8 +1,8 @@
 import { projects } from "app/lib/const"
+import type { Project } from "app/lib/utils"
 import { ArrowRight, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import type { Project } from "app/lib/utils"
 
 export default function ProyectosPage() {
   return (
@@ -105,7 +105,7 @@ export default function ProyectosPage() {
 function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
-      href={`/proyectos/${project.slug}`}
+      href={`/Projects/${project.slug}`}
       className="block border rounded-lg overflow-hidden shadow-sm bg-white hover:shadow-md transition-shadow duration-300 group"
     >
       <div className="relative h-64 overflow-hidden">
