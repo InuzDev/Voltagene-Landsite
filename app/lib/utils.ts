@@ -23,3 +23,13 @@ export function formatPhoneNumber(input: string): string {
 export async function generateStaticParams() {
 
 }
+
+// type exports
+export type Project = {
+   id: number
+   title: string
+   slug: string
+   metrics: string
+   imageUrl: string
+   description?: string
+}
