@@ -1,26 +1,26 @@
 "use client"
-
 import { ArrowDown, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useEffect, useRef, useState } from "react"
 import { Button } from "./components/ui/button"
-
-type Project = {
-   id: number
-   title: string
-   slug: string
-   metrics: string
-   imageUrl: string
-   description?: string
- }
+// import { recentProjects } from "./lib/const"
 
 export default function Home() {
+   const [Projects, setProjects] = useState([])
+
    const router = useRouter();
 
    const [scrollY, setScrollY] = useState(0)
    const heroRef = useRef<HTMLDivElement>(null)
+
+   // fetch the posts from the constant
+   useEffect(() => {
+      fetch('/api/projects')
+         .then(res => res.json())
+         .then(data => setProjects(data))
+   }, [])
 
    useEffect(() => {
       const handleScroll = () => {
@@ -92,41 +92,6 @@ export default function Home() {
          url: "/Services/#"
       },
    ];
-
-
-   // Recent projects data
-
-   // Working on it right now.
-   const recentProjects: Project [] = [
-      {
-         id: 1,
-         slug: "/Test1",
-         title: "Instalacion residencial",
-         description:
-            "Instalación con un perfil bajo completa, en un techo de aluzinc con inclinacion natural óptima.",
-         metrics: "Sistema de 11.00 kWp | 40 paneles",
-         imageUrl: "/Instalacion-proyecto-residencial.png?height=600&width=800",
-      },
-      {
-         id: 2,
-         slug: "/Test2",
-         title: "Instalacion comercial",
-         description:
-            "Instalación con una estructura de perfil bajo, comercial, en una estación de gasolina/lavadero. Inyeccion a la red.",
-         metrics: "Sistema de 17.05 kWp | 35 paneles",
-         imageUrl: "/GasStation.png?height=600&width=800",
-      },
-      {
-         id: 3,
-         slug: "/Test3",
-         title: "Instalacion residencial rural",
-         description:
-            "Instalación con inyección a la red en un residencial con techo de concreto.\n",
-         metrics: "Sistema de 250 kWp | 10 paneles",
-         imageUrl: "/whiteHome.png?height=600&width=800",
-      },
-   ];
-
 
    return (
       <>
@@ -251,7 +216,7 @@ export default function Home() {
                   </p>
 
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                     {recentProjects.map((project) => (
+                     {Projects.slice(0,3).map((project: any) => (
                         <Link key={project.id} href={`/projects/${project.slug}`} className="block border rounded-lg overflow-hidden shadow-sm bg-white hover:shadow-md transition-shadow duration-300 group">
                            <div className="relative h-64">
                               <Image
