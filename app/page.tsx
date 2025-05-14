@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation"
 import { useEffect, useRef, useState } from "react"
 import { Button } from "./components/ui/button"
 // import { recentProjects } from "./lib/const"
+import type { Project } from "./lib/utils"
 
 export default function Home() {
    const [Projects, setProjects] = useState([])
@@ -216,7 +217,7 @@ export default function Home() {
                   </p>
 
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                     {Projects.slice(0,3).map((project: any) => (
+                     {Projects.slice(0,3).map((project: Project) => (
                         <Link key={project.id} href={`/projects/${project.slug}`} className="block border rounded-lg overflow-hidden shadow-sm bg-white hover:shadow-md transition-shadow duration-300 group">
                            <div className="relative h-64">
                               <Image

@@ -2,16 +2,7 @@ import { projects } from "app/lib/const"
 import { ArrowRight, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-
-// Define the Project type
-type Project = {
-  id: number
-  title: string
-  slug: string
-  metrics: string
-  imageUrl: string
-  description?: string
-}
+import type { Project } from "app/lib/utils"
 
 export default function ProyectosPage() {
   return (
