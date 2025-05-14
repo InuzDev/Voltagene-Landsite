@@ -1,3 +1,5 @@
+// fix this issue, since this isn't working properly
+
 import { projects } from "app/lib/const"
 import { ArrowLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"

@@ -1,3 +1,4 @@
+import { projects } from "app/lib/const"
 import { ArrowRight, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -7,11 +8,8 @@ type Project = {
   id: number
   title: string
   slug: string
-  location: string
-  capacity: string
-  panels: string
+  metrics: string
   imageUrl: string
-  type: string
   description?: string
 }
 
@@ -22,7 +20,7 @@ export default function ProyectosPage() {
       <section className="relative h-[70vh] w-full overflow-hidden">
         <div className="absolute inset-0 bg-black/20 z-10" />
         <Image
-          src="/placeholder.svg?height=1080&width=1920"
+          src="/industrial-installation.jpeg?height=1080&width=1920"
           alt="Solar panels installation"
           fill
           className="object-cover"
@@ -130,11 +128,11 @@ function ProjectCard({ project }: { project: Project }) {
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2 group-hover:text-green-600 transition-colors">{project.title}</h3>
         <p className="text-zinc-600 mb-6">
-          {project.description || `Instalación ${project.type.toLowerCase()} en ${project.location}.`}
+          {project.description}
         </p>
         <div className="bg-gray-50 p-3 rounded-md">
           <p className="text-sm text-zinc-700">
-            Sistema de {project.capacity} | {project.panels} paneles
+            {project.metrics}
           </p>
         </div>
       </div>
@@ -143,72 +141,72 @@ function ProjectCard({ project }: { project: Project }) {
 }
 
 // Sample project data
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "Residencia Moderna",
-    slug: "residencia-moderna",
-    location: "San José, Costa Rica",
-    capacity: "11.00 kWp",
-    panels: "40",
-    imageUrl: "/placeholder.svg?height=600&width=800",
-    type: "Residencial",
-    description: "Instalación con un perfil bajo completa, en un techo de aluzinc con inclinacion natural óptima.",
-  },
-  {
-    id: 2,
-    title: "Estación de Servicio",
-    slug: "estacion-servicio",
-    location: "Alajuela, Costa Rica",
-    capacity: "17.05 kWp",
-    panels: "35",
-    imageUrl: "/placeholder.svg?height=600&width=800",
-    type: "Comercial",
-    description:
-      "Instalación con una estructura de perfil bajo, comercial, en una estación de gasolina/lavadero. Inyeccion a la red.",
-  },
-  {
-    id: 3,
-    title: "Residencia Rural",
-    slug: "residencia-rural",
-    location: "Guanacaste, Costa Rica",
-    capacity: "250 kWp",
-    panels: "10",
-    imageUrl: "/placeholder.svg?height=600&width=800",
-    type: "Residencial Rural",
-    description: "Instalación con inyección a la red en un residencial con techo de concreto.",
-  },
-  {
-    id: 4,
-    title: "Centro Comercial",
-    slug: "centro-comercial",
-    location: "Heredia, Costa Rica",
-    capacity: "75.5 kWp",
-    panels: "150",
-    imageUrl: "/placeholder.svg?height=600&width=800",
-    type: "Comercial",
-    description: "Instalación comercial de alto rendimiento para un centro comercial con gran demanda energética.",
-  },
-  {
-    id: 5,
-    title: "Complejo Industrial",
-    slug: "complejo-industrial",
-    location: "Limón, Costa Rica",
-    capacity: "120 kWp",
-    panels: "240",
-    imageUrl: "/placeholder.svg?height=600&width=800",
-    type: "Industrial",
-    description: "Sistema industrial de gran escala con monitoreo avanzado y optimización de rendimiento.",
-  },
-  {
-    id: 6,
-    title: "Hotel Boutique",
-    slug: "hotel-boutique",
-    location: "Puntarenas, Costa Rica",
-    capacity: "45 kWp",
-    panels: "90",
-    imageUrl: "/placeholder.svg?height=600&width=800",
-    type: "Comercial",
-    description: "Instalación diseñada para un hotel boutique con integración arquitectónica y eficiencia energética.",
-  },
-]
+// const projects: Project[] = [
+//   {
+//     id: 1,
+//     title: "Residencia Moderna",
+//     slug: "residencia-moderna",
+//     location: "San José, Costa Rica",
+//     capacity: "11.00 kWp",
+//     panels: "40",
+//     imageUrl: "/placeholder.svg?height=600&width=800",
+//     type: "Residencial",
+//     description: "Instalación con un perfil bajo completa, en un techo de aluzinc con inclinacion natural óptima.",
+//   },
+//   {
+//     id: 2,
+//     title: "Estación de Servicio",
+//     slug: "estacion-servicio",
+//     location: "Alajuela, Costa Rica",
+//     capacity: "17.05 kWp",
+//     panels: "35",
+//     imageUrl: "/placeholder.svg?height=600&width=800",
+//     type: "Comercial",
+//     description:
+//       "Instalación con una estructura de perfil bajo, comercial, en una estación de gasolina/lavadero. Inyeccion a la red.",
+//   },
+//   {
+//     id: 3,
+//     title: "Residencia Rural",
+//     slug: "residencia-rural",
+//     location: "Guanacaste, Costa Rica",
+//     capacity: "250 kWp",
+//     panels: "10",
+//     imageUrl: "/placeholder.svg?height=600&width=800",
+//     type: "Residencial Rural",
+//     description: "Instalación con inyección a la red en un residencial con techo de concreto.",
+//   },
+//   {
+//     id: 4,
+//     title: "Centro Comercial",
+//     slug: "centro-comercial",
+//     location: "Heredia, Costa Rica",
+//     capacity: "75.5 kWp",
+//     panels: "150",
+//     imageUrl: "/placeholder.svg?height=600&width=800",
+//     type: "Comercial",
+//     description: "Instalación comercial de alto rendimiento para un centro comercial con gran demanda energética.",
+//   },
+//   {
+//     id: 5,
+//     title: "Complejo Industrial",
+//     slug: "complejo-industrial",
+//     location: "Limón, Costa Rica",
+//     capacity: "120 kWp",
+//     panels: "240",
+//     imageUrl: "/placeholder.svg?height=600&width=800",
+//     type: "Industrial",
+//     description: "Sistema industrial de gran escala con monitoreo avanzado y optimización de rendimiento.",
+//   },
+//   {
+//     id: 6,
+//     title: "Hotel Boutique",
+//     slug: "hotel-boutique",
+//     location: "Puntarenas, Costa Rica",
+//     capacity: "45 kWp",
+//     panels: "90",
+//     imageUrl: "/placeholder.svg?height=600&width=800",
+//     type: "Comercial",
+//     description: "Instalación diseñada para un hotel boutique con integración arquitectónica y eficiencia energética.",
+//   },
+// ]
