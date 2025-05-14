@@ -35,12 +35,12 @@ export default async function ProjectDetailPage({ params }: ProjectParams) {
         />
         <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-end pb-16">
           <Link
-            href="/proyectos"
+            href="/Projects"
             className="inline-flex items-center text-white mb-8 hover:text-green-400 transition-colors"
           >
             <ArrowLeft className="mr-2 h-4 w-4" /> Volver a proyectos
           </Link>
-          <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-4 text-white">{_project.title}</h1>
+          <h1 className="text-5xl md:text-7xl font-semibold tracking-tight mb-4 text-white">{_project.title}</h1>
         </div>
       </section>
 
@@ -56,9 +56,9 @@ export default async function ProjectDetailPage({ params }: ProjectParams) {
               excedentes y generando ahorros significativos en la factura eléctrica.
             </p>
 
-            <h2 className="text-3xl font-light mb-8">Galería</h2>
+            {/* <h2 className="text-3xl font-light mb-8">Galería</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              {/* {project.gallery.map((image, index) => (
+              {project.gallery.map((image, index) => (
                 <div key={index} className="relative h-[300px] shadow-sm">
                   <Image
                     src={image || "/placeholder.svg"}
@@ -67,9 +67,9 @@ export default async function ProjectDetailPage({ params }: ProjectParams) {
                     className="object-cover"
                   />
                 </div>
-              ))} */}
-            </div>
-          </div>
+              ))}
+            </div> */}
+          </div> 
 
           <div>
             {/* work with the metrics, or separate them into three informations. */}
@@ -77,7 +77,7 @@ export default async function ProjectDetailPage({ params }: ProjectParams) {
               <h3 className="text-xl font-light mb-6">Detalles Técnicos</h3>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center justify-between">
-                  <span className="text-zinc-400">Informacion generals</span>
+                  <span className="text-zinc-400">Información general</span>
                   <span>{_project.metrics}</span>
                 </li>
               </ul>
@@ -86,7 +86,7 @@ export default async function ProjectDetailPage({ params }: ProjectParams) {
             <div className="mt-8">
               <h3 className="text-xl font-light mb-6">¿Interesado en un proyecto similar?</h3>
               <Link
-                href="/contacto"
+                href="/Contact"
                 className="inline-flex items-center text-green-600 border-b border-green-600 pb-1 hover:text-green-700 hover:border-green-700 transition-colors"
               >
                 Contactar ahora <ChevronRight className="ml-2 h-4 w-4" />

@@ -22,6 +22,7 @@ export default function Home() {
          .then(res => res.json())
          .then(data => setProjects(data))
    }, [])
+   // break line
 
    useEffect(() => {
       const handleScroll = () => {
@@ -218,7 +219,7 @@ export default function Home() {
 
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                      {Projects.slice(0,3).map((project: Project) => (
-                        <Link key={project.id} href={`/projects/${project.slug}`} className="block border rounded-lg overflow-hidden shadow-sm bg-white hover:shadow-md transition-shadow duration-300 group">
+                        <Link key={project.id} href={`/Projects/${project.slug}`} className="block border rounded-lg overflow-hidden shadow-sm bg-white hover:shadow-md transition-shadow duration-300 group">
                            <div className="relative h-64">
                               <Image
                                  src={project.imageUrl || "/placeholder.svg"}
