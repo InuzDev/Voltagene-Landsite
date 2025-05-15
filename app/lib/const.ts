@@ -33,7 +33,7 @@ export const projects = [
       title: "Instalacion residencial rural",
       description:
          "Instalación con inyección a la red en un residencial con techo de concreto.\n",
-      metrics: "Sistema de 250 kWp | 10 paneles",
+      metrics: "Sistema de 5.5 kWp | 10 paneles",
       imageUrl: "/whiteHome.png?height=600&width=800",
       gallery: [
          "/",
