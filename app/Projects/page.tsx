@@ -11,7 +11,7 @@ export default function ProyectosPage() {
       <section className="relative h-[70vh] w-full overflow-hidden">
         <div className="absolute inset-0 bg-black/20 z-10" />
         <Image
-          src="/industrial-installation.jpeg"
+          src="/Industrial-installation.jpeg"
           height={1080}
           width={1920}
           alt="Solar panels installation"
