@@ -5,6 +5,7 @@ export const projects = [
       title: "Instalacion residencial",
       description:
          "Instalación con un perfil bajo completa, en un techo de aluzinc con inclinacion natural óptima.",
+      power: 11.00,
       metrics: "Sistema de 11.00 kWp | 40 paneles",
       imageUrl: "/Instalacion-proyecto-residencial.png?height=600&width=800",
       gallery: [
@@ -19,6 +20,7 @@ export const projects = [
       title: "Instalacion comercial",
       description:
          "Instalación con una estructura de perfil bajo, comercial, en una estación de gasolina/lavadero. Inyeccion a la red.",
+      power: 17.05,
       metrics: "Sistema de 17.05 kWp | 35 paneles",
       imageUrl: "/GasStation.png?height=600&width=800",
       gallery: [
@@ -33,6 +35,7 @@ export const projects = [
       title: "Instalacion residencial rural",
       description:
          "Instalación con inyección a la red en un residencial con techo de concreto.\n",
+      power: 5.5,
       metrics: "Sistema de 5.5 kWp | 10 paneles",
       imageUrl: "/whiteHome.png?height=600&width=800",
       gallery: [
