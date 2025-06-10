@@ -1,16 +1,28 @@
 "use client"
-
-import { ArrowDown, ArrowRight, ExternalLink } from "lucide-react"
+import { ArrowDown, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useEffect, useRef, useState } from "react"
 import { Button } from "./components/ui/button"
+// import { recentProjects } from "./lib/const"
+import type { Project } from "./lib/utils"
 
 export default function Home() {
+   const [Projects, setProjects] = useState([])
+
    const router = useRouter();
 
    const [scrollY, setScrollY] = useState(0)
    const heroRef = useRef<HTMLDivElement>(null)
+
+   // fetch the posts from the constant
+   useEffect(() => {
+      fetch('/api/projects')
+         .then(res => res.json())
+         .then(data => setProjects(data))
+   }, [])
+   // break line
 
    useEffect(() => {
       const handleScroll = () => {
@@ -82,38 +94,6 @@ export default function Home() {
          url: "/Services/#"
       },
    ];
-
-
-   // Recent projects data
-
-   // Working on it right now.
-   const recentProjects = [
-      {
-         id: 1,
-         title: "Instalacion residencial",
-         description:
-            "Instalación con un perfil bajo completa, en un techo de aluzinc con inclinacion natural óptima.",
-         metrics: "Sistema de 11.00 kWp | 40 paneles",
-         image: "/Instalacion-proyecto-residencial.png?height=600&width=800",
-      },
-      {
-         id: 2,
-         title: "Instalacion comercial",
-         description:
-            "Instalación con una estructura de perfil bajo, comercial, en una estación de gasolina/lavadero. Inyeccion a la red.",
-         metrics: "Sistema de 17.05 kWp | 35 paneles",
-         image: "/GasStation.png?height=600&width=800",
-      },
-      {
-         id: 3,
-         title: "Instalacion residencial rural",
-         description:
-            "Instalación con inyección a la red en un residencial con techo de concreto.\n",
-         metrics: "Sistema de 250 kWp | 10 paneles",
-         image: "/whiteHome.png?height=600&width=800",
-      },
-   ];
-
 
    return (
       <>
@@ -238,35 +218,27 @@ export default function Home() {
                   </p>
 
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                     {recentProjects.map((project) => (
-                        <div
-                           key={project.id}
-                           className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
-                        >
+                     {Projects.slice(0,3).map((project: Project) => (
+                        <Link key={project.id} href={`/Projects/${project.slug}`} className="block border rounded-lg overflow-hidden shadow-sm bg-white hover:shadow-md transition-shadow duration-300 group">
                            <div className="relative h-64">
                               <Image
-                                 src={project.image || "/placeholder.svg"}
+                                 src={project.imageUrl || "/placeholder.svg"}
                                  alt={project.title}
                                  fill
                                  className="object-cover"
                               />
                            </div>
                            <div className="p-6">
-                              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                              <h3 className="text-xl font-semibold mb-2 group-hover:text-green-600 transition-colors">{project.title}</h3>
                               <p className="text-gray-700 mb-4">{project.description}</p>
                               <div className="bg-gray-100 p-3 rounded-md mb-4">
                                  <p className="text-sm font-medium text-gray-800">{project.metrics}</p>
                               </div>
-                              <Button
-                                 variant="outline"
-                                 className="w-full flex items-center justify-center gap-2 text-green-800 border-green-800 hover:bg-green-50"
-                              >
-                                 Ver Estudio de Caso <ExternalLink size={16} />
-                              </Button>
                            </div>
-                        </div>
+                        </Link>
                      ))}
                   </div>
+                  
 
                   <div className="text-center mt-12">
                      <Button onClick={() => location.replace("/Projects")} className="bg-green-800 hover:bg-green-900 text-white flex items-center gap-2">

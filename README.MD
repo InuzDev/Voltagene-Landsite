@@ -4,7 +4,7 @@
 
 ### Quick tip
 
-> The projects utilize the use of Vercel CLI to import certain files.
+> The projects use Vercel CLI to import hidden files.
 In const folder, we can see there is a "const-example.tsx", the reason of this is because we are hiding the actual const.tsx which contain commercial secrets
 
 To run a project which hides files with .gitignore, we decided to use vercel CLI. Following the instructions, we first install the CLI

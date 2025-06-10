@@ -18,11 +18,11 @@ export function SiteHeader() {
    // Navigation links data
    const generateNavLinks = (pathname: string) => [
       { href: pathname === '/' ? "/#start" : "/", label: 'Inicio' },
-      // dynamic path kjghsdghj
-      { href: pathname === "/" ? "/#services" : "/Services", label: "Servicios" },
-      { href: "/#projects", label: "Proyectos" },
+      // { href: pathname === '/' ? "/#services" : "/Services", label: "Servicios" }, since the page itself isn't ready, we going to deny access to it.
+      { href: "/#services", label: "Servicios" },
+      { href: pathname === '/' ? "/#projects" : "/Projects", label: "Proyectos" },
       { href: "/#about", label: "Sobre Nosotros" },
-      // { href: "/#testimonials", label: "Testimonials" },
+      // { href: "/#testimonials", label: "Testimonials" }, This section is still pending a discussion with client.
       { href: "/Panel-Calculator", label: "Calculadora Solar" },
       { href: "/Contact", label: "Contáctanos" },
    ]
@@ -38,8 +38,8 @@ export function SiteHeader() {
       return () => window.removeEventListener("scroll", handleScroll)
    }, [])
 
-   const isHome = pathname === '/'
-   const shouldBeTransparent = isHome && !isScrolled
+   const TransparentWhiteList = pathname === '/' // Make it transparent in the project route.
+   const shouldBeTransparent = TransparentWhiteList && !isScrolled
 
    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
       e.preventDefault()
