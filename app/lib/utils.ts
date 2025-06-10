@@ -29,6 +29,7 @@ export type Project = {
    id: number
    title: string
    slug: string
+   power: number
    metrics: string
    imageUrl: string
    description?: string
