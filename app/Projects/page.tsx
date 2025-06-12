@@ -45,35 +45,35 @@ export default function ProyectosPage() {
                         <div className="md:w-1/2">
                             <h2 className="text-3xl font-light mb-6">Proyecto Destacado</h2>
                             <h3 className="text-4xl font-light mb-8">
-                                Residencia Privada en Valle del Sol
+                                Estación de Gasolina y Lavadero
                             </h3>
                             <p className="text-zinc-600 mb-6">
-                                Una instalación residencial de alto rendimiento que combina estética
-                                y funcionalidad. Con un sistema de 25kWp, esta instalación
-                                proporciona energía limpia para toda la propiedad, reduciendo la
-                                huella de carbono y los costos energéticos.
+                                Proyecto comercial de alto rendimiento con inyección a la red. Esta
+                                instalación de 17.05 kWp provee energía limpia a una estación de
+                                gasolina y lavadero, optimizando costos operativos y reduciendo su
+                                impacto ambiental.
                             </p>
                             <ul className="space-y-4 mb-8 text-zinc-600">
                                 <li className="flex items-center">
                                     <span className="w-40 text-zinc-400">Capacidad</span>
-                                    <span>25.5 kWp</span>
+                                    <span>17.05 kWp</span>
                                 </li>
                                 <li className="flex items-center">
                                     <span className="w-40 text-zinc-400">Paneles</span>
-                                    <span>60 unidades</span>
+                                    <span>35 unidades</span>
                                 </li>
                                 {/* this information is hidden */}
                                 {/* <li className="flex items-center">
-                                    <span className="w-40 text-zinc-400">Ahorro anual</span>
-                                    <span>$4,800 USD</span>
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="w-40 text-zinc-400">Reducción CO₂</span>
-                                    <span>18 toneladas/año</span>
-                                </li> */}
+                        <span className="w-40 text-zinc-400">Ahorro anual</span>
+                        <span>$4,800 USD</span>
+                    </li>
+                    <li className="flex items-center">
+                        <span className="w-40 text-zinc-400">Reducción CO₂</span>
+                        <span>18 toneladas/año</span>
+                    </li> */}
                             </ul>
                             <Link
-                                href="/proyectos/valle-del-sol"
+                                href="/proyectos/Instalacion-comercial"
                                 className="inline-flex items-center text-green-600 border-b border-green-600 pb-1 hover:text-green-700 hover:border-green-700 transition-colors"
                             >
                                 Ver proyecto completo <ChevronRight className="ml-2 h-4 w-4" />
@@ -81,10 +81,10 @@ export default function ProyectosPage() {
                         </div>
                         <div className="md:w-1/2 relative h-[400px] md:h-auto">
                             <Image
-                                src="/placeholder.svg?height=800&width=600"
-                                alt="Residencia Privada en Valle del Sol"
+                                src="/GasStation.png?height=800&width=600"
+                                alt="Estación de Gasolina y Lavadero"
                                 fill
-                                className="object-cover"
+                                className="object-cover rounded-2xl"
                             />
                         </div>
                     </div>
