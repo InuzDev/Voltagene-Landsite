@@ -7,25 +7,28 @@ import Link from 'next/link'
 export default function ProyectosPage() {
     return (
         <main className="bg-white text-zinc-900 min-h-screen">
-            {/* Hero Section */}
             <section className="relative w-full h-screen overflow-hidden">
-                <div className="absolute inset-0 bg-black/20 z-10">
-                    <Image
-                        src="/Industrial-installation.jpeg"
-                        alt="Solar panels installation"
-                        fill
-                        className="object-cover"
-                        priority
-                    />
-                    <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-end pb-16">
-                        <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-4 text-white">
-                            Proyectos
-                        </h1>
-                        <p className="text-lg md:text-xl font-light max-w-2xl text-white/90">
-                            Instalaciones solares de alta calidad que transforman la manera en que
-                            nuestros clientes consumen energía.
-                        </p>
-                    </div>
+                {/* Imagen de fondo */}
+                <Image
+                    src="/Industrial-installation.jpeg"
+                    alt="Solar panels installation"
+                    fill
+                    className="object-cover"
+                    priority
+                />
+
+                {/* Capa oscura encima de la imagen */}
+                <div className="absolute inset-0 bg-black/25 z-10" />
+
+                {/* Contenido encima de la capa oscura */}
+                <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-end pb-16">
+                    <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-4 text-gray-200">
+                        Proyectos
+                    </h1>
+                    <p className="text-lg md:text-xl font-light max-w-2xl text-white/90">
+                        Instalaciones solares de alta calidad que transforman la manera en que
+                        nuestros clientes consumen energía.
+                    </p>
                 </div>
             </section>
 
