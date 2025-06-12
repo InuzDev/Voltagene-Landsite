@@ -1,8 +1,13 @@
 import ProjectCard from 'app/components/ProjectCard'
 import { projects } from 'app/lib/const'
+import type { Project } from 'app/lib/utils'
 import { ArrowRight, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+
+const featuredProject: Project = projects.reduce((max, project) =>
+    project.power > max.power ? project : max
+)
 
 export default function ProyectosPage() {
     return (
@@ -10,7 +15,7 @@ export default function ProyectosPage() {
             <section className="relative w-full h-screen overflow-hidden">
                 {/* Imagen de fondo */}
                 <Image
-                    src="/Industrial-installation.jpeg"
+                    src="/Solar-image.jpg"
                     alt="Solar panels installation"
                     fill
                     className="object-cover"
@@ -47,23 +52,16 @@ export default function ProyectosPage() {
                     <div className="flex flex-col md:flex-row gap-12">
                         <div className="md:w-1/2">
                             <h2 className="text-3xl font-light mb-6">Proyecto Destacado</h2>
-                            <h3 className="text-4xl font-light mb-8">
-                                Estación de Gasolina y Lavadero
-                            </h3>
-                            <p className="text-zinc-600 mb-6">
-                                Proyecto comercial de alto rendimiento con inyección a la red. Esta
-                                instalación de 17.05 kWp provee energía limpia a una estación de
-                                gasolina y lavadero, optimizando costos operativos y reduciendo su
-                                impacto ambiental.
-                            </p>
+                            <h3 className="text-4xl font-light mb-8">{featuredProject.title}</h3>
+                            <p className="text-zinc-600 mb-6">{featuredProject.description}</p>
                             <ul className="space-y-4 mb-8 text-zinc-600">
                                 <li className="flex items-center">
                                     <span className="w-40 text-zinc-400">Capacidad</span>
-                                    <span>17.05 kWp</span>
+                                    <span>{featuredProject.power} kWp</span>
                                 </li>
                                 <li className="flex items-center">
                                     <span className="w-40 text-zinc-400">Paneles</span>
-                                    <span>35 unidades</span>
+                                    <span>{featuredProject.metrics.split('|')[1].trim()}</span>
                                 </li>
                                 {/* this information is hidden */}
                                 {/* <li className="flex items-center">
@@ -76,7 +74,7 @@ export default function ProyectosPage() {
                     </li> */}
                             </ul>
                             <Link
-                                href="/proyectos/Instalacion-comercial"
+                                href="/Projects/Instalacion-comercial"
                                 className="inline-flex items-center text-green-600 border-b border-green-600 pb-1 hover:text-green-700 hover:border-green-700 transition-colors"
                             >
                                 Ver proyecto completo <ChevronRight className="ml-2 h-4 w-4" />
