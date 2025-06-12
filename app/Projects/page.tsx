@@ -8,6 +8,7 @@ import Link from 'next/link'
 const featuredProject: Project = projects.reduce((max, project) =>
     project.power > max.power ? project : max
 )
+const panels = featuredProject.metrics.split('|')[1]?.trim() ?? 'N/D'
 
 export default function ProyectosPage() {
     return (
@@ -15,7 +16,7 @@ export default function ProyectosPage() {
             <section className="relative w-full h-screen overflow-hidden">
                 {/* Imagen de fondo */}
                 <Image
-                    src="/Solar-image.jpg"
+                    src="/Industrial-muelle-installation-2.jpg"
                     alt="Solar panels installation"
                     fill
                     className="object-cover"
@@ -61,7 +62,7 @@ export default function ProyectosPage() {
                                 </li>
                                 <li className="flex items-center">
                                     <span className="w-40 text-zinc-400">Paneles</span>
-                                    <span>{featuredProject.metrics.split('|')[1].trim()}</span>
+                                    <span>{panels}</span>
                                 </li>
                                 {/* this information is hidden */}
                                 {/* <li className="flex items-center">
