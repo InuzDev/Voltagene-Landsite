@@ -38,15 +38,6 @@ export default function ProyectosPage() {
                 </div>
             </section>
 
-            {/* Projects Grid */}
-            <section className="container mx-auto px-4 py-24">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project) => (
-                        <ProjectCard key={project.id} project={project} />
-                    ))}
-                </div>
-            </section>
-
             {/* Featured Project */}
             <section className="bg-gray-50 py-24">
                 <div className="container mx-auto px-4">
@@ -90,6 +81,15 @@ export default function ProyectosPage() {
                             />
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* Projects Grid */}
+            <section className="container mx-auto px-4 py-24">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {projects.map((project) => (
+                        <ProjectCard key={project.id} project={project} />
+                    ))}
                 </div>
             </section>
 
