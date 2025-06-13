@@ -15,7 +15,7 @@ export const projects = [
       slug: "Instalacion-comercial",
       title: "Instalación comercial",
       description:
-         "Instalación solar de 17.05 kWP con paneles de ultima generación en una estación de combustible con lavadero. Ideal para negocios que desean optimizar su consumo energético y reducir costos operativos.",
+         "Instalación fotovoltaica con paneles de última generación en una estación de combustible con lavadero. Ideal para negocios que desean optimizar su consumo energético y reducir costos operativos.",
       power: 17.05,
       metrics: "Sistema de 17.05 kWp | 35 paneles",
       imageUrl: "/GasStation.png?height=600&width=800",
