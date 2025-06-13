@@ -38,7 +38,7 @@ export function SiteHeader() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
-    const TransparentWhiteList = pathname === '/' // Make it transparent in the project route.
+    const TransparentWhiteList = pathname === '/' || pathname === '/Projects' // Make it transparent in the project route.
     const shouldBeTransparent = TransparentWhiteList && !isScrolled
 
     const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
