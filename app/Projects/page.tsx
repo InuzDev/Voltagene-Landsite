@@ -16,7 +16,7 @@ export default function ProyectosPage() {
             <section className="relative w-full h-screen overflow-hidden">
                 {/* Imagen de fondo */}
                 <Image
-                    src="/Industrial-solar-installation.jpg"
+                    src="/Industrial-solar-installation.JPG"
                     alt="Solar panels installation"
                     fill
                     className="object-cover"
