@@ -27,7 +27,7 @@ export default async function ProjectDetailPage({ params }: ProjectParams) {
             <section className="relative h-screen w-full overflow-hidden">
                 <div className="absolute inset-0 bg-black/20 z-10" />
                 <Image
-                    src={_project.imageUrl || '/placeholder.svg'}
+                    src={_project.imageUrl || '/placeholder.png'}
                     alt={_project.title}
                     fill
                     className="object-cover"

@@ -252,7 +252,7 @@ export default function Home() {
                                 >
                                     <div className="relative h-64">
                                         <Image
-                                            src={project.imageUrl || '/placeholder.svg'}
+                                            src={project.imageUrl || '/placeholder.png'}
                                             alt={project.title}
                                             fill
                                             className="object-cover"
