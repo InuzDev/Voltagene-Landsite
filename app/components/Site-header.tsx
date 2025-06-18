@@ -38,6 +38,10 @@ export function SiteHeader() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
+    // Conditional renderer
+    if (pathname === '/WIP') return null
+
+    // Conditional transparency
     const TransparentWhiteList = pathname === '/' || pathname === '/Projects' // Make it transparent in the project route.
     const shouldBeTransparent = TransparentWhiteList && !isScrolled
 
