@@ -3,10 +3,11 @@ import { Button } from 'app/components/ui/button'
 import { Card } from 'app/components/ui/card'
 import { Input } from 'app/components/ui/input'
 import { Toaster } from 'app/components/ui/sonner'
-import { Textarea } from 'app/components/ui/textarea'
 import { formatPhoneNumber } from 'app/lib/utils'
-import { Clock, Instagram, Mail, MapPin, Phone } from 'lucide-react'
+import { Clock, Instagram, Mail, Phone } from 'lucide-react'
 import React, { useState } from 'react'
+
+// This is recycling the contact us form, main differences are the form itself.
 
 export default function ContactPage() {
     const [rawValue, setRawValue] = useState('')
@@ -130,7 +131,7 @@ export default function ContactPage() {
                                             </label>
                                             <Input
                                                 id="phone"
-                                                name="phone"
+                                                name="phoneNumber"
                                                 value={formattedValue}
                                                 onChange={HandleFormatNumber}
                                                 type="tel"
@@ -139,7 +140,14 @@ export default function ContactPage() {
                                             {/* Just put the +x (xxx) xxx-xxxx */}
                                         </div>
 
-                                        <div className="space-y-2">
+                                        {/* 
+                                        
+                                        Remember to make the last two:
+                                        1- EnergyGenerator
+
+                                         */}
+
+                                        {/* <div className="space-y-2">
                                             <label
                                                 htmlFor="subject"
                                                 className="text-sm font-medium"
@@ -149,12 +157,12 @@ export default function ContactPage() {
                                             <Input
                                                 id="subject"
                                                 name="subject"
-                                                placeholder="subject"
+                                                placeholder="Asunto"
                                                 required
                                             />
-                                        </div>
+                                        </div> */}
 
-                                        <div className="space-y-2">
+                                        {/* <div className="space-y-2">
                                             <label
                                                 htmlFor="message"
                                                 className="text-sm font-medium"
@@ -163,12 +171,12 @@ export default function ContactPage() {
                                             </label>
                                             <Textarea
                                                 id="message"
-                                                name="message"
+                                                name="Mensaje"
                                                 placeholder="Cuéntanos cómo podemos ayudarte"
                                                 rows={5}
                                                 required
                                             />
-                                        </div>
+                                        </div> */}
 
                                         <Button
                                             type="submit"
@@ -187,29 +195,25 @@ export default function ContactPage() {
                                         Información de contacto
                                     </h2>
                                     <p className="text-gray-600 mb-8">
-                                        Contáctenos directamente mediante nuestro número de
-                                        telefono. Nuestro equipo está listo para responder sus
-                                        preguntas y brindarle las soluciones solares que necesita.
+                                        Contáctenos directamente o visite nuestra oficina. Nuestro
+                                        equipo está listo para responder sus preguntas y brindarle
+                                        las soluciones solares que necesita.
                                     </p>
 
                                     <div className="space-y-6">
-                                        <div className="flex items-start">
-                                            <div className="flex-shrink-0 mt-1">
-                                                <MapPin className="h-5 w-5 text-green-600" />
-                                            </div>
-                                            <div className="ml-3">
-                                                <h3 className="text-base font-medium">
-                                                    Nuestra ubicación
-                                                </h3>
-                                                <p className="text-gray-600">
-                                                    Penetración, No. 22, Apto. Residencial Carlin V
-                                                    Apto A3, Cerro Hermoso, Santiago de los
-                                                    Caballeros
-                                                    <br />
-                                                    República Dominicana
-                                                </p>
-                                            </div>
-                                        </div>
+                                        {/* <div className="flex items-start">
+                                 <div className="flex-shrink-0 mt-1">
+                                    <MapPin className="h-5 w-5 text-green-600" />
+                                 </div>
+                                 <div className="ml-3">
+                                    <h3 className="text-base font-medium">Nuestra ubicación</h3>
+                                    <p className="text-gray-600">
+                                       Penetración, No. 22, Apto. Residencial Carlin V Apto A3, Cerro Hermoso, Santiago de los Caballeros
+                                       <br />
+                                       República Dominicana
+                                    </p>
+                                 </div>
+                              </div> */}
 
                                         <div className="flex items-start">
                                             <div className="flex-shrink-0 mt-1">
@@ -280,19 +284,6 @@ export default function ContactPage() {
                 </section>
 
                 <Toaster />
-
-                {/* CTA Section */}
-
-                {/* The CTA section need to be programmed and developed. */}
-                {/* <section className="py-16 px-4 md:px-6 lg:px-8 bg-gray-50">
-               <div className="max-w-7xl mx-auto text-center">
-                  <h2 className="text-3xl font-bold mb-6">Ready to Switch to Solar?</h2>
-                  <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-                     Dé el primer paso hacia la independencia energética y la sostenibilidad. Solicite una consulta gratuita con nuestros expertos.
-                  </p>
-                  <Button className="bg-green-600 hover:bg-green-700 px-8 py-6 text-lg">Obtenga una cotización gratis</Button>
-               </div>
-            </section> */}
             </main>
         </>
     )

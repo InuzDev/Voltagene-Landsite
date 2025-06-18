@@ -137,7 +137,7 @@ export function SiteHeader() {
                                     ))}
                                     <Button
                                         onClick={() => {
-                                            location.replace('/Contact')
+                                            location.replace('/Quotes')
                                         }}
                                         className="mt-3.5 mx-14 bg-green-800 hover:bg-green-900 text-white"
                                     >
