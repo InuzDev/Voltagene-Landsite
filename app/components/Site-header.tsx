@@ -90,18 +90,17 @@ export function SiteHeader() {
                 </nav>
 
                 <div className="flex items-center gap-4">
-                    <Button
-                        className={`hidden sm:inline-flex ${
-                            shouldBeTransparent
-                                ? 'bg-white text-green-800 hover:bg-gray-100'
-                                : 'bg-green-800 hover:bg-green-900 text-white'
-                        }`}
-                        onClick={() => {
-                            location.replace('/Contact')
-                        }}
-                    >
-                        Obtener cotización
-                    </Button>
+                    <Link href={'/Quotes'}>
+                        <Button
+                            className={`hidden sm:inline-flex ${
+                                shouldBeTransparent
+                                    ? 'bg-white text-green-800 hover:bg-gray-100'
+                                    : 'bg-green-800 hover:bg-green-900 text-white'
+                            }`}
+                        >
+                            Obtener cotización
+                        </Button>
+                    </Link>
 
                     {/* Mobile Navigation */}
                     <Sheet>
@@ -135,14 +134,11 @@ export function SiteHeader() {
                                             {link.label}
                                         </a>
                                     ))}
-                                    <Button
-                                        onClick={() => {
-                                            location.replace('/Quotes')
-                                        }}
-                                        className="mt-3.5 mx-14 bg-green-800 hover:bg-green-900 text-white"
-                                    >
-                                        Obtener Cotización
-                                    </Button>
+                                    <Link href={'/Quotes'}>
+                                        <Button className="mt-3.5 mx-14 bg-green-800 hover:bg-green-900 text-white">
+                                            Obtener Cotización
+                                        </Button>
+                                    </Link>
                                 </nav>
                             </div>
                         </SheetContent>

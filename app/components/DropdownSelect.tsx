@@ -5,6 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 
 interface DropdownSelectProps {
     id: string
+    name?: string
     label?: string
     placeholder: string
     value: string

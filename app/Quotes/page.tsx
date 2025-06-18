@@ -87,7 +87,7 @@ export default function ContactPage() {
                                                 </label>
                                                 <Input
                                                     id="firstName"
-                                                    name="firstName"
+                                                    name="Nombre"
                                                     placeholder="Introduce tu nombre"
                                                     required
                                                 />
@@ -101,7 +101,7 @@ export default function ContactPage() {
                                                 </label>
                                                 <Input
                                                     id="lastName"
-                                                    name="lastName"
+                                                    name="Apellido"
                                                     placeholder="Introduce tu apellido"
                                                     required
                                                 />
@@ -127,7 +127,7 @@ export default function ContactPage() {
                                             </label>
                                             <Input
                                                 id="phone"
-                                                name="phoneNumber"
+                                                name="Número de telefono"
                                                 value={formattedValue}
                                                 onChange={HandleFormatNumber}
                                                 type="tel"
@@ -139,6 +139,7 @@ export default function ContactPage() {
                                             <DropdownSelect
                                                 id="energyProvider"
                                                 label="Distribuidora de energía"
+                                                name="distribuidora"
                                                 placeholder="Selecciona tu distribuidora de energía"
                                                 value={dist}
                                                 onChange={setDistributor}

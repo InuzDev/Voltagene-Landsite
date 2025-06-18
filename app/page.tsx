@@ -132,10 +132,10 @@ export default function Home() {
                                 size="lg"
                                 className="bg-green-800 hover:bg-green-900 text-white"
                                 onClick={() => {
-                                    router.push('/Contact')
+                                    router.push('/Quotes')
                                 }}
                             >
-                                Solicita una Cotización Gratis
+                                Solicita una Cotización
                             </Button>
                             <Button
                                 size="lg"
