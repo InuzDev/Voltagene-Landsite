@@ -169,9 +169,7 @@ export default function Home() {
                 <section id="services" className="w-full py-24 px-4 bg-white">
                     <div className="max-w-6xl mx-auto">
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                                Nuestros Servicios
-                            </h2>
+                            <h2 className="text-4xl font-light mb-8">Nuestros Servicios</h2>
                             <p className="text-gray-600 max-w-2xl mx-auto">
                                 Ofrecemos soluciones solares integrales para satisfacer tus
                                 necesidades energéticas, desde la instalación hasta el
@@ -237,7 +235,7 @@ export default function Home() {
                 {/* Recent Projects Section */}
                 <section id="projects" className="w-full py-20 px-4 bg-gray-50">
                     <div className="max-w-6xl mx-auto">
-                        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+                        <h2 className="text-3xl md:text-4xl font-light text-center mb-6">
                             Proyectos Recientes
                         </h2>
                         <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
