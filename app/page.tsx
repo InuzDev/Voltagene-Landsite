@@ -77,7 +77,8 @@ export default function Home() {
                 'Mantenimiento programado',
                 'Monitoreo del rendimiento',
             ],
-            url: '/Panel-cleaning',
+            // url: '/Panel-cleaning',
+            url: '/WIP',
         },
         {
             id: 3,
@@ -91,7 +92,8 @@ export default function Home() {
                 'Ampliación de capacidad',
                 'Optimización del rendimiento',
             ],
-            url: '/System-remodelation',
+            // url: '/System-remodelation',
+            url: '/WIP',
         },
     ]
 
