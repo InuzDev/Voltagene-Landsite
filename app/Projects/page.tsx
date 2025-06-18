@@ -133,7 +133,7 @@ export default function ProyectosPage() {
                     que se adapte a tus necesidades energéticas y estéticas.
                 </p>
                 <Link
-                    href="/Contact"
+                    href="/Quotes"
                     className="inline-flex items-center px-8 py-4 text-lg transition-colors rounded-4xl bg-green-800 hover:bg-green-900 text-white"
                 >
                     Contactar ahora <ArrowRight className="ml-2 h-5 w-5" />

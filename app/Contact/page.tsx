@@ -90,7 +90,7 @@ export default function ContactPage() {
                                                 </label>
                                                 <Input
                                                     id="firstName"
-                                                    name="firstName"
+                                                    name="Primer Nombre"
                                                     placeholder="Introduce tu nombre"
                                                     required
                                                 />
@@ -104,7 +104,7 @@ export default function ContactPage() {
                                                 </label>
                                                 <Input
                                                     id="lastName"
-                                                    name="lastName"
+                                                    name="Apellido"
                                                     placeholder="Introduce tu apellido"
                                                     required
                                                 />
@@ -117,7 +117,7 @@ export default function ContactPage() {
                                             </label>
                                             <Input
                                                 id="email"
-                                                name="email"
+                                                name="Correo Electrónico"
                                                 type="email"
                                                 placeholder="Introduce tu dirección de correo electrónico"
                                                 required
@@ -130,7 +130,7 @@ export default function ContactPage() {
                                             </label>
                                             <Input
                                                 id="phone"
-                                                name="phone"
+                                                name="Número de telefono"
                                                 value={formattedValue}
                                                 onChange={HandleFormatNumber}
                                                 type="tel"
@@ -148,7 +148,7 @@ export default function ContactPage() {
                                             </label>
                                             <Input
                                                 id="subject"
-                                                name="subject"
+                                                name="Asunto"
                                                 placeholder="subject"
                                                 required
                                             />
@@ -163,7 +163,7 @@ export default function ContactPage() {
                                             </label>
                                             <Textarea
                                                 id="message"
-                                                name="message"
+                                                name="Mensaje"
                                                 placeholder="Cuéntanos cómo podemos ayudarte"
                                                 rows={5}
                                                 required

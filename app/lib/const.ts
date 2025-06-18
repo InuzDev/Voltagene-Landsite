@@ -83,6 +83,6 @@ export const Distributor = [
    { id: 'EDESUR', label: 'Edesur' },
    { id: 'EDEESTE', label: 'Edeeste' },
    { id: 'Luz y Fuerza', label: 'Luz y Fuerza' },
-   { id: 'CPEN', label: 'CPEN' },
+   { id: 'CPEM', label: 'CPEM' },
    { id: 'Otra', label: 'Otra' },
 ]
