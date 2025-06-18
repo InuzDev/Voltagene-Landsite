@@ -5,7 +5,7 @@ import { Button } from 'app/components/ui/button'
 import { Card } from 'app/components/ui/card'
 import { Input } from 'app/components/ui/input'
 import { Label } from 'app/components/ui/label'
-import { REGIONS } from 'app/const/const'
+import { REGIONS } from 'app/const/Regions-const'
 import { Calculator, Sun, Zap } from 'lucide-react'
 import { useState } from 'react'
 

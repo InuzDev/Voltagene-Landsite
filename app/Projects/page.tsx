@@ -86,11 +86,7 @@ export default function ProyectosPage() {
                                     <span className="w-40 text-zinc-400">Capacidad</span>
                                     <span>{featuredProject.power} kWp</span>
                                 </li>
-                                <li className="flex items-center">
-                                    <span className="w-40 text-zinc-400">Paneles</span>
-                                    <span>{panels}</span>
-                                </li>
-                                {/* this information is hidden */}
+                                {/* this information is hidden until we get further information */}
                                 {/* <li className="flex items-center">
                         <span className="w-40 text-zinc-400">Ahorro anual</span>
                         <span>$4,800 USD</span>

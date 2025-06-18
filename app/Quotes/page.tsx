@@ -1,15 +1,18 @@
 'use client'
+import { DropdownSelect } from 'app/components/DropdownSelect'
 import { Button } from 'app/components/ui/button'
 import { Card } from 'app/components/ui/card'
 import { Input } from 'app/components/ui/input'
 import { Toaster } from 'app/components/ui/sonner'
+import { Distributor } from 'app/lib/const'
 import { formatPhoneNumber } from 'app/lib/utils'
-import { Clock, Instagram, Mail, Phone } from 'lucide-react'
+import { Clock, Instagram, Mail, MapPin, Phone } from 'lucide-react'
 import React, { useState } from 'react'
 
 // This is recycling the contact us form, main differences are the form itself.
 
 export default function ContactPage() {
+    const [dist, setDistributor] = useState<string>('Otra') // Default value for the distributor
     const [rawValue, setRawValue] = useState('')
     const [formattedValue, setFormattedValue] = useState('')
     const [result, setResult] = React.useState('')
@@ -66,20 +69,13 @@ export default function ContactPage() {
                 <section className="py-10 px-4 md:px-6 lg:px-8">
                     <div className="max-w-7xl mx-auto">
                         <div className="text-center mb-16">
-                            <h1 className="text-4xl font-bold mb-4">Contactanos</h1>
-                            <p className="text-gray-600 max-w-2xl mx-auto">
-                                ¿Tiene alguna pregunta sobre nuestras soluciones solares? Contacte
-                                con nuestro equipo y con gusto le ayudaremos.
-                            </p>
+                            <h1 className="text-4xl font-medium mb-4">Consigue una cotización</h1>
                         </div>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                             {/* Contact Form */}
                             <div>
                                 <Card className="p-8 shadow-sm">
-                                    <h2 className="text-2xl font-semibold mb-6">
-                                        Envíanos un mensaje
-                                    </h2>
                                     <form className="space-y-6" onSubmit={onSubmit}>
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                             <div className="space-y-2">
@@ -112,7 +108,7 @@ export default function ContactPage() {
                                             </div>
                                         </div>
 
-                                        <div className="space-y-2">
+                                        {/* <div className="space-y-2">
                                             <label htmlFor="email" className="text-sm font-medium">
                                                 E-mail / Correo Electrónico
                                             </label>
@@ -123,7 +119,7 @@ export default function ContactPage() {
                                                 placeholder="Introduce tu dirección de correo electrónico"
                                                 required
                                             />
-                                        </div>
+                                        </div> */}
 
                                         <div className="space-y-2">
                                             <label htmlFor="phone" className="text-sm font-medium">
@@ -137,46 +133,34 @@ export default function ContactPage() {
                                                 type="tel"
                                                 placeholder="Introduce tu número de telefono"
                                             />{' '}
-                                            {/* Just put the +x (xxx) xxx-xxxx */}
                                         </div>
 
-                                        {/* 
-                                        
-                                        Remember to make the last two:
-                                        1- EnergyGenerator
-
-                                         */}
-
-                                        {/* <div className="space-y-2">
-                                            <label
-                                                htmlFor="subject"
-                                                className="text-sm font-medium"
-                                            >
-                                                Asunto
-                                            </label>
-                                            <Input
-                                                id="subject"
-                                                name="subject"
-                                                placeholder="Asunto"
-                                                required
+                                        <div className="space-y-2">
+                                            <DropdownSelect
+                                                id="energyProvider"
+                                                label="Distribuidora de energía"
+                                                placeholder="Selecciona tu distribuidora de energía"
+                                                value={dist}
+                                                onChange={setDistributor}
+                                                options={Distributor}
                                             />
-                                        </div> */}
+                                        </div>
 
-                                        {/* <div className="space-y-2">
+                                        <div className="space-y-2">
                                             <label
                                                 htmlFor="message"
                                                 className="text-sm font-medium"
                                             >
                                                 Mensaje
                                             </label>
-                                            <Textarea
+                                            <textarea
                                                 id="message"
-                                                name="Mensaje"
-                                                placeholder="Cuéntanos cómo podemos ayudarte"
-                                                rows={5}
-                                                required
-                                            />
-                                        </div> */}
+                                                name="message"
+                                                rows={4}
+                                                placeholder="Nota extra sobre tu consulta"
+                                                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                                            ></textarea>
+                                        </div>
 
                                         <Button
                                             type="submit"
@@ -195,25 +179,29 @@ export default function ContactPage() {
                                         Información de contacto
                                     </h2>
                                     <p className="text-gray-600 mb-8">
-                                        Contáctenos directamente o visite nuestra oficina. Nuestro
-                                        equipo está listo para responder sus preguntas y brindarle
-                                        las soluciones solares que necesita.
+                                        Contáctenos directamente con nuestro número de telefono.
+                                        Nuestro equipo está listo para responder sus preguntas y
+                                        brindarle las soluciones solares que necesita.
                                     </p>
 
                                     <div className="space-y-6">
-                                        {/* <div className="flex items-start">
-                                 <div className="flex-shrink-0 mt-1">
-                                    <MapPin className="h-5 w-5 text-green-600" />
-                                 </div>
-                                 <div className="ml-3">
-                                    <h3 className="text-base font-medium">Nuestra ubicación</h3>
-                                    <p className="text-gray-600">
-                                       Penetración, No. 22, Apto. Residencial Carlin V Apto A3, Cerro Hermoso, Santiago de los Caballeros
-                                       <br />
-                                       República Dominicana
-                                    </p>
-                                 </div>
-                              </div> */}
+                                        <div className="flex items-start">
+                                            <div className="flex-shrink-0 mt-1">
+                                                <MapPin className="h-5 w-5 text-green-600" />
+                                            </div>
+                                            <div className="ml-3">
+                                                <h3 className="text-base font-medium">
+                                                    Nuestra ubicación
+                                                </h3>
+                                                <p className="text-gray-600">
+                                                    Penetración, No. 22, Apto. Residencial Carlin V
+                                                    Apto A3, Cerro Hermoso, Santiago de los
+                                                    Caballeros
+                                                    <br />
+                                                    República Dominicana
+                                                </p>
+                                            </div>
+                                        </div>
 
                                         <div className="flex items-start">
                                             <div className="flex-shrink-0 mt-1">

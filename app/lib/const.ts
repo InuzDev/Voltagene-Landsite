@@ -77,3 +77,12 @@ export const projects = [
       gallery: ["/", "/", "/"]
    }
 ]
+
+export const Distributor = [
+   { id: 'EDENORTE', label: 'Edenorte' },
+   { id: 'EDESUR', label: 'Edesur' },
+   { id: 'EDEESTE', label: 'Edeeste' },
+   { id: 'Luz y Fuerza', label: 'Luz y Fuerza' },
+   { id: 'CPEN', label: 'CPEN' },
+   { id: 'Otra', label: 'Otra' },
+]
