@@ -1,5 +1,5 @@
 'use client'
-import { ArrowDown, ArrowRight } from 'lucide-react'
+import { ArrowDown, ArrowRight, ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -63,7 +63,7 @@ export default function Home() {
                 'Instalación por expertos',
                 'Cobertura de garantía',
             ],
-            url: '/Services/#Solar-System-Installation',
+            url: '/Panel-installation',
         },
         {
             id: 2,
@@ -77,7 +77,7 @@ export default function Home() {
                 'Mantenimiento programado',
                 'Monitoreo del rendimiento',
             ],
-            url: '/Services/#',
+            url: '/Panel-cleaning',
         },
         {
             id: 3,
@@ -91,7 +91,7 @@ export default function Home() {
                 'Ampliación de capacidad',
                 'Optimización del rendimiento',
             ],
-            url: '/Services/#',
+            url: '/System-remodelation',
         },
     ]
 
@@ -181,7 +181,7 @@ export default function Home() {
                             {services.map((service) => (
                                 <div
                                     key={service.id}
-                                    className="group bg-white rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl"
+                                    className="group bg-white rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:ring-1 hover:ring-green-500"
                                 >
                                     {/* Image Container */}
                                     <div className="relative h-56 overflow-hidden">
@@ -189,7 +189,7 @@ export default function Home() {
                                             src={service.image}
                                             alt={service.title}
                                             fill
-                                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                            className="object-cover transition-transform duration-500"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-70" />
                                         <h3 className="absolute bottom-4 left-4 text-xl font-bold text-white">
@@ -217,14 +217,14 @@ export default function Home() {
                                         {/* CTA Button */}
                                         {/* We going to hide the access to this page for now until the development is completed. */}
 
-                                        {/* <Button
-                                 onClick={() => location.replace(service.url)}
-                                 variant="ghost"
-                                 className="w-full justify-between text-green-800 hover:text-green-900 hover:bg-green-50 border border-green-200 group-hover:border-green-300 transition-colors"
-                              >
-                                 Aprende más{" "}
-                                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                              </Button> */}
+                                        <Button
+                                            onClick={() => location.replace(service.url)}
+                                            variant="ghost"
+                                            className="w-full justify-between text-green-800 hover:text-green-900 hover:bg-green-50 border border-green-200 group-hover:border-green-300 transition-colors"
+                                        >
+                                            Aprende más{' '}
+                                            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                                        </Button>
                                     </div>
                                 </div>
                             ))}
@@ -248,7 +248,7 @@ export default function Home() {
                                 <Link
                                     key={project.id}
                                     href={`/Projects/${project.slug}`}
-                                    className="block border rounded-lg overflow-hidden shadow-sm bg-white hover:shadow-md transition-shadow duration-300 group"
+                                    className="group bg-white rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:ring-1 hover:ring-green-500"
                                 >
                                     <div className="relative h-64">
                                         <Image
