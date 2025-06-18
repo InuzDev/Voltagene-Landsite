@@ -1,9 +1,12 @@
+'use client'
+
 import ProjectCard from 'app/components/ProjectCard'
 import { projects } from 'app/lib/const'
 import type { Project } from 'app/lib/utils'
 import { ArrowRight, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useRef, useState } from 'react'
 
 const featuredProject: Project = projects.reduce((max, project) =>
     project.power > max.power ? project : max
@@ -11,20 +14,52 @@ const featuredProject: Project = projects.reduce((max, project) =>
 const panels = featuredProject.metrics.split('|')[1]?.trim() ?? 'N/D'
 
 export default function ProyectosPage() {
+    const [scrollY, setScrollY] = useState(0)
+    const heroRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY)
+        }
+
+        window.addEventListener('scroll', handleScroll, { passive: true })
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
+    // Calculate opacity based on scroll position
+    const calculateOpacity = () => {
+        if (!heroRef.current) return 1
+        const heroHeight = heroRef.current.offsetHeight
+        // Start fading when scroll position is 20% of hero height
+        const fadeStart = heroHeight * 0.2
+        // Complete fade when scroll position is 80% of hero height
+        const fadeEnd = heroHeight * 0.8
+        const range = fadeEnd - fadeStart
+
+        if (scrollY <= fadeStart) return 1
+        if (scrollY >= fadeEnd) return 0
+
+        return 1 - (scrollY - fadeStart) / range
+    }
     return (
         <main className="bg-white text-zinc-900 min-h-screen">
             <section className="relative w-full h-screen overflow-hidden">
                 {/* Imagen de fondo */}
-                <Image
-                    src="/Industrial-solar-installation.jpg"
-                    alt="Solar panels installation"
-                    fill
-                    className="object-cover"
-                    priority
-                />
-
+                <div
+                    ref={heroRef}
+                    className="absolute inset-0 z-0 transition-opacity duration-200"
+                    style={{ opacity: calculateOpacity() }}
+                >
+                    <Image
+                        src="/Industrial-solar-installation.JPG"
+                        alt="Solar panels installation"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                </div>
                 {/* Capa oscura encima de la imagen */}
-                <div className="absolute inset-0 bg-black/25 z-10" />
+                <div className="absolute inset-0 bg-black/30 z-10" />
 
                 {/* Contenido encima de la capa oscura */}
                 <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-end pb-16">
@@ -35,15 +70,6 @@ export default function ProyectosPage() {
                         Instalaciones solares de alta calidad que transforman la manera en que
                         nuestros clientes consumen energía.
                     </p>
-                </div>
-            </section>
-
-            {/* Projects Grid */}
-            <section className="container mx-auto px-4 py-24">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project) => (
-                        <ProjectCard key={project.id} project={project} />
-                    ))}
                 </div>
             </section>
 
@@ -90,6 +116,15 @@ export default function ProyectosPage() {
                             />
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* Projects Grid */}
+            <section className="container mx-auto px-4 py-24">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {projects.map((project) => (
+                        <ProjectCard key={project.id} project={project} />
+                    ))}
                 </div>
             </section>
 
