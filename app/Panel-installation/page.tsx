@@ -242,13 +242,15 @@ export default function PanelInstallation() {
                         <p className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
                             Transforma tu propiedad en una central de energía limpia
                         </p>
-                        <Button
-                            size="lg"
-                            className="bg-green-600 hover:bg-green-700 text-white px-12 py-4 rounded-2xl text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-                        >
-                            Solicitar Instalación
-                            <ArrowRight className="ml-2 w-5 h-5" />
-                        </Button>
+                        <Link href="/Contact">
+                            <Button
+                                size="lg"
+                                className="bg-green-600 hover:bg-green-700 text-white px-12 py-4 rounded-2xl text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                            >
+                                Solicitar Instalación
+                                <ArrowRight className="ml-2 w-5 h-5" />
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </section>
