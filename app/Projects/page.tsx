@@ -11,7 +11,6 @@ import { useEffect, useRef, useState } from 'react'
 const featuredProject: Project = projects.reduce((max, project) =>
     project.power > max.power ? project : max
 )
-const panels = featuredProject.metrics.split('|')[1]?.trim() ?? 'N/D'
 
 export default function ProyectosPage() {
     const [scrollY, setScrollY] = useState(0)
