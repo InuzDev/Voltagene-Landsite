@@ -4,6 +4,7 @@ import { Button } from 'app/components/ui/button'
 import { Card, CardContent } from 'app/components/ui/card'
 import { useScrollAnimation } from 'app/hooks/useScrollAnimation'
 import { ArrowRight, CheckCircle, Shield, Wifi, Zap } from 'lucide-react'
+import Link from 'next/link'
 import { useState } from 'react'
 
 export default function PanelInstallation() {
@@ -372,16 +373,18 @@ export default function PanelInstallation() {
                             ¿Listo para Comenzar?
                         </h2>
                         <p className="text-xl text-gray-600 mb-8">
-                            Programa tu consulta gratuita y da el primer paso hacia la independencia
+                            Programa tu consulta y da el primer paso hacia la independencia
                             energética
                         </p>
-                        <Button
-                            size="lg"
-                            className="bg-green-600 hover:bg-green-700 text-white px-12 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-                        >
-                            Obtener Cotización Gratuita
-                            <ArrowRight className="ml-2 w-5 h-5" />
-                        </Button>
+                        <Link href="/Contact">
+                            <Button
+                                size="lg"
+                                className="bg-green-600 hover:bg-green-700 text-white px-12 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                            >
+                                Obtener Cotización
+                                <ArrowRight className="ml-2 w-5 h-5" />
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </section>
