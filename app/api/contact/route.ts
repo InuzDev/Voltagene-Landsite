@@ -2,9 +2,10 @@ import { LRUCache } from "lru-cache";
 import { NextResponse } from "next/server";
 
 const rateLimit = new LRUCache<string, boolean>({
-   max: 5, // max IPs
+   max: 1000, // Handle 1000 IPs
    ttl: 1000 * 60 // 1 minute
-})
+ });
+ 
 
 
 export async function POST(req: Request) {
