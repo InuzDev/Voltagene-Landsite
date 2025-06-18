@@ -4,7 +4,7 @@
 
 ## Allow hidden file explicitly in the deployment
 
-!app/const/const.tsx
+!app/const/Regions-const.tsx
 
 ## Still ignore build folders
 

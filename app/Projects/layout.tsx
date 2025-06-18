@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import type React from 'react'
 
 export const metadata: Metadata = {
-    title: 'Voltagene SRL - Calculadora Solar',
-    description: 'Calcule cuántos paneles solares necesita según su consumo energético mensual',
+    title: 'Voltagene SRL - Proyectos',
+    description: 'Portafolio de proyectos de energía solar de Voltagene SRL',
 }
 
-export default function CalculadoraSolarLayout({
+export default function ProjectsHomePageLayout({
     children,
 }: Readonly<{
     children: React.ReactNode

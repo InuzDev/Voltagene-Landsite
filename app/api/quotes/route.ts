@@ -20,9 +20,9 @@ export async function POST(req: Request) {
 
     rateLimit.set(ip, true) // Set this IP as "seen"
     const Quotedata = await req.json()
-    const { firstName, lastName, email, phoneNumber, energyGenerator } = Quotedata;
+    const { firstName, lastName, phoneNumber, energyProvider } = Quotedata;
 
-    if (![firstName, lastName, email, phoneNumber, energyGenerator].every(Boolean)) {
+    if (![firstName, lastName, phoneNumber, energyProvider].every(Boolean)) {
       return NextResponse.json(
         { error: "Por favor, completa todos los campos | Please fill in all fields." },
         { status: 400 }
