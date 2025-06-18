@@ -13,12 +13,8 @@ import { useState } from 'react'
 
 // We need to ask for the real power, name and ID. Call the grown team.
 const SOLAR_PANELS = [
-    { id: 'eco100', power: 100 },
-    { id: 'eco200', power: 200 },
-    { id: 'eco300', power: 300 },
-    { id: 'eco400', power: 400 },
-    { id: 'premium500', power: 500 },
-    { id: 'premium600', power: 600 },
+    { id: '590', power: 590 },
+    { id: '615', power: 615 },
 ]
 
 // Helper function to format numbers with thousand separators
