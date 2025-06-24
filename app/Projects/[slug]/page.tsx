@@ -52,12 +52,6 @@ export default async function ProjectDetailPage({ params }: ProjectParams) {
                     <div className="md:col-span-2">
                         <h2 className="text-3xl font-light mb-8">Descripción del Proyecto</h2>
                         <p className="text-zinc-600 mb-8">{_project.description}</p>
-                        <p className="text-zinc-600 mb-12">
-                            La instalación se realizó en un techo de aluzinc con inclinación natural
-                            óptima, maximizando la captación solar durante todo el año. El sistema
-                            está conectado a la red eléctrica, permitiendo la inyección de
-                            excedentes y generando ahorros significativos en la factura eléctrica.
-                        </p>
 
                         {/* <h2 className="text-3xl font-light mb-8">Galería</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
