@@ -135,6 +135,8 @@ export default function ContactPage() {
                                             />{' '}
                                         </div>
 
+                                        {/* Fix the dropdown menu, which aren't sending the designated data */}
+
                                         <div className="space-y-2">
                                             <DropdownSelect
                                                 id="energyProvider"
@@ -146,6 +148,8 @@ export default function ContactPage() {
                                                 options={Distributor}
                                             />
                                         </div>
+
+                                        {/* Breakdown, check the Todo oomment */}
 
                                         <div className="space-y-2">
                                             <label

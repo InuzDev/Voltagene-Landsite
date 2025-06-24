@@ -1,3 +1,7 @@
+// We need to make a database that manage this, also a CMS to manage the content
+// This is a static data, we can use a database to manage this, but for now
+// we will use a static data
+
 export const projects = [
    {
       id: 1,
@@ -74,6 +78,36 @@ export const projects = [
       power: 5.8,
       metrics: "Sistema de 5.8 kWp",
       imageUrl: "/BlueHouse.jpg?height=600&width=800",
+      gallery: ["/", "/", "/"]
+   },
+   {
+      id: 8,
+      slug: "sistema-fotovoltaico-doble-viviendas-independientes",
+      title: "Sistema Fotovoltaico Doble para Viviendas Independientes",
+      description: "Instalación de generación fotovoltaica en edificio residencial, compuesta por dos sistemas completamente independientes, diseñados para abastecer energéticamente a dos hogares distintos. Cada uno cuenta con una capacidad instalada de 8.12 kWp, permitiendo una operación autónoma y eficiente en cada residencia. La estructura empleada incluye perfil estructural de tipo alto y tornillería de acero inoxidable, seleccionados por su resistencia mecánica y durabilidad ante condiciones ambientales adversas. El diseño del conjunto favorece la integración arquitectónica mediante una configuración discreta y de bajo impacto visual. Este enfoque técnico garantiza robustez estructural, eficiencia en la captación solar y una solución estética que armoniza con el entorno residencial.",
+      power: 8.12,
+      metrics: "Sistema de 8.12 kWp",
+      imageUrl: '/sistema-fotovoltaico-doble.jpeg?height=600&width=800',
+      gallery: ["/", "/", "/"]
+   },
+   {
+      id: 9,
+      slug: "incremento-estrategico-inyeccion-red",
+      title: "Incremento Estratégico de Inyección a la Red – 29.5 kWp para Empresa Comercial de Alto Prestigio",
+      description: "En el marco de su compromiso continuo con la sostenibilidad y la eficiencia operativa, se implementó una ampliación de 29.5 kWp al sistema fotovoltaico de una reconocida empresa comercial con décadas de liderazgo en su sector. La instalación se realizó con una configuración técnica discreta que preserva la estética de sus infraestructuras. Gracias a un diseño meticulioso y a una ubicación estratégica en cubierta, el sistema se integra de forma prácticamente imperceptible, sin alterar la imagen corporativa ni el entorno visual de las instalaciones. Esta expansión permite una mayor inyección de energía limpia a la red, optimizando el autoconsumo y generando excedentes que refuerzan el compromiso ambiental de la empresa ante sus clientes, socios y la comunidad",
+      power: 29.5,
+      metrics: "Sistema de 29.5 kWp",
+      imageUrl: '/Industrial-solar-installation.JPG?height=600&width=800',
+      gallery: ["/", "/", "/"]
+   },
+   {
+      id: 10,
+      slug: "Instalacion-laboratorio-patologia",
+      title: "Instalación Fotovoltaica de Alta Eficiencia para Laboratorio de Patología",
+      description: "En un edificio clínico de tres niveles, diseñamos e instalamos un sistema fotovoltaico con inyección a la red, cuidadosamente adaptado a los estándares energéticos y arquitectónicos de un laboratorio de alto perfil. Gracias a la amplitud del techo, fue posible integrar todos los componentes del sistema —módulos solares, inversores, estructuras y canalización de forma estratégica y sin comprometer el espacio útil ni la estética del entorno. El sistema se implementó con un enfoque de máxima eficiencia, permitiendo aprovechar al 100% la captación solar disponible. Integración estética y tecnológica: Desde la vía pública, el sistema se mantiene visualmente discreto, respetando la imagen institucional del edificio sin renunciar a una solución energética moderna y sostenible. Este proyecto combina rendimiento técnico, diseño inteligente y compromiso ambiental, ofreciendo al cliente un retorno energético visible con una presencia arquitectónica invisible",
+      power: 58,
+      metrics: "Sistema de 58 kWp",
+      imageUrl: "/Laboratorio-de-patologia.jpeg?height=600&width=800",
       gallery: ["/", "/", "/"]
    }
 ]
