@@ -20,7 +20,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 <h3 className="text-xl font-semibold mb-2 group-hover:text-green-600 transition-colors">
                     {project.title}
                 </h3>
-                <p className="text-zinc-600 mb-6">{project.description}</p>
+                <p className="text-zinc-600 mb-6 line-clamp-3">{project.description}</p>
                 <div className="bg-gray-50 p-3 rounded-md">
                     <p className="text-sm text-zinc-700">{project.metrics}</p>
                 </div>
