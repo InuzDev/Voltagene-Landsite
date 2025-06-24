@@ -85,8 +85,8 @@ export const projects = [
       slug: "sistema-fotovoltaico-doble-viviendas-independientes",
       title: "Sistema Fotovoltaico Doble para Viviendas Independientes",
       description: "Instalación de generación fotovoltaica en edificio residencial, compuesta por dos sistemas completamente independientes, diseñados para abastecer energéticamente a dos hogares distintos. Cada uno cuenta con una capacidad instalada de 8.12 kWp, permitiendo una operación autónoma y eficiente en cada residencia. La estructura empleada incluye perfil estructural de tipo alto y tornillería de acero inoxidable, seleccionados por su resistencia mecánica y durabilidad ante condiciones ambientales adversas. El diseño del conjunto favorece la integración arquitectónica mediante una configuración discreta y de bajo impacto visual. Este enfoque técnico garantiza robustez estructural, eficiencia en la captación solar y una solución estética que armoniza con el entorno residencial.",
-      power: 8.12,
-      metrics: "Sistema de 8.12 kWp",
+      power: 16.24,
+      metrics: "2 Sistema de 8.12 kWp (16.24 kWp total)",
       imageUrl: '/sistema-fotovoltaico-doble.jpeg?height=600&width=800',
       gallery: ["/", "/", "/"]
    },
