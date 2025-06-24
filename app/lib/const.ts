@@ -107,7 +107,7 @@ export const projects = [
       description: "En un edificio clínico de tres niveles, diseñamos e instalamos un sistema fotovoltaico con inyección a la red, cuidadosamente adaptado a los estándares energéticos y arquitectónicos de un laboratorio de alto perfil. Gracias a la amplitud del techo, fue posible integrar todos los componentes del sistema —módulos solares, inversores, estructuras y canalización de forma estratégica y sin comprometer el espacio útil ni la estética del entorno. El sistema se implementó con un enfoque de máxima eficiencia, permitiendo aprovechar al 100% la captación solar disponible. Integración estética y tecnológica: Desde la vía pública, el sistema se mantiene visualmente discreto, respetando la imagen institucional del edificio sin renunciar a una solución energética moderna y sostenible. Este proyecto combina rendimiento técnico, diseño inteligente y compromiso ambiental, ofreciendo al cliente un retorno energético visible con una presencia arquitectónica invisible",
       power: 58,
       metrics: "Sistema de 58 kWp",
-      imageUrl: "/Laboratorio-de-patologia.jpeg?height=600&width=800",
+      imageUrl: "/laboratorio-patologia.jpeg?height=600&width=800",
       gallery: ["/", "/", "/"]
    }
 ]
