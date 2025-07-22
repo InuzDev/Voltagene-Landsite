@@ -1,3 +1,5 @@
+// This is not a feature yet.
+
 import type { PushSubscription } from 'web-push'
 import webpush from 'web-push'
 

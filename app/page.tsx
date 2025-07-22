@@ -248,7 +248,7 @@ export default function Home() {
                                 <Link
                                     key={project.id}
                                     href={`/Projects/${project.slug}`}
-                                    className="group bg-white rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:ring-1 hover:ring-green-500"
+                                    className="group bg-white rounded-xl text-black overflow-hidden transition-all duration-300 hover:shadow-xl hover:ring-1 hover:ring-green-500"
                                 >
                                     <div className="relative h-64">
                                         <Image
@@ -259,10 +259,12 @@ export default function Home() {
                                         />
                                     </div>
                                     <div className="p-6">
-                                        <h3 className="text-xl font-semibold mb-2 group-hover:text-green-600 transition-colors">
+                                        <h3 className="text-xl text-black font-semibold mb-2 group-hover:text-green-600 transition-colors">
                                             {project.title}
                                         </h3>
-                                        <p className="text-gray-700 mb-4">{project.description}</p>
+                                        <p className="text-gray-700 mb-4 line-clamp-3">
+                                            {project.description}
+                                        </p>
                                         <div className="bg-gray-100 p-3 rounded-md mb-4">
                                             <p className="text-sm font-medium text-gray-800">
                                                 {project.metrics}
