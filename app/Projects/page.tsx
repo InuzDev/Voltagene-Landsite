@@ -104,7 +104,7 @@ export default function ProyectosPage() {
                         </div>
                         <div className="md:w-1/2 relative h-[400px] md:h-auto">
                             <Image
-                                src="/GasStation.png?height=800&width=600"
+                                src={featuredProject.imageUrl}
                                 alt="Estación de Gasolina y Lavadero"
                                 fill
                                 className="object-cover rounded-2xl"
