@@ -6,7 +6,7 @@ export const projects = [
    {
       id: 1,
       slug: "Instalacion-residencial",
-      title: "Instalación residencial",
+      title: "Instalación fotovoltaica residencial",
       description:
          "Sistema solar eficiente y discreto, perfectamente integrado en un techo de aluzinc con inclinación natural óptima. Ideal para hogares que buscan reducir su factura eléctrica sin comprometer la estética.",
       power: 11.00,
@@ -14,21 +14,20 @@ export const projects = [
       imageUrl: "/Instalacion-proyecto-residencial.png?height=600&width=800",
       gallery: ["/", "/", "/"]
    },
-   {
+      {
       id: 2,
-      slug: "Instalacion-comercial",
-      title: "Instalación comercial",
-      description:
-         "Instalación fotovoltaica con paneles de última generación en una estación de combustible con lavadero. Ideal para negocios que desean optimizar su consumo energético y reducir costos operativos.",
-      power: 17.05,
-      metrics: "Sistema de 17.05 kWp",
-      imageUrl: "/GasStation.png?height=600&width=800",
+      slug: "Instalacion-laboratorio-patologia",
+      title: "Instalación fotovoltaica de Alta Eficiencia",
+      description: "En un edificio clínico de tres niveles, diseñamos e instalamos un sistema fotovoltaico con inyección a la red, cuidadosamente adaptado a los estándares energéticos y arquitectónicos de un laboratorio de alto perfil. Gracias a la amplitud del techo, fue posible integrar todos los componentes del sistema —módulos solares, inversores, estructuras y canalización de forma estratégica y sin comprometer el espacio útil ni la estética del entorno. El sistema se implementó con un enfoque de máxima eficiencia, permitiendo aprovechar al 100% la captación solar disponible. Integración estética y tecnológica: Desde la vía pública, el sistema se mantiene visualmente discreto, respetando la imagen institucional del edificio sin renunciar a una solución energética moderna y sostenible. Este proyecto combina rendimiento técnico, diseño inteligente y compromiso ambiental, ofreciendo al cliente un retorno energético visible con una presencia arquitectónica invisible",
+      power: 58,
+      metrics: "Sistema de 58 kWp",
+      imageUrl: "/laboratorio-patologia.jpeg?height=600&width=800",
       gallery: ["/", "/", "/"]
    },
    {
       id: 3,
       slug: "Instalacion-residencial-rural",
-      title: "Instalación residencial rural",
+      title: "Instalación fotovoltaica residencial rural",
       description:
          "Solución energética eficiente para zonas rurales. Instalación sobre techo de concreto con inyección a la red, perfecta para garantizar autonomía eléctrica en hogares alejados del centro urbano.",
       power: 5.5,
@@ -39,7 +38,7 @@ export const projects = [
    {
       id: 4,
       slug: "residencial-tejas",
-      title: "Instalación residencial",
+      title: "Instalación fotovoltaica residencial",
       description:
          "Sistema solar conectado a la red sobre techo de tejas, ideal para viviendas tradicionales que buscan modernizarse con energía renovable y elegante integración arquitectónica.",
       power: 9.12,
@@ -102,14 +101,15 @@ export const projects = [
    },
    {
       id: 10,
-      slug: "Instalacion-laboratorio-patologia",
-      title: "Instalación Fotovoltaica de Alta Eficiencia para Laboratorio de Patología",
-      description: "En un edificio clínico de tres niveles, diseñamos e instalamos un sistema fotovoltaico con inyección a la red, cuidadosamente adaptado a los estándares energéticos y arquitectónicos de un laboratorio de alto perfil. Gracias a la amplitud del techo, fue posible integrar todos los componentes del sistema —módulos solares, inversores, estructuras y canalización de forma estratégica y sin comprometer el espacio útil ni la estética del entorno. El sistema se implementó con un enfoque de máxima eficiencia, permitiendo aprovechar al 100% la captación solar disponible. Integración estética y tecnológica: Desde la vía pública, el sistema se mantiene visualmente discreto, respetando la imagen institucional del edificio sin renunciar a una solución energética moderna y sostenible. Este proyecto combina rendimiento técnico, diseño inteligente y compromiso ambiental, ofreciendo al cliente un retorno energético visible con una presencia arquitectónica invisible",
-      power: 58,
-      metrics: "Sistema de 58 kWp",
-      imageUrl: "/laboratorio-patologia.jpeg?height=600&width=800",
+      slug: "Instalacion-comercial",
+      title: "Instalación comercial",
+      description:
+         "Instalación fotovoltaica con paneles de última generación en una estación de combustible con lavadero. Ideal para negocios que desean optimizar su consumo energético y reducir costos operativos.",
+      power: 17.05,
+      metrics: "Sistema de 17.05 kWp",
+      imageUrl: "/GasStation.png?height=600&width=800",
       gallery: ["/", "/", "/"]
-   }
+   },
 ]
 
 export const Distributor = [

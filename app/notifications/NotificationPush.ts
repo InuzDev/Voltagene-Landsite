@@ -1,3 +1,5 @@
+// This is not a feature yet
+
 const SERVICE_WORKER_FILE_PATH = "sw/notification-sw.js"
 
 export function isNotificationSupported(): boolean {
