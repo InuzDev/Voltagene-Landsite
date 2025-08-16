@@ -52,20 +52,6 @@ export default async function ProjectDetailPage({ params }: ProjectParams) {
                     <div className="md:col-span-2">
                         <h2 className="text-3xl font-light mb-8">Descripción del Proyecto</h2>
                         <p className="text-zinc-600 mb-8">{_project.description}</p>
-
-                        {/* <h2 className="text-3xl font-light mb-8">Galería</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              {project.gallery.map((image, index) => (
-                <div key={index} className="relative h-[300px] shadow-sm">
-                  <Image
-                    src={image || "/placeholder.svg"}
-                    alt={`${project.title} - Imagen ${index + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div> */}
                     </div>
 
                     <div>

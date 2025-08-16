@@ -12,7 +12,7 @@ import React, { useState } from 'react'
 // This is recycling the contact us form, main differences are the form itself.
 
 export default function ContactPage() {
-    const [dist, setDistributor] = useState<string>('Otra') // Default value for the distributor
+    const [dist, setDistributor] = useState<string>('EDENORTE') // Default value for the distributor
     const [rawValue, setRawValue] = useState('')
     const [formattedValue, setFormattedValue] = useState('')
     const [result, setResult] = React.useState('')
@@ -37,6 +37,7 @@ export default function ContactPage() {
         const form = event.currentTarget // more reliable than event.target
         const formData = new FormData(form)
 
+        formData.append('distribuidora', dist)
         formData.append('access_key', 'eb583560-aae6-487b-a3c3-e97756fe2a81')
 
         try {
@@ -107,6 +108,8 @@ export default function ContactPage() {
                                                 />
                                             </div>
                                         </div>
+
+                                        {/* It is required to add email? Ask HQ */}
 
                                         {/* <div className="space-y-2">
                                             <label htmlFor="email" className="text-sm font-medium">
