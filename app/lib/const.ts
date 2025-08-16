@@ -12,7 +12,6 @@ export const projects = [
       power: 11.00,
       metrics: "Sistema de 11.00 kWp",
       imageUrl: "/Instalacion-proyecto-residencial.png?height=600&width=800",
-      gallery: ["/", "/", "/"]
    },
       {
       id: 2,
@@ -22,7 +21,6 @@ export const projects = [
       power: 58,
       metrics: "Sistema de 58 kWp",
       imageUrl: "/laboratorio-patologia.jpeg?height=600&width=800",
-      gallery: ["/", "/", "/"]
    },
    {
       id: 3,
@@ -33,7 +31,6 @@ export const projects = [
       power: 5.5,
       metrics: "Sistema de 5.5 kWp",
       imageUrl: "/whiteHome.png?height=600&width=800",
-      gallery: ["/", "/", "/"]
    },
    {
       id: 4,
@@ -44,7 +41,6 @@ export const projects = [
       power: 9.12,
       metrics: "Sistema de 9.12 kWp",
       imageUrl: "/FamHome.png?height=600&width=800",
-      gallery: ["/", "/", "/"]
    },
    {
       id: 5,
@@ -55,7 +51,6 @@ export const projects = [
       power: 8.25,
       metrics: "Sistema de 8.25 kWp",
       imageUrl: "/Residential-Installation.png?height=600&width=800",
-      gallery: ["/", "/", "/"]
    },
    {
       id: 6,
@@ -66,7 +61,6 @@ export const projects = [
       power: 15.40,
       metrics: "Sistema de 15.40 kWp",
       imageUrl: "/Project15KwP.png?height=600&width=800",
-      gallery: ["/", "/", "/"]
    },
    {
       id: 7,
@@ -77,7 +71,6 @@ export const projects = [
       power: 5.8,
       metrics: "Sistema de 5.8 kWp",
       imageUrl: "/BlueHouse.jpg?height=600&width=800",
-      gallery: ["/", "/", "/"]
    },
    {
       id: 8,
@@ -87,7 +80,6 @@ export const projects = [
       power: 16.24,
       metrics: "2 Sistema de 8.12 kWp (16.24 kWp total)",
       imageUrl: '/sistema-fotovoltaico-doble.jpeg?height=600&width=800',
-      gallery: ["/", "/", "/"]
    },
    {
       id: 9,
@@ -97,7 +89,6 @@ export const projects = [
       power: 29.5,
       metrics: "Sistema de 29.5 kWp",
       imageUrl: '/Industrial-solar-installation.JPG?height=600&width=800',
-      gallery: ["/", "/", "/"]
    },
    {
       id: 10,
@@ -108,15 +99,15 @@ export const projects = [
       power: 17.05,
       metrics: "Sistema de 17.05 kWp",
       imageUrl: "/GasStation.png?height=600&width=800",
-      gallery: ["/", "/", "/"]
    },
 ]
 
+// We need to fix this issue, since we have been working on a fix fo the E-mail. The E-mail doesn't receive the label data selected.
 export const Distributor = [
    { id: 'EDENORTE', label: 'Edenorte' },
    { id: 'EDESUR', label: 'Edesur' },
    { id: 'EDEESTE', label: 'Edeeste' },
-   { id: 'Luz y Fuerza', label: 'Luz y Fuerza' },
+   { id: 'LUZ_Y_FUERZA', label: 'Luz y Fuerza' },
    { id: 'CPEM', label: 'CPEM' },
-   { id: 'Otra', label: 'Otra' },
+   { id: 'ANOTHER', label: 'Otra' },
 ]
