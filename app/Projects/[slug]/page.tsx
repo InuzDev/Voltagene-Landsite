@@ -1,6 +1,6 @@
 // fix this issue, since this isn't working properly
 
-import { projects } from 'app/lib/const'
+import { Projects } from 'app/lib/const'
 import { ArrowLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -12,12 +12,12 @@ type ProjectParams = {
 }
 
 export async function generateStaticParams() {
-    return [projects.map((project) => ({ slug: project.slug }))]
+    return [Projects.map((project) => ({ slug: project.slug }))]
 }
 
 export default async function ProjectDetailPage({ params }: ProjectParams) {
     // find the project from the json
-    const _project = projects.find((p) => p.slug === params.slug)
+    const _project = Projects.find((p) => p.slug === params.slug)
 
     if (!_project) return <h1>Proyecto no encontrado.</h1>
 

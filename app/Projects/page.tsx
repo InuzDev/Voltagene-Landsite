@@ -1,14 +1,14 @@
 'use client'
 
 import ProjectCard from 'app/components/ProjectCard'
-import { projects } from 'app/lib/const'
+import { Projects } from 'app/lib/const'
 import type { Project } from 'app/lib/utils'
 import { ArrowRight, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
-const featuredProject: Project = projects.reduce((max, project) =>
+const featuredProject: Project = Projects.reduce((max, project) =>
     project.power > max.power ? project : max
 )
 
@@ -117,7 +117,7 @@ export default function ProyectosPage() {
             {/* Projects Grid */}
             <section className="container mx-auto px-4 py-24">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project) => (
+                    {Projects.map((project) => (
                         <ProjectCard key={project.id} project={project} />
                     ))}
                 </div>

@@ -5,7 +5,9 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { Button } from './components/ui/button'
-// import { recentProjects } from "./lib/const"
+// Slider props
+import { MediaSlider } from './components/media-slider'
+import { ServicesProps, SliderProps } from './lib/const'
 import type { Project } from './lib/utils'
 
 export default function Home() {
@@ -49,54 +51,6 @@ export default function Home() {
         return 1 - (scrollY - fadeStart) / range
     }
 
-    // Services data
-    const services = [
-        {
-            id: 1,
-            title: 'Instalación Solar',
-            description:
-                'Instalación profesional de paneles solares de alta eficiencia para propiedades residenciales y comerciales.',
-            image: '/Modern-home.jpg?height=400&width=600',
-            features: [
-                'Diseño personalizado del sistema',
-                'Paneles de primera calidad',
-                'Instalación por expertos',
-                'Cobertura de garantía',
-            ],
-            url: '/Panel-installation',
-        },
-        {
-            id: 2,
-            title: 'Limpieza de Paneles',
-            description:
-                'Servicios regulares de mantenimiento y limpieza para asegurar que tus paneles solares funcionen al máximo rendimiento.',
-            image: '/Solar-Cleaning-2.jpg?height=400&width=600',
-            features: [
-                'Mayor eficiencia',
-                'Prolonga la vida útil de los paneles',
-                'Mantenimiento programado',
-                'Monitoreo del rendimiento',
-            ],
-            // url: '/Panel-cleaning',
-            url: '/WIP',
-        },
-        {
-            id: 3,
-            title: 'Remodelación del Sistema',
-            description:
-                'Actualización y remodelación de sistemas solares existentes para mejorar el rendimiento y la producción de energía.',
-            image: '/Remodeling-system.png?height=400&width=600',
-            features: [
-                'Evaluación del sistema',
-                'Actualización tecnológica',
-                'Ampliación de capacidad',
-                'Optimización del rendimiento',
-            ],
-            // url: '/System-remodelation',
-            url: '/WIP',
-        },
-    ]
-
     return (
         <>
             <main id="start" className="min-h-screen flex flex-col items-center">
@@ -107,13 +61,8 @@ export default function Home() {
                         className="absolute inset-0 z-0 transition-opacity duration-200"
                         style={{ opacity: calculateOpacity() }}
                     >
-                        <Image
-                            src="/BlueHouse.jpg?height=1080&width=1920"
-                            alt="Solar panels on a sunny day"
-                            fill
-                            priority
-                            className="object-cover"
-                        />
+                        {/* Slider for more dynamic experience. */}
+                        <MediaSlider autoPlay={true} showControls={false} items={SliderProps} />
                         {/* Dark overlay for better text visibility */}
                         <div className="absolute inset-0 bg-black/30" />
                     </div>
@@ -178,7 +127,7 @@ export default function Home() {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                            {services.map((service) => (
+                            {ServicesProps.map((service) => (
                                 <div
                                     key={service.id}
                                     className="group bg-white rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:ring-1 hover:ring-green-500"

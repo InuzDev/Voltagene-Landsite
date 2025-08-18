@@ -2,7 +2,7 @@
 // This is a static data, we can use a database to manage this, but for now
 // we will use a static data
 
-export const projects = [
+export const Projects = [
    {
       id: 1,
       slug: "Instalacion-residencial",
@@ -102,6 +102,54 @@ export const projects = [
    },
 ]
 
+    // Services data
+    export const ServicesProps = [
+        {
+            id: 1,
+            title: 'Instalación Solar',
+            description:
+                'Instalación profesional de paneles solares de alta eficiencia para propiedades residenciales y comerciales.',
+            image: '/Modern-home.jpg?height=400&width=600',
+            features: [
+                'Diseño personalizado del sistema',
+                'Paneles de primera calidad',
+                'Instalación por expertos',
+                'Cobertura de garantía',
+            ],
+            url: '/Panel-installation',
+        },
+        {
+            id: 2,
+            title: 'Limpieza de Paneles',
+            description:
+                'Servicios regulares de mantenimiento y limpieza para asegurar que tus paneles solares funcionen al máximo rendimiento.',
+            image: '/Solar-Cleaning-2.jpg?height=400&width=600',
+            features: [
+                'Mayor eficiencia',
+                'Prolonga la vida útil de los paneles',
+                'Mantenimiento programado',
+                'Monitoreo del rendimiento',
+            ],
+            // url: '/Panel-cleaning',
+            url: '/WIP',
+        },
+        {
+            id: 3,
+            title: 'Remodelación del Sistema',
+            description:
+                'Actualización y remodelación de sistemas solares existentes para mejorar el rendimiento y la producción de energía.',
+            image: '/Remodeling-system.png?height=400&width=600',
+            features: [
+                'Evaluación del sistema',
+                'Actualización tecnológica',
+                'Ampliación de capacidad',
+                'Optimización del rendimiento',
+            ],
+            // url: '/System-remodelation',
+            url: '/WIP',
+        },
+    ]
+
 // We need to fix this issue, since we have been working on a fix fo the E-mail. The E-mail doesn't receive the label data selected.
 export const Distributor = [
    { id: 'EDENORTE', label: 'Edenorte' },
@@ -110,4 +158,22 @@ export const Distributor = [
    { id: 'LUZ_Y_FUERZA', label: 'Luz y Fuerza' },
    { id: 'CPEM', label: 'CPEM' },
    { id: 'ANOTHER', label: 'Otra' },
+]
+
+export const SliderProps = [
+   {
+      type: "image" as const,
+      src: "/BlueHouse.jpg?height=1080&width=1920",
+      alt: 'Main Project image'
+   },
+   {
+      type: "video" as const,
+      src: "/CleaningAndMaintenance.mp4?height=1080&width=1920",
+      alt: "Maintenance video"
+   },
+   {
+      type: "image" as const,
+      src: "/VoltagenePresentationVideo.mp4?height=1080&width=1920",
+      alt: "Video Presentatin of Voltagene SRL"
+   }
 ]
