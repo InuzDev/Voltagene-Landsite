@@ -160,20 +160,22 @@ export const Distributor = [
    { id: 'ANOTHER', label: 'Otra' },
 ]
 
+// Going to uncomment the other props when we properly design and configure the other parts.
+
 export const SliderProps = [
-   {
-      type: "image" as const,
-      src: "/BlueHouse.jpg?height=1080&width=1920",
-      alt: 'Main Project image'
-   },
+   // {
+   //    type: "image" as const,
+   //    src: "/BlueHouse.jpg?height=1080&width=1920",
+   //    alt: 'Main Project image'
+   // },
+   // {
+   //    type: "video" as const,
+   //    src: "/CleaningAndMaintenance.mp4?height=1080&width=1920",
+   //    alt: "Maintenance video"
+   // },
    {
       type: "video" as const,
-      src: "/CleaningAndMaintenance.mp4?height=1080&width=1920",
-      alt: "Maintenance video"
-   },
-   {
-      type: "image" as const,
-      src: "/VoltagenePresentationVideo.mp4?height=1080&width=1920",
+      src: "/VoltagenePresentationVideo.webm?height=1080&width=1920",
       alt: "Video Presentatin of Voltagene SRL"
    }
 ]

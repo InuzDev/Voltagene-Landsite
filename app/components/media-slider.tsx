@@ -98,10 +98,6 @@ export function MediaSlider({
         }
     }
 
-    const goToSlide = (index: number) => {
-        setCurrentIndex(index)
-    }
-
     const togglePlayPause = () => {
         setIsPlaying(!isPlaying)
     }
