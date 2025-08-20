@@ -8,7 +8,7 @@ import { Button } from './components/ui/button'
 // Slider props
 import { MediaSlider } from './components/media-slider'
 import { ServicesProps, SliderProps } from './lib/const'
-import type { Project } from './lib/utils'
+import type { Project } from './lib/types'
 
 export default function Home() {
     const [Projects, setProjects] = useState([])

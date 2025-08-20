@@ -2,7 +2,7 @@
 
 import ProjectCard from 'app/components/ProjectCard'
 import { Projects } from 'app/lib/const'
-import type { Project } from 'app/lib/utils'
+import type { Project } from 'app/lib/types'
 import { ArrowRight, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'

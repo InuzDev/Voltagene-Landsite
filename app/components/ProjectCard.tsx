@@ -1,4 +1,4 @@
-import type { Project } from 'app/lib/utils'
+import type { Project } from 'app/lib/types'
 import Image from 'next/image'
 import Link from 'next/link'
 

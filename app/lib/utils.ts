@@ -18,19 +18,3 @@ export function formatPhoneNumber(input: string): string {
 
    return input;
 }
-
-// Make a function that generates the static links in the application.
-export async function generateStaticParams() {
-
-}
-
-// type exports
-export type Project = {
-   id: number
-   title: string
-   slug: string
-   power: number
-   metrics: string
-   imageUrl: string
-   description?: string
-}

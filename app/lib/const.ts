@@ -179,3 +179,4 @@ export const SliderProps = [
       alt: "Video Presentatin of Voltagene SRL"
    }
 ]
+
