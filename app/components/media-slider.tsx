@@ -76,7 +76,7 @@ export function MediaSlider({
 
         const interval = setInterval(() => {
             goToNext()
-        }, 43000) // Change slide every 5 seconds
+        }, 65000) // (ms) Change this to change the showtime of each slide.
 
         return () => clearInterval(interval)
     }, [autoPlay, items.length])
