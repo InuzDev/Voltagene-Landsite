@@ -2,6 +2,8 @@
 // This is a static data, we can use a database to manage this, but for now
 // we will use a static data
 
+// this also going to be updated for a more automated way.
+
 export const Projects = [
    {
       id: 1,
@@ -85,7 +87,8 @@ export const Projects = [
       id: 9,
       slug: "incremento-estrategico-inyeccion-red",
       title: "Incremento Estratégico de Inyección a la Red – 29.5 kWp para Empresa Comercial de Alto Prestigio",
-      description: "En el marco de su compromiso continuo con la sostenibilidad y la eficiencia operativa, se implementó una ampliación de 29.5 kWp al sistema fotovoltaico de una reconocida empresa comercial con décadas de liderazgo en su sector. La instalación se realizó con una configuración técnica discreta que preserva la estética de sus infraestructuras. Gracias a un diseño meticulioso y a una ubicación estratégica en cubierta, el sistema se integra de forma prácticamente imperceptible, sin alterar la imagen corporativa ni el entorno visual de las instalaciones. Esta expansión permite una mayor inyección de energía limpia a la red, optimizando el autoconsumo y generando excedentes que refuerzan el compromiso ambiental de la empresa ante sus clientes, socios y la comunidad",
+      description: 
+         "En el marco de su compromiso continuo con la sostenibilidad y la eficiencia operativa, se implementó una ampliación de 29.5 kWp al sistema fotovoltaico de una reconocida empresa comercial con décadas de liderazgo en su sector. La instalación se realizó con una configuración técnica discreta que preserva la estética de sus infraestructuras. Gracias a un diseño meticulioso y a una ubicación estratégica en cubierta, el sistema se integra de forma prácticamente imperceptible, sin alterar la imagen corporativa ni el entorno visual de las instalaciones. Esta expansión permite una mayor inyección de energía limpia a la red, optimizando el autoconsumo y generando excedentes que refuerzan el compromiso ambiental de la empresa ante sus clientes, socios y la comunidad",
       power: 29.5,
       metrics: "Sistema de 29.5 kWp",
       imageUrl: '/Industrial-solar-installation.JPG?height=600&width=800',
@@ -100,6 +103,24 @@ export const Projects = [
       metrics: "Sistema de 17.05 kWp",
       imageUrl: "/GasStation.png?height=600&width=800",
    },
+   {
+      id: 11,
+      slug: 'instalacion-residencial-premium',
+      title: 'Instalación en un edificio residencial con un sistema fotovoltaico de inyección de lujo de 8.25 kWp',
+      description: "Sistema fotovoltaico de inyección a la red sobre edificio residencial de lujo de 8.25 kWp, estructura de aluminio anodizado y tornillería inoxidable en bajo perfil, instalación muy discreta y eficiente",
+      power: 8.25,
+      metrics: 'Sistema de 8.25 kWp',
+      imageUrl: '/ResidentialMares.JPEG?height=600&width=800'
+   },
+   {
+      id: 12,
+      slug: 'instalacion-residencial',
+      title: 'Instalación residencial con un sistema de inyección a la red de 9.35 kWp',
+      description: 'Sistema fotovoltaico inyección a la red de 9.35 kWp, estructura de aluminio anodizado y tornillería inoxidable en bajo perfil, sobre techo de concreto en zona residencial',
+      power: 9.35,
+      metrics: 'Sistema de 9.35 kWp',
+      imageUrl: '/RedInjection9.35.JPG?height=600&width=800'
+   }
 ]
 
     // Services data
@@ -162,6 +183,8 @@ export const Distributor = [
 
 // Going to uncomment the other props when we properly design and configure the other parts.
 
+
+// this going to be update soon.
 export const SliderProps = [
    // {
    //    type: "image" as const,
