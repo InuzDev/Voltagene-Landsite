@@ -110,7 +110,7 @@ export const Projects = [
       description: "Sistema fotovoltaico de inyección a la red sobre edificio residencial de lujo de 8.25 kWp, estructura de aluminio anodizado y tornillería inoxidable en bajo perfil, instalación muy discreta y eficiente",
       power: 8.25,
       metrics: 'Sistema de 8.25 kWp',
-      imageUrl: '/ResidentialMares.jpg?height=600&width=800'
+      imageUrl: '/ResidentialMares.jpeg?height=600&width=800'
    },
    {
       id: 12,
