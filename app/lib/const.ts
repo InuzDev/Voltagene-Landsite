@@ -110,7 +110,7 @@ export const Projects = [
       description: "Sistema fotovoltaico de inyección a la red sobre edificio residencial de lujo de 8.25 kWp, estructura de aluminio anodizado y tornillería inoxidable en bajo perfil, instalación muy discreta y eficiente",
       power: 8.25,
       metrics: 'Sistema de 8.25 kWp',
-      imageUrl: '/ResidentialMares.JPEG?height=600&width=800'
+      imageUrl: '/ResidentialMares.jpg?height=600&width=800'
    },
    {
       id: 12,
@@ -119,7 +119,7 @@ export const Projects = [
       description: 'Sistema fotovoltaico inyección a la red de 9.35 kWp, estructura de aluminio anodizado y tornillería inoxidable en bajo perfil, sobre techo de concreto en zona residencial',
       power: 9.35,
       metrics: 'Sistema de 9.35 kWp',
-      imageUrl: '/RedInjection9.35.JPG?height=600&width=800'
+      imageUrl: '/RedInjection9_35.jpg?height=600&width=800'
    }
 ]
 

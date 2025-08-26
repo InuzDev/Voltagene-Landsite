@@ -47,7 +47,7 @@ export function MediaSlider({
 
     useEffect(() => {
         console.log('Current item:', getCurrentItem())
-    }, [currentIndex, currentItem])
+    }, [currentIndex, currentItem, getCurrentItem])
 
     useEffect(() => {
         // Reset video refs array when items change
@@ -69,7 +69,7 @@ export function MediaSlider({
                 currentVideo.pause()
             }
         }
-    }, [currentIndex, isPlaying, currentItem, videoErrors])
+    }, [currentIndex, isPlaying, currentItem, videoErrors, hasError, isCurrentVideo])
 
     useEffect(() => {
         if (!autoPlay || items.length <= 1) return
