@@ -1,3 +1,6 @@
+// This file is made to connect the supabase's database and store the login data.
+
+
 import { createClient } from "@supabase/supabase-js";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL as string

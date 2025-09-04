@@ -2,8 +2,7 @@
 // This is a static data, we can use a database to manage this, but for now
 // we will use a static data
 
-// this also going to be updated for a more automated way.
-
+// Since we need to make a database to store the data of the page as we going to make a dashboard so the user can upload the data himself.
 export const Projects = [
    {
       id: 1,
