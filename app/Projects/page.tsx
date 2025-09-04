@@ -1,7 +1,7 @@
 'use client'
 
 import ProjectCard from 'app/components/ProjectCard'
-import { Projects } from 'app/lib/const'
+import { Projects } from 'app/const/const'
 import type { Project } from 'app/lib/types'
 import { ArrowRight, ChevronRight } from 'lucide-react'
 import Image from 'next/image'

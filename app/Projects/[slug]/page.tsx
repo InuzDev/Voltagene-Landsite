@@ -1,6 +1,6 @@
 // fix this issue, since this isn't working properly
 
-import { Projects } from 'app/lib/const'
+import { Projects } from 'app/const/const'
 import { ArrowLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
