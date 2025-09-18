@@ -14,7 +14,7 @@ export const Projects = [
       metrics: "Sistema de 11.00 kWp",
       imageUrl: "/Instalacion-proyecto-residencial.png?height=600&width=800",
    },
-      {
+   {
       id: 2,
       slug: "Instalacion-laboratorio-patologia",
       title: "Instalación fotovoltaica de Alta Eficiencia",
@@ -176,7 +176,7 @@ export const Projects = [
         },
         {
             id: 2,
-            title: 'Limpieza de Paneles',
+            title: 'Limpieza y mantenimiento de Paneles',
             description:
                 'Servicios regulares de mantenimiento y limpieza para asegurar que tus paneles solares funcionen al máximo rendimiento.',
             image: '/Solar-Cleaning-2.jpg?height=400&width=600',
