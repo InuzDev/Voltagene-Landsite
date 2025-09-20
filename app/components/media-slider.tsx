@@ -36,19 +36,6 @@ export function MediaSlider({
     const isCurrentImage = currentItem?.type === 'image'
     const hasError = currentItem ? videoErrors.has(currentIndex) : false
 
-    const getCurrentItem = () => ({
-        item: currentItem || null,
-        index: currentIndex,
-        isVideo: isCurrentVideo || false,
-        isImage: isCurrentImage || false,
-        hasError,
-        totalItems: items.length,
-    })
-
-    useEffect(() => {
-        console.log('Current item:', getCurrentItem())
-    }, [currentIndex, currentItem, getCurrentItem])
-
     useEffect(() => {
         // Reset video refs array when items change
         videoRefs.current = videoRefs.current.slice(0, items.length)
