@@ -70,7 +70,7 @@ export default function ContactPage() {
                 <section className="py-10 px-4 md:px-6 lg:px-8">
                     <div className="max-w-7xl mx-auto">
                         <div className="text-center mb-16">
-                            <h1 className="text-4xl font-medium mb-4">Consigue una cotización</h1>
+                            <h1 className="text-4xl font-bold mb-4">Consigue una cotización</h1>
                         </div>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -194,7 +194,7 @@ export default function ContactPage() {
 
                                     <div className="space-y-6">
                                         <div className="flex items-start">
-                                            <div className="flex-shrink-0 mt-1">
+                                            <div className="shrink-0 mt-1">
                                                 <MapPin className="h-5 w-5 text-green-600" />
                                             </div>
                                             <div className="ml-3">
@@ -212,7 +212,7 @@ export default function ContactPage() {
                                         </div>
 
                                         <div className="flex items-start">
-                                            <div className="flex-shrink-0 mt-1">
+                                            <div className="shrink-0 mt-1">
                                                 <Phone className="h-5 w-5 text-green-600" />
                                             </div>
                                             <div className="ml-3">
@@ -224,7 +224,7 @@ export default function ContactPage() {
                                         </div>
 
                                         <div className="flex items-start">
-                                            <div className="flex-shrink-0 mt-1">
+                                            <div className="shrink-0 mt-1">
                                                 <Mail className="h-5 w-5 text-green-600" />
                                             </div>
                                             <div className="ml-3">
@@ -246,7 +246,7 @@ export default function ContactPage() {
                                         </div>
 
                                         <div className="flex items-start">
-                                            <div className="flex-shrink-0 mt-1">
+                                            <div className="shrink-0 mt-1">
                                                 <Clock className="h-5 w-5 text-green-600" />
                                             </div>
                                             <div className="ml-3">

@@ -53,15 +53,15 @@ export function SiteFooter() {
                         <h3 className="text-xl font-bold mb-4 text-yellow-500">Contáctanos</h3>
                         <ul className="space-y-3">
                             <li className="flex items-start">
-                                <Phone className="h-5 w-5 mr-2 text-green-600 mt-0.5 flex-shrink-0" />
+                                <Phone className="h-5 w-5 mr-2 text-green-600 mt-0.5 shrink-0" />
                                 <span>+1 (849) 490-0306</span>
                             </li>
                             <li className="flex items-start">
-                                <Mail className="h-5 w-5 mr-2 text-green-600 mt-0.5 flex-shrink-0" />
+                                <Mail className="h-5 w-5 mr-2 text-green-600 mt-0.5 shrink-0" />
                                 <span>info@voltagene.com</span>
                             </li>
                             <li className="flex items-start">
-                                <MapPin className="h-5 w-5 mr-2 text-green-600 mt-0.5 flex-shrink-0" />
+                                <MapPin className="h-5 w-5 mr-2 text-green-600 mt-0.5 shrink-0" />
                                 <span>
                                     Penetración, No. 22, Apto. Residencial Carlin V Apto A3, Cerro
                                     Hermoso, Santiago de los Caballeros

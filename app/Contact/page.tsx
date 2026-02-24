@@ -194,13 +194,14 @@ export default function ContactPage() {
 
                                     <div className="space-y-6">
                                         <div className="flex items-start">
-                                            <div className="flex-shrink-0 mt-1">
+                                            <div className="shrink-0 mt-1">
                                                 <MapPin className="h-5 w-5 text-green-600" />
                                             </div>
                                             <div className="ml-3">
                                                 <h3 className="text-base font-medium">
                                                     Nuestra ubicación
                                                 </h3>
+                                                {/* This is a prive residency */}
                                                 <p className="text-gray-600">
                                                     Penetración, No. 22, Apto. Residencial Carlin V
                                                     Apto A3, Cerro Hermoso, Santiago de los
@@ -212,7 +213,7 @@ export default function ContactPage() {
                                         </div>
 
                                         <div className="flex items-start">
-                                            <div className="flex-shrink-0 mt-1">
+                                            <div className="shrink-0 mt-1">
                                                 <Phone className="h-5 w-5 text-green-600" />
                                             </div>
                                             <div className="ml-3">
@@ -224,7 +225,7 @@ export default function ContactPage() {
                                         </div>
 
                                         <div className="flex items-start">
-                                            <div className="flex-shrink-0 mt-1">
+                                            <div className="shrink-0 mt-1">
                                                 <Mail className="h-5 w-5 text-green-600" />
                                             </div>
                                             <div className="ml-3">
@@ -246,7 +247,7 @@ export default function ContactPage() {
                                         </div>
 
                                         <div className="flex items-start">
-                                            <div className="flex-shrink-0 mt-1">
+                                            <div className="shrink-0 mt-1">
                                                 <Clock className="h-5 w-5 text-green-600" />
                                             </div>
                                             <div className="ml-3">

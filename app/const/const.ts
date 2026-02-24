@@ -3,6 +3,11 @@
 // we will use a static data
 
 // Since we need to make a database to store the data of the page as we going to make a dashboard so the user can upload the data himself.
+export const Solar_panels = [
+   { id: "590", power: 590, label: "590W Panel" },
+   { id: "615", power: 615, label: "615W Panel" },
+];
+
 export const Projects = [
    {
       id: 1,
@@ -10,7 +15,7 @@ export const Projects = [
       title: "Instalación fotovoltaica residencial",
       description:
          "Sistema solar eficiente y discreto, perfectamente integrado en un techo de aluzinc con inclinación natural óptima. Ideal para hogares que buscan reducir su factura eléctrica sin comprometer la estética.",
-      power: 11.00,
+      power: 11.0,
       metrics: "Sistema de 11.00 kWp",
       imageUrl: "/Instalacion-proyecto-residencial.png?height=600&width=800",
    },
@@ -18,7 +23,8 @@ export const Projects = [
       id: 2,
       slug: "Instalacion-laboratorio-patologia",
       title: "Instalación fotovoltaica de Alta Eficiencia",
-      description: "En un edificio clínico de tres niveles, diseñamos e instalamos un sistema fotovoltaico con inyección a la red, cuidadosamente adaptado a los estándares energéticos y arquitectónicos de un laboratorio de alto perfil. Gracias a la amplitud del techo, fue posible integrar todos los componentes del sistema —módulos solares, inversores, estructuras y canalización de forma estratégica y sin comprometer el espacio útil ni la estética del entorno. El sistema se implementó con un enfoque de máxima eficiencia, permitiendo aprovechar al 100% la captación solar disponible. Integración estética y tecnológica: Desde la vía pública, el sistema se mantiene visualmente discreto, respetando la imagen institucional del edificio sin renunciar a una solución energética moderna y sostenible. Este proyecto combina rendimiento técnico, diseño inteligente y compromiso ambiental, ofreciendo al cliente un retorno energético visible con una presencia arquitectónica invisible.",
+      description:
+         "En un edificio clínico de tres niveles, diseñamos e instalamos un sistema fotovoltaico con inyección a la red, cuidadosamente adaptado a los estándares energéticos y arquitectónicos de un laboratorio de alto perfil. Gracias a la amplitud del techo, fue posible integrar todos los componentes del sistema —módulos solares, inversores, estructuras y canalización de forma estratégica y sin comprometer el espacio útil ni la estética del entorno. El sistema se implementó con un enfoque de máxima eficiencia, permitiendo aprovechar al 100% la captación solar disponible. Integración estética y tecnológica: Desde la vía pública, el sistema se mantiene visualmente discreto, respetando la imagen institucional del edificio sin renunciar a una solución energética moderna y sostenible. Este proyecto combina rendimiento técnico, diseño inteligente y compromiso ambiental, ofreciendo al cliente un retorno energético visible con una presencia arquitectónica invisible.",
       power: 58,
       metrics: "Sistema de 58 kWp",
       imageUrl: "/laboratorio-patologia.jpeg?height=600&width=800",
@@ -59,7 +65,7 @@ export const Projects = [
       title: "Proyecto con 15.4 kWp",
       description:
          "Instalación de gran capacidad energética en techo de aluzinc, diseñada para optimizar el rendimiento con una estructura discreta de perfil bajo. Ideal para hogares o empresas con alta demanda eléctrica.",
-      power: 15.40,
+      power: 15.4,
       metrics: "Sistema de 15.40 kWp",
       imageUrl: "/Project15KwP.png?height=600&width=800",
    },
@@ -77,20 +83,21 @@ export const Projects = [
       id: 8,
       slug: "sistema-fotovoltaico-doble-viviendas-independientes",
       title: "Sistema Fotovoltaico Doble para Viviendas Independientes",
-      description: "Instalación de generación fotovoltaica en edificio residencial, compuesta por dos sistemas completamente independientes, diseñados para abastecer energéticamente a dos hogares distintos. Cada uno cuenta con una capacidad instalada de 8.12 kWp, permitiendo una operación autónoma y eficiente en cada residencia. La estructura empleada incluye perfil estructural de tipo alto y tornillería de acero inoxidable, seleccionados por su resistencia mecánica y durabilidad ante condiciones ambientales adversas. El diseño del conjunto favorece la integración arquitectónica mediante una configuración discreta y de bajo impacto visual. Este enfoque técnico garantiza robustez estructural, eficiencia en la captación solar y una solución estética que armoniza con el entorno residencial.",
+      description:
+         "Instalación de generación fotovoltaica en edificio residencial, compuesta por dos sistemas completamente independientes, diseñados para abastecer energéticamente a dos hogares distintos. Cada uno cuenta con una capacidad instalada de 8.12 kWp, permitiendo una operación autónoma y eficiente en cada residencia. La estructura empleada incluye perfil estructural de tipo alto y tornillería de acero inoxidable, seleccionados por su resistencia mecánica y durabilidad ante condiciones ambientales adversas. El diseño del conjunto favorece la integración arquitectónica mediante una configuración discreta y de bajo impacto visual. Este enfoque técnico garantiza robustez estructural, eficiencia en la captación solar y una solución estética que armoniza con el entorno residencial.",
       power: 16.24,
       metrics: "2 Sistema de 8.12 kWp (16.24 kWp total)",
-      imageUrl: '/sistema-fotovoltaico-doble.jpeg?height=600&width=800',
+      imageUrl: "/sistema-fotovoltaico-doble.jpeg?height=600&width=800",
    },
    {
       id: 9,
       slug: "incremento-estrategico-inyeccion-red",
       title: "Incremento Estratégico de Inyección a la Red – 29.5 kWp para Empresa Comercial de Alto Prestigio",
-      description: 
+      description:
          "En el marco de su compromiso continuo con la sostenibilidad y la eficiencia operativa, se implementó una ampliación de 29.5 kWp al sistema fotovoltaico de una reconocida empresa comercial con décadas de liderazgo en su sector. La instalación se realizó con una configuración técnica discreta que preserva la estética de sus infraestructuras. Gracias a un diseño meticulioso y a una ubicación estratégica en cubierta, el sistema se integra de forma prácticamente imperceptible, sin alterar la imagen corporativa ni el entorno visual de las instalaciones. Esta expansión permite una mayor inyección de energía limpia a la red, optimizando el autoconsumo y generando excedentes que refuerzan el compromiso ambiental de la empresa ante sus clientes, socios y la comunidad.",
       power: 29.5,
       metrics: "Sistema de 29.5 kWp",
-      imageUrl: '/Industrial-solar-installation.JPG?height=600&width=800',
+      imageUrl: "/Industrial-solar-installation.JPG?height=600&width=800",
    },
    {
       id: 10,
@@ -104,120 +111,125 @@ export const Projects = [
    },
    {
       id: 11,
-      slug: 'instalacion-residencial-premium',
-      title: 'Instalación en un edificio residencial con un sistema fotovoltaico de inyección de lujo de 8.25 kWp',
-      description: "Sistema fotovoltaico de inyección a la red sobre edificio residencial de lujo de 8.25 kWp, estructura de aluminio anodizado y tornillería inoxidable en bajo perfil, instalación muy discreta y eficiente.",
+      slug: "instalacion-residencial-premium",
+      title: "Instalación en un edificio residencial con un sistema fotovoltaico de inyección de lujo de 8.25 kWp",
+      description:
+         "Sistema fotovoltaico de inyección a la red sobre edificio residencial de lujo de 8.25 kWp, estructura de aluminio anodizado y tornillería inoxidable en bajo perfil, instalación muy discreta y eficiente.",
       power: 8.25,
-      metrics: 'Sistema de 8.25 kWp',
-      imageUrl: '/ResidentialMares.jpeg?height=600&width=800'
+      metrics: "Sistema de 8.25 kWp",
+      imageUrl: "/ResidentialMares.jpeg?height=600&width=800",
    },
    {
       id: 12,
-      slug: 'instalacion-residencial',
-      title: 'Instalación residencial con un sistema de inyección a la red de 9.35 kWp',
-      description: 'Sistema fotovoltaico inyección a la red de 9.35 kWp, estructura de aluminio anodizado y tornillería inoxidable en bajo perfil, sobre techo de concreto en zona residencial',
+      slug: "instalacion-residencial",
+      title: "Instalación residencial con un sistema de inyección a la red de 9.35 kWp",
+      description:
+         "Sistema fotovoltaico inyección a la red de 9.35 kWp, estructura de aluminio anodizado y tornillería inoxidable en bajo perfil, sobre techo de concreto en zona residencial",
       power: 9.35,
-      metrics: 'Sistema de 9.35 kWp',
-      imageUrl: '/RedInjection9_35.jpg?height=600&width=800'
+      metrics: "Sistema de 9.35 kWp",
+      imageUrl: "/RedInjection9_35.jpg?height=600&width=800",
    },
    {
       id: 13,
-      slug: 'InyectionRedResidentialHouse',
-      title: 'Inyección a red casa residencial',
-      description: 'Sistema de generación fotovoltaica de 6.77kWp inyección a la red, sobre techo de concreto, casa de familia, estructura completamente sella e impermeabilizada.',
+      slug: "InyectionRedResidentialHouse",
+      title: "Inyección a red casa residencial",
+      description:
+         "Sistema de generación fotovoltaica de 6.77kWp inyección a la red, sobre techo de concreto, casa de familia, estructura completamente sella e impermeabilizada.",
       power: 6.77,
-      metrics: 'Sistema de 6.77 kWp',
-      imageUrl: '/InyeccionRedCasaResidencial.jpg?height=600&width=800'
+      metrics: "Sistema de 6.77 kWp",
+      imageUrl: "/InyeccionRedCasaResidencial.jpg?height=600&width=800",
    },
    {
       id: 14,
-      slug: 'BeautifulApartmentResidentialInstallation',
-      title: 'Instalación residencial en apartamento con sistema de inyección',
-      description: 'Sistema inyección a la red de 6.27kWp en techo de concreto sobre hermoso apartamento de dos niveles.',
+      slug: "BeautifulApartmentResidentialInstallation",
+      title: "Instalación residencial en apartamento con sistema de inyección",
+      description:
+         "Sistema inyección a la red de 6.27kWp en techo de concreto sobre hermoso apartamento de dos niveles.",
       power: 6.27,
-      metrics: 'Sistema de 6.27 kWp',
-      imageUrl: '/AereaBoli.jpg?height=600&width=800'
+      metrics: "Sistema de 6.27 kWp",
+      imageUrl: "/AereaBoli.jpg?height=600&width=800",
    },
    {
       id: 15,
-      slug: 'InstalacionRuralCasaCampo',
-      title: 'Instalación Rural en casa de campo',
-      description: 'Sistema fotovoltaico inyección a la red de 6.44kWp instalado sobre tejado a dos aguas en zona rural.',
+      slug: "InstalacionRuralCasaCampo",
+      title: "Instalación Rural en casa de campo",
+      description:
+         "Sistema fotovoltaico inyección a la red de 6.44kWp instalado sobre tejado a dos aguas en zona rural.",
       power: 6.44,
-      metrics: 'Sistema de 6.44 kWp',
-      imageUrl: '/SistemaCasaCampoZonaRural.jpg?height=600&width=800'
+      metrics: "Sistema de 6.44 kWp",
+      imageUrl: "/SistemaCasaCampoZonaRural.jpg?height=600&width=800",
    },
    {
       id: 16,
-      slug: 'ResidencialSistemaSlug',
-      title: 'Instalación de sistema de inyección a la red residencial',
-      descriptipn: 'Sistema fotovoltaico  de inyección a la red sobre edificio residencial de lujo de 8.25kWp, estructura de aluminio anodizado y tornillería inoxidable en bajo perfil, instalación muy discreta y eficiente.',
+      slug: "ResidencialSistemaSlug",
+      title: "Instalación de sistema de inyección a la red residencial",
+      descriptipn:
+         "Sistema fotovoltaico  de inyección a la red sobre edificio residencial de lujo de 8.25kWp, estructura de aluminio anodizado y tornillería inoxidable en bajo perfil, instalación muy discreta y eficiente.",
       power: 8.25,
-      metrics: 'Sistema de 8.25kWp',
-      imageUrl: '/ResidenciialMaresSistema.jpg?height=600&width=800'
-   }
-]
+      metrics: "Sistema de 8.25kWp",
+      imageUrl: "/ResidenciialMaresSistema.jpg?height=600&width=800",
+   },
+];
 
-    // Services data
-    export const ServicesProps = [
-        {
-            id: 1,
-            title: 'Instalación Solar',
-            description:
-                'Instalación profesional de paneles solares de alta eficiencia para propiedades residenciales y comerciales.',
-            image: '/Modern-home.jpg?height=400&width=600',
-            features: [
-                'Diseño personalizado del sistema',
-                'Paneles de primera calidad',
-                'Instalación por expertos',
-                'Cobertura de garantía',
-            ],
-            url: '/Panel-installation',
-        },
-        {
-            id: 2,
-            title: 'Limpieza y mantenimiento de Paneles',
-            description:
-                'Servicios regulares de mantenimiento y limpieza para asegurar que tus paneles solares funcionen al máximo rendimiento.',
-            image: '/Solar-Cleaning-2.jpg?height=400&width=600',
-            features: [
-                'Mayor eficiencia',
-                'Prolonga la vida útil de los paneles',
-                'Mantenimiento programado',
-                'Monitoreo del rendimiento',
-            ],
-            // url: '/Panel-cleaning',
-            url: '/WIP',
-        },
-        {
-            id: 3,
-            title: 'Remodelación del Sistema',
-            description:
-                'Actualización y remodelación de sistemas solares existentes para mejorar el rendimiento y la producción de energía.',
-            image: '/Remodeling-system.png?height=400&width=600',
-            features: [
-                'Evaluación del sistema',
-                'Actualización tecnológica',
-                'Ampliación de capacidad',
-                'Optimización del rendimiento',
-            ],
-            // url: '/System-remodelation',
-            url: '/WIP',
-        },
-    ]
+// Services data
+export const ServicesProps = [
+   {
+      id: 1,
+      title: "Instalación Solar",
+      description:
+         "Instalación profesional de paneles solares de alta eficiencia para propiedades residenciales y comerciales.",
+      image: "/Modern-home.jpg?height=400&width=600",
+      features: [
+         "Diseño personalizado del sistema",
+         "Paneles de primera calidad",
+         "Instalación por expertos",
+         "Cobertura de garantía",
+      ],
+      url: "/Panel-installation",
+   },
+   {
+      id: 2,
+      title: "Limpieza y mantenimiento de Paneles",
+      description:
+         "Servicios regulares de mantenimiento y limpieza para asegurar que tus paneles solares funcionen al máximo rendimiento.",
+      image: "/Solar-Cleaning-2.jpg?height=400&width=600",
+      features: [
+         "Mayor eficiencia",
+         "Prolonga la vida útil de los paneles",
+         "Mantenimiento programado",
+         "Monitoreo del rendimiento",
+      ],
+      // url: '/Panel-cleaning',
+      url: "/WIP",
+   },
+   {
+      id: 3,
+      title: "Remodelación del Sistema",
+      description:
+         "Actualización y remodelación de sistemas solares existentes para mejorar el rendimiento y la producción de energía.",
+      image: "/Remodeling-system.png?height=400&width=600",
+      features: [
+         "Evaluación del sistema",
+         "Actualización tecnológica",
+         "Ampliación de capacidad",
+         "Optimización del rendimiento",
+      ],
+      // url: '/System-remodelation',
+      url: "/WIP",
+   },
+];
 
 // We need to fix this issue, since we have been working on a fix fo the E-mail. The E-mail doesn't receive the label data selected.
 export const Distributor = [
-   { id: 'EDENORTE', label: 'Edenorte' },
-   { id: 'EDESUR', label: 'Edesur' },
-   { id: 'EDEESTE', label: 'Edeeste' },
-   { id: 'LUZ_Y_FUERZA', label: 'Luz y Fuerza' },
-   { id: 'CPEM', label: 'CPEM' },
-   { id: 'ANOTHER', label: 'Otra' },
-]
+   { id: "EDENORTE", label: "Edenorte" },
+   { id: "EDESUR", label: "Edesur" },
+   { id: "EDEESTE", label: "Edeeste" },
+   { id: "LUZ_Y_FUERZA", label: "Luz y Fuerza" },
+   { id: "CPEM", label: "CPEM" },
+   { id: "ANOTHER", label: "Otra" },
+];
 
 // Going to uncomment the other props when we properly design and configure the other parts.
-
 
 // this going to be update soon.
 export const SliderProps = [
@@ -234,7 +246,6 @@ export const SliderProps = [
    {
       type: "video" as const,
       src: "/VoltagenePresentationVideo.webm?height=1080&width=1920",
-      alt: "Video Presentatin of Voltagene SRL"
-   }
-]
-
+      alt: "Video Presentatin of Voltagene SRL",
+   },
+];
