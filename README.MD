@@ -5,7 +5,32 @@
 ### Quick tip
 
 > The projects use Vercel CLI to import hidden files.
-In const folder, we can see there is a "const-example.tsx", the reason of this is because we are hiding the actual const.tsx which contain commercial secrets
+> In const folder, we can see there is a "const-example.tsx", the reason of this is because we are hiding the actual const.tsx which contain commercial secrets
+
+## Please keep a consistent style.
+
+I use zed editor, with the following configuration in the style of TypeScript and JavaScript code:
+
+```json
+[
+   "languages": {
+      "JavaScript": {
+         "format_on_save": "on",
+         "formatter": "prettier",
+         "tab_size": 3,
+      },
+      "TypeScript": {
+         "format_on_save": "on",
+         "formatter": "prettier",
+         "tab_size": 3,
+      },
+   }
+]
+```
+
+The only part I want to keep consistent are the tab_size. Keep the code clean and don't use one single letter variables.
+
+## Uploading to production
 
 To upload the project to vercel, we decided to use vercel CLI. Because, .gitignore remove some important files. Following the instructions, we first install the CLI
 

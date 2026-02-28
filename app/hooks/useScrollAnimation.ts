@@ -1,50 +1,53 @@
-"use client"
+// useScroolAnimation.ts
+// Hook function used in the scroll animation.
 
-import { useEffect, useState } from "react"
+"use client";
+
+import { useEffect, useState } from "react";
 
 export function useScrollAnimation() {
-  const [scrollY, setScrollY] = useState(0)
+   const [scrollY, setScrollY] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY)
-    }
+   useEffect(() => {
+      const handleScroll = () => {
+         setScrollY(window.scrollY);
+      };
 
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      return () => window.removeEventListener("scroll", handleScroll);
+   }, []);
 
-  return scrollY
+   return scrollY;
 }
 
 export function useIntersectionObserver(options = {}) {
-  const [isVisible, setIsVisible] = useState(false)
-  const [ref, setRef] = useState<HTMLElement | null>(null)
+   const [isVisible, setIsVisible] = useState(false);
+   const [ref, setRef] = useState<HTMLElement | null>(null);
 
-  useEffect(() => {
-    if (!ref) return
+   useEffect(() => {
+      if (!ref) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0]
-        if (entry && entry.isIntersecting) {
-          setIsVisible(true)
-          observer.unobserve(ref)
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: "50px",
-        ...options,
-      },
-    )
+      const observer = new IntersectionObserver(
+         (entries) => {
+            const entry = entries[0];
+            if (entry && entry.isIntersecting) {
+               setIsVisible(true);
+               observer.unobserve(ref);
+            }
+         },
+         {
+            threshold: 0.1,
+            rootMargin: "50px",
+            ...options,
+         },
+      );
 
-    observer.observe(ref)
+      observer.observe(ref);
 
-    return () => {
-      if (ref) observer.unobserve(ref)
-    }
-  }, [ref, options])
+      return () => {
+         if (ref) observer.unobserve(ref);
+      };
+   }, [ref, options]);
 
-  return [setRef, isVisible] as const
+   return [setRef, isVisible] as const;
 }
