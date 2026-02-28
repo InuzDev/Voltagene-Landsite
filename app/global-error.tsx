@@ -6,25 +6,17 @@ import { SiteHeader } from "./components/Site-header";
 import "./Global.css";
 // Error boundaries must be Client Components - Next.Js docs
 
-export default function GlobalError(
-   // Arguments
-   {
-      error,
-      reset,
-   }: // Arguments type
-   {
-      error: Error & { digest?: string };
-      reset: () => void;
-   },
-) {
-   // Start of the function
-
-   // log the error to an error reporting service
+export default function GlobalError({
+   error,
+   reset,
+}: {
+   error: Error & { digest?: string };
+   reset: () => void;
+}) {
    useEffect(() => {
       console.error(error);
    }, [error]);
    return (
-      // Global errors must include html and body tags, only Global errors
       <html>
          <body>
             <SiteHeader />
