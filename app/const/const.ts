@@ -199,8 +199,8 @@ export const ServicesProps = [
          "Mantenimiento programado",
          "Monitoreo del rendimiento",
       ],
-      // url: '/Panel-cleaning',
-      url: "/WIP",
+      url: "/Panel-cleaning",
+      // url: "/WIP",
    },
    {
       id: 3,

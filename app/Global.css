@@ -118,7 +118,8 @@
    --color-sidebar-ring: var(--sidebar-ring);
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+}
 
 @layer base {
    * {

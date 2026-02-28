@@ -1,26 +1,28 @@
 // Low priority, need to be redo
 
-'use client'
-import { useEffect } from "react"
-import { SiteHeader } from "./components/Site-header"
-import './Global.css'
+"use client";
+import { useEffect } from "react";
+import { SiteHeader } from "./components/Site-header";
+import "./Global.css";
 // Error boundaries must be Client Components - Next.Js docs
 
 export default function GlobalError(
    // Arguments
-   { error, reset }:
-      // Arguments type
-      {
-         error: Error & { digest?: string }
-         reset: () => void
-      }
+   {
+      error,
+      reset,
+   }: // Arguments type
+   {
+      error: Error & { digest?: string };
+      reset: () => void;
+   },
 ) {
    // Start of the function
 
    // log the error to an error reporting service
    useEffect(() => {
-      console.error(error)
-   }, [error])
+      console.error(error);
+   }, [error]);
    return (
       // Global errors must include html and body tags, only Global errors
       <html>
@@ -32,9 +34,11 @@ export default function GlobalError(
                {/* Attempt to recover by trying to re-render the segment */}
                <button onClick={() => reset()}>Reintentar</button>
                <br />
-               <p>Si este error sigue persistiendo, contacte al departamento IT</p>
+               <p>
+                  Si este error sigue persistiendo, contacte al departamento IT
+               </p>
             </div>
          </body>
       </html>
-   )
+   );
 }

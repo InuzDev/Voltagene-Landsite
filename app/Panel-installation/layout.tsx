@@ -1,16 +1,16 @@
-import type { Metadata } from 'next'
-import type React from 'react'
+import type { Metadata } from "next";
+import type React from "react";
 
 export const metadata: Metadata = {
-    title: 'Voltagene SRL - Instalación Solar',
-    description:
-        'Instalación de sistemas solares fotovoltaicos para hogares, industrias y empresas',
-}
+   title: "Voltagene SRL - Instalación Solar",
+   description:
+      "Instalación de sistemas solares fotovoltaicos para hogares, industrias y empresas",
+};
 
 export default function PanelInstallationLayout({
-    children,
+   children,
 }: Readonly<{
-    children: React.ReactNode
+   children: React.ReactNode;
 }>) {
-    return <>{children}</>
+   return <>{children}</>;
 }
