@@ -1,11 +1,16 @@
 node_modules/
-.qodo/
+# qodo dot files
+.qodo
 
 #Next folder
 .next/
 
 #Environment variables
-.env.local
 .env
+.env.local
 
-.qodo
+# Business Secret folder
+app/const/Regions-const.tsx
+
+# Vercel dot files
+.vercel
