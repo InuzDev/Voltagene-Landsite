@@ -118,6 +118,9 @@
    --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@media (min-width: 768px) {
+}
+
 @layer base {
    * {
       @apply border-border outline-ring/50;

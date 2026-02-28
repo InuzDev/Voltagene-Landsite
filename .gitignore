@@ -9,8 +9,10 @@ node_modules/
 .env
 .env.local
 
+
 # Business Secret folder
 app/const/Regions-const.tsx
 
 # Vercel dot files
+
 .vercel
