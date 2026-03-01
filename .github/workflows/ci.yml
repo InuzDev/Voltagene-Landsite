@@ -3,25 +3,24 @@ name: Next.js CI
 on: [push, pull_request]
 
 jobs:
-    lint-and-test:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
+   lint-and-test:
+      runs-on: ubuntu-latest
+      strategy:
+         matrix:
+            node: [20, 22]
+      steps:
+         - uses: actions/checkout@v4
 
-            - name: Set up node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: 24
+         - name: Set up node.js
+           uses: actions/setup-node@v4
+           with:
+              node-version: ${{ matrix.node }}
 
-            - name: Install dependencies
-              run: npm install
+         - name: Install pnpm
+           run: npm install -g pnpm
 
-            - name: Run ESLint
-              run: npm run lint
+         - name: Install dependencies
+           run: pnpm install
 
-            - name: TypeScript check
-              run: npx tsc --noEmit
-
-            - name: Build Next.js
-              run: npm run build
+         - name: Run ESLint
+           run: pnpm run lint

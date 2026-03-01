@@ -23,33 +23,52 @@ export default function ContactPage() {
       }
    };
 
+   // Form submit function.
    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      setResult("Sending...");
+      setResult("Sending. . .");
 
       const form = event.currentTarget;
-      const formData = new FormData(form);
 
-      formData.append("access_key", "eb583560-aae6-487b-a3c3-e97756fe2a81");
+      const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+      const surname = (form.elements.namedItem("surname") as HTMLInputElement)
+         .value;
+      const email = (form.elements.namedItem("email") as HTMLInputElement)
+         .value;
+      const topic = (form.elements.namedItem("topic") as HTMLInputElement)
+         .value;
+      const message = (
+         form.elements.namedItem("message") as HTMLTextAreaElement
+      ).value;
 
       try {
-         const response = await fetch("https://api.web3forms.com/submit", {
+         const response = await fetch("/api/contact", {
             method: "POST",
-            body: formData,
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+               name,
+               surname,
+               email,
+               phone_number: formattedValue,
+               topic,
+               message,
+            }),
          });
 
          const data = await response.json();
 
-         if (data.success) {
+         if (response.ok) {
             setResult("Form submitted successfully");
-            form.reset(); // reset the form
+
+            form.reset();
+            setFormattedValue("");
+            setRawValue("");
          } else {
-            console.error("An error occurred:", data);
-            setResult(data.message);
+            setResult(data.message || "Something went wrong");
          }
       } catch (error) {
-         console.error("Network error:", error);
-         setResult("Something went wrong. Please try again.");
+         console.error("Network error: ", error);
+         setResult("Something went wrong, please try again later");
       }
    };
    console.info(result);
@@ -87,7 +106,7 @@ export default function ContactPage() {
                                     </label>
                                     <Input
                                        id="firstName"
-                                       name="Primer Nombre"
+                                       name="name"
                                        placeholder="Introduce tu nombre"
                                        required
                                     />
@@ -101,7 +120,7 @@ export default function ContactPage() {
                                     </label>
                                     <Input
                                        id="lastName"
-                                       name="Apellido"
+                                       name="surname"
                                        placeholder="Introduce tu apellido"
                                        required
                                     />
@@ -117,7 +136,7 @@ export default function ContactPage() {
                                  </label>
                                  <Input
                                     id="email"
-                                    name="Correo Electrónico"
+                                    name="email"
                                     type="email"
                                     placeholder="Introduce tu dirección de correo electrónico"
                                     required
@@ -133,11 +152,12 @@ export default function ContactPage() {
                                  </label>
                                  <Input
                                     id="phone"
-                                    name="Número de telefono"
+                                    name="phone_number"
                                     value={formattedValue}
                                     onChange={HandleFormatNumber}
                                     type="tel"
                                     placeholder="Introduce tu número de telefono"
+                                    required
                                  />{" "}
                                  {/* Just put the +x (xxx) xxx-xxxx */}
                               </div>
@@ -151,8 +171,8 @@ export default function ContactPage() {
                                  </label>
                                  <Input
                                     id="subject"
-                                    name="Asunto"
-                                    placeholder="subject"
+                                    name="topic"
+                                    placeholder="Introduce el asunto de tu mensaje"
                                     required
                                  />
                               </div>
@@ -166,7 +186,7 @@ export default function ContactPage() {
                                  </label>
                                  <Textarea
                                     id="message"
-                                    name="Mensaje"
+                                    name="message"
                                     placeholder="Cuéntanos cómo podemos ayudarte"
                                     rows={5}
                                     required

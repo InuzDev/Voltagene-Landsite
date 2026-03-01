@@ -3,6 +3,8 @@
 // we will use a static data
 
 // Since we need to make a database to store the data of the page as we going to make a dashboard so the user can upload the data himself.
+import type { Region } from "app/lib/types";
+
 export const Solar_panels = [
    { id: "590", power: 590, label: "590W Panel" },
    { id: "615", power: 615, label: "615W Panel" },
