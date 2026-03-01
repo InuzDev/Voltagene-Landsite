@@ -32,32 +32,45 @@ export default function ContactPage() {
    // This is where the form submit starts. Sending it to the destinated target.
    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      setResult("Sending...");
+      setResult("Sending. . .");
 
-      const form = event.currentTarget; // more reliable than event.target
-      const formData = new FormData(form);
+      const form = event.currentTarget;
 
-      formData.append("distribuidora", dist);
-      formData.append("access_key", "eb583560-aae6-487b-a3c3-e97756fe2a81");
+      const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+      const surname = (form.elements.namedItem("surname") as HTMLInputElement)
+         .value;
+      const email = (form.elements.namedItem("email") as HTMLInputElement)
+         .value;
+      const message = (form.elements.namedItem("message") as HTMLInputElement)
+         .value;
 
       try {
-         const response = await fetch("https://api.web3forms.com/submit", {
+         const response = await fetch("/api/quotes", {
             method: "POST",
-            body: formData,
+            headers: { "Content-type": "application/json" },
+            body: JSON.stringify({
+               name,
+               surname,
+               email,
+               phone_number: formattedValue,
+               energy_distributor: dist,
+               message,
+            }),
          });
 
          const data = await response.json();
 
-         if (data.success) {
+         if (response.ok) {
             setResult("Form submitted successfully");
-            form.reset(); // reset the form
+            form.reset();
+            setFormattedValue("");
+            setRawValue("");
          } else {
-            console.error("An error occurred:", data);
-            setResult(data.message);
+            setResult(data.message || "Something went wrong");
          }
       } catch (error) {
-         console.error("Network error:", error);
-         setResult("Something went wrong. Please try again.");
+         console.error("Network error: ", error);
+         setResult("Something went wrong, please try again later.");
       }
    };
 
@@ -90,7 +103,7 @@ export default function ContactPage() {
                                     </label>
                                     <Input
                                        id="firstName"
-                                       name="Nombre"
+                                       name="name"
                                        placeholder="Introduce tu nombre"
                                        required
                                     />
@@ -104,27 +117,28 @@ export default function ContactPage() {
                                     </label>
                                     <Input
                                        id="lastName"
-                                       name="Apellido"
+                                       name="surname"
                                        placeholder="Introduce tu apellido"
                                        required
                                     />
                                  </div>
                               </div>
 
-                              {/* It is required to add email? Ask HQ */}
-
-                              {/* <div className="space-y-2">
-                                            <label htmlFor="email" className="text-sm font-medium">
-                                                E-mail / Correo Electrónico
-                                            </label>
-                                            <Input
-                                                id="email"
-                                                name="email"
-                                                type="email"
-                                                placeholder="Introduce tu dirección de correo electrónico"
-                                                required
-                                            />
-                                        </div> */}
+                              <div className="space-y-2">
+                                 <label
+                                    htmlFor="email"
+                                    className="text-sm font-medium"
+                                 >
+                                    E-mail / Correo Electrónico
+                                 </label>
+                                 <Input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    placeholder="Introduce tu dirección de correo electrónico"
+                                    required
+                                 />
+                              </div>
 
                               <div className="space-y-2">
                                  <label
@@ -134,8 +148,8 @@ export default function ContactPage() {
                                     Número de telefono
                                  </label>
                                  <Input
-                                    id="phone"
-                                    name="Número de telefono"
+                                    id="phone_number"
+                                    name="phone_number"
                                     value={formattedValue}
                                     onChange={HandleFormatNumber}
                                     type="tel"
@@ -149,7 +163,7 @@ export default function ContactPage() {
                                  <DropdownSelect
                                     id="energyProvider"
                                     label="Distribuidora de energía"
-                                    name="distribuidora"
+                                    name="energy_distributor"
                                     placeholder="Selecciona tu distribuidora de energía"
                                     value={dist}
                                     onChange={setDistributor}

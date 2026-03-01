@@ -1,13 +1,19 @@
 node_modules/
-.qodo/
+# qodo dot files
+.qodo
 
 #Next folder
 .next/
 
 #Environment variables
-.env
+
 .env.local
 
-.qodo
+
+# Business Secret folder
+# Delete the .tsx after testing.
 app/const/Regions-const.tsx
+regions.json
+# Vercel dot files
+
 .vercel
