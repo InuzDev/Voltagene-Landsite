@@ -85,7 +85,7 @@ export function SiteHeader() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+            <nav className="hidden lg:flex items-center space-x-6 text-sm font-medium">
                {navLinks.map((link) => (
                   <a
                      key={link.href}
@@ -131,7 +131,7 @@ export function SiteHeader() {
                {/* Mobile Navigation */}
                <Sheet>
                   <SheetTrigger asChild>
-                     <Button variant="ghost" size="icon" className="md:hidden">
+                     <Button variant="ghost" size="icon" className="lg:hidden">
                         <Menu className="h-6 w-6" />
                         <span className="sr-only">Toggle menu</span>
                      </Button>
