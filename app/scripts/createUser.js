@@ -6,18 +6,21 @@ const pool = new Pool({
    connectionString: process.env.DATABASE_URL,
 });
 
+const { ADMIN_NAME, ADMIN_SURNAME, ADMIN_EMAIL, ADMIN_ROLE, ADMIN_PASSWORD } =
+   process.env;
+
 async function createUser() {
-   const name = "David";
-   const surname = "Jorge";
-   const email = "info@voltagene.com";
-   const role = "Ingeniero principal de software";
-   const password = process.env.ADMIN_PASSWORD;
+   const name = ADMIN_NAME;
+   const surname = ADMIN_SURNAME;
+   const email = ADMIN_EMAIL;
+   const role = ADMIN_ROLE;
+   const password = ADMIN_PASSWORD;
 
    if (!password) {
       throw new Error("ADMIN_PASSWORD is not defined in .env.local");
    }
 
-   const hashedPassword = await bcrypt.hash(password, 10);
+   const hashedPassword = await bcrypt.hash(password, 12);
 
    await pool.query(
       `INSERT INTO EmployeeUsers (name, surname, email, role, password)
@@ -26,6 +29,7 @@ async function createUser() {
    );
 
    console.log(`User ${email} created successfully`);
+   await pull.end();
    process.exit(0);
 }
 
