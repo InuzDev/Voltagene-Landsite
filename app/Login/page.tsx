@@ -41,8 +41,8 @@ export default function LoginPage() {
             setError(data.error || "Error al iniciar sesion");
             return;
          }
-
-         router.push("/dashboard");
+         router.push("/WIP");
+         // router.push("/dashboard");
       } catch (err) {
          setError("Error de conexion, intenta de nuevo mas tarde");
       } finally {
