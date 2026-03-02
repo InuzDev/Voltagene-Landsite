@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
          forwarded?.split(",")[0]?.trim() ||
          req.headers.get("x-real-ip") ||
          req.headers.get("cf-connecting-ip") ||
-         "unknonw";
+         "Unknown";
 
       if (rateLimit.has(ip)) {
          return NextResponse.json(

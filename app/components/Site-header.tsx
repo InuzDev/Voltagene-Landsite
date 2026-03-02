@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu } from "lucide-react";
+import { LogIn, Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -101,6 +101,21 @@ export function SiteHeader() {
             </nav>
 
             <div className="flex items-center gap-4">
+               {/* Employee portal button - desktop only */}
+               <Link href="/Login">
+                  <Button
+                     variant="ghost"
+                     size="sm"
+                     className={`hidden sm:inline-flex items-center gap-1.5 text-sm ${
+                        shouldBeTransparent
+                           ? "text-white/80 hover:text-white hover:bg-white/10"
+                           : "text-gray-600 hover:text-green-700 hover:bg-green-50"
+                     }`}
+                  >
+                     <LogIn className="h-4 w-4" />
+                     Portal
+                  </Button>
+               </Link>
                <Link href={"/Quotes"}>
                   <Button
                      className={`hidden sm:inline-flex ${
@@ -152,6 +167,14 @@ export function SiteHeader() {
                               <Button className="mt-3.5 mx-14 bg-green-800 hover:bg-green-900 text-white">
                                  Obtener Cotización
                               </Button>
+                           </Link>
+                           {/* Employee portal link - mobile sheet */}
+                           <Link
+                              href="/Login"
+                              className="flex items-center gap-2 text-base font-medium py-2 px-20 text-gray-600 hover:text-green-700 transition-colors"
+                           >
+                              <LogIn className="h-5 w-5" />
+                              Portal de Empleados
                            </Link>
                         </nav>
                      </div>

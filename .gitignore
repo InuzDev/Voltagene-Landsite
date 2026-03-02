@@ -6,14 +6,8 @@ node_modules/
 .next/
 
 #Environment variables
-
 .env.local
 
 
-# Business Secret folder
-# Delete the .tsx after testing.
-app/const/Regions-const.tsx
-regions.json
 # Vercel dot files
-
 .vercel
