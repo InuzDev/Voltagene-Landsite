@@ -2,65 +2,26 @@
 
 ## Documentation
 
-### Quick tip
-
-> The projects use Vercel CLI to import hidden files.
-> In const folder, we can see there is a "const-example.tsx", the reason of this is because we are hiding the actual const.tsx which contain commercial secrets
+This website project is mainly open source, you can check the code and suggest fixes.
 
 ## Please keep a consistent style.
 
-I use zed editor, with the following configuration in the style of TypeScript and JavaScript code:
-
-```json
-[
-   "languages": {
-      "JavaScript": {
-         "format_on_save": "on",
-         "formatter": "prettier",
-         "tab_size": 3,
-      },
-      "TypeScript": {
-         "format_on_save": "on",
-         "formatter": "prettier",
-         "tab_size": 3,
-      },
-   }
-]
-```
+indentation of three spaces, minimal comments if needed. No single letter variables.
 
 The only part I want to keep consistent are the tab_size. Keep the code clean and don't use one single letter variables.
 
-## Uploading to production
-
-To upload the project to vercel, we decided to use vercel CLI. Because, .gitignore remove some important files. Following the instructions, we first install the CLI
-
-```shell
-npm install -g vercel
-```
-
-Then, we setup the project to connect it with vercel
-
-```shell
-# First, you need to log in your vercel account with the CLI
-vercel --login
-# Then, connect your project with vercel
-vercel --prod
-```
-
-This website is used by Voltagene SRL, made with Next.Js 15.1.7 - TypeScript, for the style we opted for Tailwind CSS.
-
-To initialize the project you need npm and node.js Version 20.18.2+
+To initialize the project you need pnpm and node.js Version 20.20.0
 
 In the terminal run the command:
 
 ```shell
-npm i
+pnpm i
 ```
 
 Then after the installation of the dependencies, run:
 
 ```shell
-npm run dev
+pnpm run dev
 ```
 
 Feel free to customize the scripts in package.json

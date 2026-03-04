@@ -21,8 +21,7 @@ export function SiteHeader() {
       {
          href: pathname === "/" ? "/#services" : "/Services",
          label: "Servicios",
-      }, // since the page itself isn't ready, we going to deny access to it.
-      { href: "/#services", label: "Servicios" },
+      },
       {
          href: pathname === "/" ? "/#projects" : "/Projects",
          label: "Proyectos",
