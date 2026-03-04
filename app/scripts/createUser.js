@@ -1,6 +1,10 @@
 require("dotenv").config({ path: ".env.local" });
+
+const ws = require("ws");
 const bcrypt = require("bcryptjs");
-const { Pool } = require("@neondatabase/serverless");
+const { Pool, neonConfig } = require("@neondatabase/serverless");
+
+neonConfig.webSocketConstructor = ws;
 
 const pool = new Pool({
    connectionString: process.env.DATABASE_URL,
@@ -29,7 +33,7 @@ async function createUser() {
    );
 
    console.log(`User ${email} created successfully`);
-   await pull.end();
+   await pool.end();
    process.exit(0);
 }
 

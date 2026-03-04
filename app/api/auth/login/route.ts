@@ -1,9 +1,13 @@
 export const runtime = "nodejs";
 
 import { pool } from "app/lib/db";
+import { SignJWT } from "jose";
+import { cookies } from "next/headers";
 import bcrypt from "bcryptjs";
 import { LRUCache } from "lru-cache";
 import { NextResponse, NextRequest } from "next/server";
+
+const JWTSECRET = new TextEncoder().encode(process.env.JWT_SECRET);
 
 const rateLimit = new LRUCache<string, boolean>({
    max: 500,
@@ -40,7 +44,7 @@ export async function POST(request: NextRequest) {
          );
       }
 
-      rateLimit.set(ip, true);
+      rateLimit.set(key, true);
 
       if (!normalizedEmail.endsWith("@voltagene.com")) {
          return NextResponse.json(
@@ -68,6 +72,24 @@ export async function POST(request: NextRequest) {
             { status: 401 },
          );
       }
+
+      const token = await new SignJWT({
+         id: user.id,
+         email: user.email,
+         role: user.role,
+      })
+         .setProtectedHeader({ alg: "HS256" })
+         .setExpirationTime("8h")
+         .sign(JWTSECRET);
+
+      const cookieStore = await cookies();
+      cookieStore.set("session", token, {
+         httpOnly: true,
+         secure: process.env.NODE_ENV === "production",
+         sameSite: "lax",
+         maxAge: 60 * 60 * 8,
+         path: "/",
+      });
 
       return NextResponse.json({ success: true, role: user.role });
    } catch (error) {
