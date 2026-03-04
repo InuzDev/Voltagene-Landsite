@@ -67,11 +67,4 @@ Feel free to customize the scripts in package.json
 
 > If you got any question, ask for @InuzDev
 
-On Going chores
-
-- sales page
-- Security measures for DDoS and DoS attack.
-
-Project chores list
-
 - Create About us section
