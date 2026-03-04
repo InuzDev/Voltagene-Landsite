@@ -24,7 +24,7 @@ async function createUser() {
       throw new Error("ADMIN_PASSWORD is not defined in .env.local");
    }
 
-   const hashedPassword = await bcrypt.hash(password, 10);
+   const hashedPassword = await bcrypt.hash(password, 12);
 
    await pool.query(
       `INSERT INTO EmployeeUsers (name, surname, email, role, password)
