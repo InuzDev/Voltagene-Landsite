@@ -1,6 +1,10 @@
 require("dotenv").config({ path: ".env.local" });
+
+const ws = require("ws");
 const bcrypt = require("bcryptjs");
-const { Pool } = require("@neondatabase/serverless");
+const { Pool, neonConfig } = require("@neondatabase/serverless");
+
+neonConfig.webSocketConstructor = ws;
 
 const pool = new Pool({
    connectionString: process.env.DATABASE_URL,
@@ -20,7 +24,7 @@ async function createUser() {
       throw new Error("ADMIN_PASSWORD is not defined in .env.local");
    }
 
-   const hashedPassword = await bcrypt.hash(password, 12);
+   const hashedPassword = await bcrypt.hash(password, 10);
 
    await pool.query(
       `INSERT INTO EmployeeUsers (name, surname, email, role, password)
@@ -29,7 +33,7 @@ async function createUser() {
    );
 
    console.log(`User ${email} created successfully`);
-   await pull.end();
+   await pool.end();
    process.exit(0);
 }
 

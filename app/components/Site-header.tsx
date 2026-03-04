@@ -18,14 +18,15 @@ export function SiteHeader() {
    // Navigation links data
    const generateNavLinks = (pathname: string) => [
       { href: pathname === "/" ? "/#start" : "/", label: "Inicio" },
-      // { href: pathname === '/' ? "/#services" : "/Services", label: "Servicios" }, since the page itself isn't ready, we going to deny access to it.
+      {
+         href: pathname === "/" ? "/#services" : "/Services",
+         label: "Servicios",
+      }, // since the page itself isn't ready, we going to deny access to it.
       { href: "/#services", label: "Servicios" },
       {
          href: pathname === "/" ? "/#projects" : "/Projects",
          label: "Proyectos",
       },
-      // { href: "/#about", label: "Sobre Nosotros" },
-      // { href: "/#testimonials", label: "Testimonials" }, This section is still pending a discussion with client.
       { href: "/Panel-Calculator", label: "Calculadora Solar" },
       { href: "/Contact", label: "Contáctanos" },
    ];
@@ -41,8 +42,8 @@ export function SiteHeader() {
       return () => window.removeEventListener("scroll", handleScroll);
    }, []);
 
-   // Conditional renderer
-   if (pathname === "/WIP") return null;
+   // Conditional renderer - hide on internal tool routes
+   if (pathname === "/WIP" || pathname.startsWith("/Dashboard")) return null;
 
    // Conditional transparency
    const TransparentWhiteList = pathname === "/" || pathname === "/Projects"; // Make it transparent in the project route.
@@ -171,7 +172,7 @@ export function SiteHeader() {
                            {/* Employee portal link - mobile sheet */}
                            <Link
                               href="/Login"
-                              className="flex items-center gap-2 text-base font-medium py-2 px-20 text-gray-600 hover:text-green-700 transition-colors"
+                              className="flex items-center gap-2 text-base font-medium py-96 px-20 text-gray-600 hover:text-green-700 transition-colors"
                            >
                               <LogIn className="h-5 w-5" />
                               Portal de Empleados

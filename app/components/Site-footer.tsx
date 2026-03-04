@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 export function SiteFooter() {
    const pathname = usePathname();
 
-   if (pathname === "/WIP") return null;
+   if (pathname === "/WIP" || pathname.startsWith("/Dashboard")) return null;
 
    return (
       <footer className="bg-gray-900 text-white w-full">
