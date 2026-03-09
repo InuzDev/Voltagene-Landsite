@@ -2,6 +2,8 @@ import { neon } from "@neondatabase/serverless";
 import { LRUCache } from "lru-cache";
 import { NextRequest, NextResponse } from "next/server";
 
+const ConnectionString = process.env.NODE_ENV === 'production' ? process.env.PRODUCTION_DATABASE_URL : process.env.DEVELOPMENT_DATABASE_URL;
+
 // Limit the rate of the user, max 1 request per IP per minute
 const rateLimit = new LRUCache<string, boolean>({
    max: 500,
@@ -43,7 +45,7 @@ export async function POST(req: NextRequest) {
       }
 
       // insert the input of the user into the database.
-      const sql = neon(process.env.DATABASE_URL!);
+      const sql = neon(ConnectionString!);
 
       await sql`
          INSERT INTO ContactFormResponse(name, surname, email, phone_number, topic, message)

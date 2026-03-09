@@ -13,6 +13,7 @@ const pool = new Pool({
 const { ADMIN_NAME, ADMIN_SURNAME, ADMIN_EMAIL, ADMIN_ROLE, ADMIN_PASSWORD } =
    process.env;
 
+// Main function; Check .env and change the data there to change the admin user.
 async function createUser() {
    const name = ADMIN_NAME;
    const surname = ADMIN_SURNAME;
