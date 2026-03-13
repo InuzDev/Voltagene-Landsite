@@ -2,7 +2,10 @@ import { neon } from "@neondatabase/serverless";
 import { LRUCache } from "lru-cache";
 import { NextRequest, NextResponse } from "next/server";
 
-const ConnectionString = process.env.NODE_ENV === 'production' ? process.env.PRODUCTION_DATABASE_URL : process.env.DEVELOPMENT_DATABASE_URL;
+const ConnectionString =
+   process.env.NODE_ENV === "production"
+      ? process.env.PRODUCTION_DATABASE_URL
+      : process.env.DEVELOPMENT_DATABASE_URL;
 
 // Limit the rate of the user, max 1 request per IP per minute
 const rateLimit = new LRUCache<string, boolean>({
@@ -20,7 +23,7 @@ export async function POST(req: NextRequest) {
          req.headers.get("cf-connecting-ip") ||
          "unknown";
 
-      if (rateLimit.has(ip)) {
+      if (process.env.NODE_ENV !== "development" && rateLimit.has(ip)) {
          return NextResponse.json(
             {
                error: "Too many requests. Please wait before sending another message.",

@@ -19,7 +19,7 @@ export function SiteHeader() {
    const generateNavLinks = (pathname: string) => [
       { href: pathname === "/" ? "/#start" : "/", label: "Inicio" },
       {
-         href: pathname === "/" ? "/#services" : "/Services",
+         href: pathname === "/" ? "/#services" : "/#services",
          label: "Servicios",
       },
       {

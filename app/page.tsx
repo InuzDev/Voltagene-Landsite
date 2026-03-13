@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "./components/ui/button";
-// Slider props
 import { MediaSlider } from "./components/media-slider";
 import { ServicesProps, SliderProps } from "./const/const";
 import type { Project } from "./lib/types";
@@ -24,7 +23,6 @@ export default function Home() {
          .then((res) => res.json())
          .then((data) => setProjects(data));
    }, []);
-   // break line
 
    useEffect(() => {
       const handleScroll = () => {
