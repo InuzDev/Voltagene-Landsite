@@ -92,11 +92,8 @@ export async function POST(req: NextRequest) {
          { status: 201 },
       );
    } catch (error) {
-      console.error("Database error: ", error);
-
-      return NextResponse.json(
-         { success: false, message: error },
-         { status: 500 },
-      );
+      const message = error instanceof Error ? error.message : String(error);
+      console.error("Database error: ", message);
+      return NextResponse.json({ success: false, message }, { status: 500 });
    }
 }
