@@ -13,15 +13,6 @@ const rateLimit = new LRUCache<string, boolean>({
    ttl: 1000 * 60,
 });
 
-if (!ConnectionString) {
-   throw new Error(
-      `DATABASE_URL is not defined. NODE_ENV=${process.env.NODE_ENV}`,
-   );
-}
-
-// insert the input of the user into the database.
-const sql = neon(ConnectionString!);
-
 export async function POST(req: NextRequest) {
    try {
       // Detect the user IP
@@ -42,6 +33,19 @@ export async function POST(req: NextRequest) {
       }
 
       rateLimit.set(ip, true);
+
+      const connectionString =
+         process.env.NODE_ENV === "production"
+            ? process.env.PRODUCTION_DATABASE_URL
+            : process.env.DEVELOPMENT_DATABASE_URL;
+
+      if (!connectionString) {
+         throw new Error(
+            `No DB connection string. NODE_ENV=${process.env.NODE_ENV}`,
+         );
+      }
+
+      const sql = neon(connectionString);
 
       const data = await req.json();
       const {
