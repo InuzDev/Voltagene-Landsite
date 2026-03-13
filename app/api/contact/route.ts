@@ -13,6 +13,15 @@ const rateLimit = new LRUCache<string, boolean>({
    ttl: 1000 * 60,
 });
 
+if (!ConnectionString) {
+   throw new Error(
+      `DATABASE_URL is not defined. NODE_ENV=${process.env.NODE_ENV}`,
+   );
+}
+
+// insert the input of the user into the database.
+const sql = neon(ConnectionString!);
+
 export async function POST(req: NextRequest) {
    try {
       // Detect the user IP
@@ -46,9 +55,6 @@ export async function POST(req: NextRequest) {
             { status: 400 },
          );
       }
-
-      // insert the input of the user into the database.
-      const sql = neon(ConnectionString!);
 
       await sql`
          INSERT INTO ContactFormResponse(name, surname, email, phone_number, topic, message)
